@@ -8,7 +8,7 @@ const Academic = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    import('../data/about.md').then((res) => {
+    import('../data/aboutmywork.md').then((res) => {
       fetch(res.default)
         .then((r) => r.text())
         .then(setMarkdown);

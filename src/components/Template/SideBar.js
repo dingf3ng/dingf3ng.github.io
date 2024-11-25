@@ -43,7 +43,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Ding Feng, 2024, <Link to="/">dingf3ng.github.io</Link>, adapted from Mr Michael.
+        &copy; Ding Feng, 2024, <Link to="/">dingf3ng.github.io</Link>, adapted from Mr Michael&apos;s.
       </p>
     </section>
   </section>
