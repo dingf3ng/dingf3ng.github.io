@@ -1,15 +1,31 @@
+### Basic Coursework
+
+I am a year 2 student at *School of Computing* in NUS. And I am majoring in Computer Science and minoring in Mathematics (almost finished), and Economics (not yet start). 
+
+<br>
+
 ### My academic focus
 
 Currently I am exploring the possibilities in the field of Programming Language Theory, and their implications with *Formal Logic*. 
 
 <br>
 
-I am serving as a Teaching Assistant for *Discrete Mathematics (CS1231S)* and *Data Structures & Algorithms (CS2040S)* in School of Computing, NUS. By my observation, most of the students have no I idea of *why* they are learning these *"theoritical nonsense"*. This phenomenon is dangrous as, in my opinion, the first step as well as the most crucial step when learning something is **to know why** I should learn it and **what does it have to do** with those things that will be heavily used in my career. Currently the confusion is induced by lack of interaction between the *Discrete Mathematics* course and the *Introduction to Programming* course.
+I am serving as a Teaching Assistant for *Discrete Mathematics (CS1231S)* and *Data Structures & Algorithms (CS2040S)* in School of Computing, NUS. From my observations, many students struggle to understand *why* they are learning these theoretical concepts, often dismissing them as *"nonsense"*. This lack of understanding is dangerous, as, in my opinion, the first and most crucial step in learning is **to know why** the subject is important and **what does it have to do** practical applications in ones future careers. The confusion often stems from a lack of interaction between courses like *Discrete Mathematics* and *Programming Methodology*, though they both have rather fitted syllabuses respectively.
 
 <br>
 
-Thankfully, we can mitigate this tension by introducing dependent typed languages, or theorem provers. Student could learn some Curry-Howard Correspondence, and hence resolve those **"why-confusions"** in their mind. So, for now I am especially interested in merging the advances of dependent typed languages into the teaching in these introductory courses. 
+Thankfully, there is hope for bridging this gap by introducing dependent typed languages or theorem provers into the current curriculum. This concept may help students grasp concepts like the *Curry-Howard Correspondence*, resolving their **"why-confusions"** and fostering a deeper appreciation for theoretical foundations. 
 
 <br>
 
-My objective is to let CS students have a deeper and more beautiful understanding of what they are studying, namely, programming. They **have the right to learn something different** about programming from the content of those *web courses* that they can watch anytime at home.
+So for now, I am particularly interested in integrating advances in dependent typed languages into introductory courses to provide students with a more profound and beautiful understanding of programming. They deserve the **right to learn something unique—beyond** what is typically covered in web courses they can access at home.
+
+<br> 
+
+Currently, my friends and I are developing a educational (simple yet sufficient) dependent typed language based on [Pie-lang](https://thelittletyper.com). We are developing this as a extension of the [Source Academy](https://sourceacademy.org/playground), a widely used platform of teaching for courses like *Programming Methodolody(CS1101S)* for now.
+
+<br>
+
+### Teaching
+- CS1231S, 24/25 SEM 1, Tutorial Group 08A
+- CS2040S, 24/25 SEM 2, To be updated
