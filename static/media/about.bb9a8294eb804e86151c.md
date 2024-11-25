@@ -21,7 +21,7 @@ I can play a little bit tennis and I am currently practicing for progress, and i
 One thing in the past I loved, but not as much now, is playing games. There are quite a number of games that either imposed a significant influence on me or gave me a huge pleasure in a certain period of times. Here are some of them: *Age of Empires II*, *Simcity 4*, *Minecraft*, *Fruit Ninja*, *GTA 5*, *Red Dead Redemption 2*..., and many of them I cannot remember their names. If you want you can try them out, they are all excellent games.
 
 <br>
-Sometime I take interesting photographs, but this depends heavily on luck. But I do have some works that seem to be reasonably good, I will put some of them in the [Gallery Section]().
+Sometime I take interesting photographs, but this depends heavily on luck. But I do have some works that seem to be reasonably good, I will put some of them in the [Gallery Section](https://dingf3ng.github.io/gallery).
 
 <br>
 Trust me, I still have a bunch of interets that I am not able to list them all here, but above should be enough to let *U* come up with a outline of me.
