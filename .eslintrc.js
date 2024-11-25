@@ -10,6 +10,9 @@ module.exports = {
   ignorePatterns: ['node_modules/', 'build/'],
   parser: '@babel/eslint-parser',
   plugins: ['react'],
+  settings: {
+    'import/core-modules': ['prop-types'],
+  },
   rules: {
     'jsx-a11y/anchor-is-valid': [
       'error',

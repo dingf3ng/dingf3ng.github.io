@@ -1,7 +1,13 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+} from 'react-router-dom';
 import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
+import posts from './data/posts/posts.json'; // Add this import at the top
 
 const { PUBLIC_URL } = process.env;
 
@@ -16,6 +22,13 @@ const Gallery = lazy(() => import('./pages/Gallery'));
 const Posts = lazy(() => import('./pages/Posts'));
 const Academic = lazy(() => import('./pages/Academic'));
 const Personal = lazy(() => import('./pages/Personal'));
+const PostTemplate = lazy(() => import('./pages/PostTemplate'));
+
+const PostTemplateWrapper = () => {
+  const { id } = useParams();
+  const post = posts.find((p) => p.id === id);
+  return <PostTemplate post={post} />;
+};
 
 const App = () => (
   <BrowserRouter basename={PUBLIC_URL}>
@@ -28,6 +41,7 @@ const App = () => (
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/post/:id" element={<PostTemplateWrapper />} />
       </Routes>
     </Suspense>
   </BrowserRouter>
