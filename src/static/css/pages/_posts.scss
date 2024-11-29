@@ -24,16 +24,27 @@
     }
   }
   .compilations {
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
     .title {
       text-align: center;
     }
     .compilation-container {
+
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+
+      padding-bottom: 2em;
+      gap: 2em;
+
       h4 {
         font-weight: normal;
+      }
+
+      // Media query for smaller screens
+      @media screen and (max-width: 768px) {
+        padding: 1em;
+        gap: 1em;
       }
     }
     
@@ -46,9 +57,16 @@
 }
 
 .compilation-box {
+
   margin: 0.5em;
   border: solid 2px _palette(border);
   padding: 1.5em;
+
+  width: 320px;
+  min-height: 200px;
+  max-height: 200px;
+  
+
   h4 {
     font-weight: normal;
   }
