@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
+    <meta charset="utf-8">
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      const pathSegmentsToKeep = 0;
-      const l = window.location;
+      var pathSegmentsToKeep = 1;
+
+      var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +

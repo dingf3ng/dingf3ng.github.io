@@ -1,12 +1,50 @@
 // About page (/about)
 
 .markdown {
-  p {
-    margin: auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+
+  // Headers
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
   }
 
-  h1 {
-    font-size: 0.8em;
-    margin-top: 3em;
+  // Math formulas
+  .katex-display {
+    margin: 1.5em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .katex {
+    font-size: 1.1em;
+  }
+
+  // Code blocks
+  pre {
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1em 0;
+    overflow-x: auto;
+  }
+
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+
+  // Lists and paragraphs
+  p {
+    margin: 1em 0;
+  }
+
+  ul, ol {
+    padding-left: 2em;
+    margin: 1em 0;
   }
 }

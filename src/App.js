@@ -9,7 +9,7 @@ import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
 import posts from './data/posts/posts.json'; // Add this import at the top
 
-const { PUBLIC_URL } = process.env;
+const { PUBLIC_URL } = process.env.PUBLIC_URL || '';
 
 // Every route - we lazy load so that each page can be chunked
 // NOTE that some of these chunks are very small. We should optimize
@@ -38,10 +38,10 @@ const App = () => (
         <Route path="/academic" element={<Academic />} />
         <Route path="/personal" element={<Personal />} />
         <Route path="/posts" element={<Posts />} />
+        <Route path="/post/:id" element={<PostTemplateWrapper />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/post/:id" element={<PostTemplateWrapper />} />
       </Routes>
     </Suspense>
   </BrowserRouter>
