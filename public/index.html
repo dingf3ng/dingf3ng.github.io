@@ -29,18 +29,31 @@
       href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
     />
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
+      // Add this script to index.html
       (function(l) {
-        if (l.search[1] === '/' ) {
+        // Check if we've already processed this redirect
+        if (sessionStorage.getItem('redirectProcessed')) {
+          return;
+        }
+        
+        if (l.search[1] === '/') {
+          // Mark that we're processing the redirect
+          sessionStorage.setItem('redirectProcessed', 'true');
+          
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
+          
           window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+            l.pathname.slice(0, -1) + decoded + l.hash
           );
+          
+          // Clear the flag after small delay
+          setTimeout(function() {
+            sessionStorage.removeItem('redirectProcessed');
+          }, 100);
         }
-      }(window.location))
+      })(window.location);
     </script>
   </head>
 
