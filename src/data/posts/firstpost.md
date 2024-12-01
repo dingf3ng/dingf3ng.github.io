@@ -12,7 +12,7 @@ $~$
 Generally speaking, a **Proposition / Statement** is a mapping from assertion content to Boolean.
 
 #### 2. Propositions, Connectives and Formulae
-- We now have a set for Propositions: $P = \{{p_1,p_2,p_3,...}\}$, and  for Connectives: $C = \{\neg, \lor, \land \}$, then we can construct **Formulae** $F = \{{f_1,f_2,...}\}$ from these.
+- We now have a set for Propositions: $P = \{p_1,p_2,p_3,...\}$, and  for Connectives: $C = \{\neg, \lor, \land \}$, then we can construct **Formulae** $F = \{f_1,f_2,...\}$ from these.
 ##### 2.1. Non-formal Definition of Formula
 - A **Formula** in propositional logic is either a **Proposition itself**, or is obtained by application of connectives to Formula.
 $~$
@@ -94,3 +94,6 @@ $$ \begin{align*} \text{Proof:} \\
 Using the same method used when proving **Claim 3**, one can prove all undesirable strings are not in *$F$*.
 $~$
 ***Now the "Form" have been proved for existence, uniqueness, and "purity". Definition of Formula finished***
+
+
+
