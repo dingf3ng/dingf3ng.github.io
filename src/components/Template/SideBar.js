@@ -26,7 +26,7 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I&apos;m Ding Feng, an undergraduate @{' '}
+        Hi, I&apos;m Ding Feng, an undergraduate (Science & Technology Scholar) @{' '}
         <a href="https://www.comp.nus.edu.sg">National University of Singapore</a>.
         I am majoring at CS and taking Mathematics and Economics as Minor. I will be
         graduating in 2027.

@@ -1,9 +1,9 @@
 [
     {
       "id": "1",
-      "title": "My First Post",
-      "excerpt": "This is the first post on my blog...",
-      "address": "firstpost.md",
+      "title": "CS4269 Lecture 2",
+      "excerpt": "This is a test post about mathematical logics...",
+      "address": "testpost.md",
       "date": "2024-11-30",
       "category": "Mathematical Logics"
     },
@@ -22,6 +22,14 @@
       "content": "Full post content here...",
       "date": "2020-01-03",
       "category": "Programming Language"
+    },
+    {
+      "id": "4",
+      "title": "My First Post",
+      "excerpt": "This is the first post on my blog...",
+      "content": "Full post content here...",
+      "date": "2020-01-03",
+      "category": "Else"
     }
 ]
   

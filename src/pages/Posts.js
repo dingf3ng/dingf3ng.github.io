@@ -11,10 +11,7 @@ const sections = {
 };
 
 const Posts = () => (
-  <Main
-    title="Posts"
-    description="My posts on various topics"
-  >
+  <Main title="Posts" description="osts on various topics">
     <article className="pagepost" id="posts">
       <header>
         <div className="title">
@@ -30,9 +27,15 @@ const Posts = () => (
           </div>
         </div>
       </header>
-
       {Object.entries(sections).map(([name, Section]) => (
-        <Section key={name} />
+        name === 'Compilations' ? (
+          <React.Fragment key={name}>
+            <Section />
+            <hr className="section-divider" />
+          </React.Fragment>
+        ) : (
+          <Section key={name} />
+        )
       ))}
     </article>
   </Main>

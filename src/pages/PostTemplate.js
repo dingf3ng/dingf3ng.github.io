@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Markdown from 'markdown-to-jsx';
+import Markdown from 'react-markdown';
 import 'katex/dist/katex.min.css';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -17,13 +17,7 @@ const PostTemplate = ({ post }) => {
         .then((r) => r.text())
         .then(setMarkdown);
     });
-  });
-
-  const options = {
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
-    forceBlock: true,
-  };
+  }, []);
 
   const count = markdown
     .split(/\s+/)
@@ -41,7 +35,7 @@ const PostTemplate = ({ post }) => {
             <p>(in about {count} words)</p>
           </div>
         </header>
-        <Markdown options={options}>{markdown}</Markdown>
+        <Markdown rehypePlugins={[rehypeKatex]} remarkPlugins={[remarkMath]}>{markdown}</Markdown>
       </article>
     </Main>
   );

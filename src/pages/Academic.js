@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Markdown from 'markdown-to-jsx';
+import Markdown from 'react-markdown';
 
 import Main from '../layouts/Main';
 
@@ -13,7 +13,7 @@ const Academic = () => {
         .then((r) => r.text())
         .then(setMarkdown);
     });
-  });
+  }, []);
 
   const count = markdown
     .split(/\s+/)
