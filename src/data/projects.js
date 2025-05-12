@@ -1,15 +1,12 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'DEMO',
-    subtitle: 'DEMO-subtitle',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2020-01-01',
+    title: 'Pie in Source Academy',
+    subtitle: 'Implementation of Pie in Source Academy',
+    image: '/images/projects/pieslang.jpg',
+    date: '2025-04-01',
     desc:
-      'a demo project'
-      + 'demo description'
-      + 'demo description'
-      + 'demo description',
+      'Pie is a theorem prover that is based on the book "The Little Typer". It is designed to be a simple and easy-to-use theorem prover for students and researchers. The implementation of Pie in Source Academy is a project that aims to provide an interactive environment for learning and using Pie.',
   },
 ];
 

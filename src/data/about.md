@@ -1,36 +1,22 @@
 ### Intro
 
-I was born in Tianjin, China, in 2005. I had a wonderful childhood experience in the city, and, occasionally, in my father's hometown — Linzi, a small town in Shandong Province. I live in a lovely and country-style family and I gained so much love from it. Same as most of my peers, I began school at the age of 6. Since then, many thanks to my friends and teachers, I have had whimsical and unforgettable lives across my [elementary](https://baike.baidu.com/item/天津市南开区科技实验小学/7850747), [junior high](https://baike.baidu.com/item/天津市第二十五中学/6441189) and [high school](https://zh.wikipedia.org/zh-sg/天津市新华中学).
-
+Born in Tianjin, China, I was raised in a nurturing family environment that provided me with a strong foundation. My formative years were enriched by time spent both in Tianjin and occasionally in Linzi, a small town in Shandong Province where my father was born. My academic journey began at age six, following the standard educational timeline in China. Since then, I have completed studies in my [elementary school](https://baike.baidu.com/item/天津市南开区科技实验小学/7850747), [junior high](https://baike.baidu.com/item/天津市第二十五中学/6441189) and [high school](https://zh.wikipedia.org/zh-sg/天津市新华中学). Throughout these educational stages, I was fortunate to develop meaningful relationships with educators and peers who contributed significantly to my intellectual and personal growth.
 
 In the year of 2023, I started my journey in Singapore, a vibrant and disciplined city state. I have been a student in *School of Computing* of NUS and have been keeping explore new possibilities since then.
 
 ***
 ### What I like
 
-I would say I was born in a *Artistic* family, so that I inherited rather a amount of talent in art, Especially in music. So the first thing I like is of course, what I was given, the music. I enjoy listening as well as making the music. I can play guitar, keyboard, harmonica, and sing, they are great ways to relax *4* me in my free time. There are plenty of pieces of music and musicians that heavily affected my life, or serves as a great source of inspirations.
+Born into an artistic family, I inherited a natural inclination toward creative expression. Music serves as both a passion and relaxation method in my life—I play guitar, keyboard, harmonica, and sing during leisure hours. Various musical compositions and artists have significantly influenced my perspective and creative process.
 
+While not an avid sports enthusiast, I engage in several athletic activities regularly. Football has been my primary sport since childhood, beginning around age 7-8. This interest developed through my father's enthusiasm for the game and was further cultivated during the World Cup 2014. My football experience includes representing Nankai District on a competitive team during elementary school and later playing for my high school team. These experiences have fostered valuable friendships and continue to enrich my life.
 
-I am not a big fan of sports but I play a variety of them quite often. The sport I play most is football, I started to play it since probably 7-8, largely due to the affect of my father, who was a big fan of football before I was born, and also introduced by the *World Cup 2014* fever. Throughout these years, professinally, I was a member of Team of Nankai (a district in Tianjin) when in elementary school, and a capable player in school team in High School. It brings me so many fun and friendships all the way until today.
+I engage in tennis as a developing skill, and occasionally enjoy swimming and running for recreation, though I acknowledge my proficiency in these activities is still evolving.
 
+Gaming constituted a significant interest during earlier periods of my life. Several titles have either shaped my perspectives or provided substantial enjoyment.
 
-I can play a little bit tennis and I am currently practicing for progress, and in free times I could go for swimming or running, but I have to admit I am not a competent players in these fields.
-
-
-One thing in the past I loved, but not as much now, is playing games. There are quite a number of games that either imposed a significant influence on me or gave me a huge pleasure in a certain period of times. Here are some of them: *Age of Empires II*, *Simcity 4*, *Minecraft*, *Fruit Ninja*, *GTA 5*, *Red Dead Redemption 2*..., and many of them I cannot remember their names. If you want you can try them out, they are all excellent games.
-
-
-Sometime I take interesting photographs, but this depends heavily on luck. But I do have some works that seem to be reasonably good, I will put some of them in the [Gallery Section](https://dingf3ng.github.io/gallery).
-
-
-Trust me, I still have a bunch of interets that I am not able to list them all here, but above should be enough to let *U* come up with a outline of me.
+Photography represents another occasional creative outlet, one that I pursue opportunistically rather than systematically. Some of my more successful photographic works will be available in [Gallery](https://dingf3ng.github.io/gallery).
 
 ***
 
-### What will be the future
-
-Not yet do I have the certain answer for *Personal Life* section, maybe you can find more concrete infomation in *Academic* section. Love will keep us alive.
-
-***
-
-##### This *artikel* is not generated by LLM, please read with assurance.
+##### This article is not generated by LLM.
