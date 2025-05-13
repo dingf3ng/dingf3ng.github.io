@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -11,6 +11,41 @@ import posts from './data/posts/posts.json'; // Add this import at the top
 
 const { PUBLIC_URL } = process.env.PUBLIC_URL;
 
+// document.documentElement.setAttribute('data-theme', 'light');
+
+const initializeTheme = () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    // Use the saved theme if available
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  } else {
+    // Otherwise use system preference
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = prefersDarkMode ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', initialTheme);
+    localStorage.setItem('theme', initialTheme);
+  }
+};
+
+const setupThemeListener = () => {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const handleThemeChange = (e) => {
+    if (!localStorage.getItem('theme')) {
+      const newTheme = e.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+    }
+  };
+  // Add listener (using the appropriate method based on browser support)
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener('change', handleThemeChange);
+  } else {
+    // Fallback for older browsers
+    mediaQuery.addListener(handleThemeChange);
+  }
+};
+
+// Initialize theme on load
+initializeTheme();
 // Every route - we lazy load so that each page can be chunked
 // NOTE that some of these chunks are very small. We should optimize
 // which pages are lazy loaded in the future.
@@ -30,21 +65,27 @@ const PostTemplateWrapper = () => {
   return <PostTemplate post={post} />;
 };
 
-const App = () => (
-  <BrowserRouter basename={PUBLIC_URL}>
-    <Suspense fallback={<Main />}>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/academic" element={<Academic />} />
-        <Route path="/personal" element={<Personal />} />
-        <Route path="/posts" element={<Posts />} />
-        <Route path="/post/:id" element={<PostTemplateWrapper />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Suspense>
-  </BrowserRouter>
-);
+const App = () => {
+  useEffect(() => {
+    setupThemeListener();
+  }, []);
+
+  return (
+    <BrowserRouter basename={PUBLIC_URL}>
+      <Suspense fallback={<Main />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/academic" element={<Academic />} />
+          <Route path="/personal" element={<Personal />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/post/:id" element={<PostTemplateWrapper />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  );
+};
 
 export default App;

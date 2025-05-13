@@ -12,7 +12,7 @@
     position: absolute;
     padding: 0;
     bottom: 0;
-    border-top: solid 2px _palette(border);
+    border-top: solid 2px var(--color-border);
 
     p {
       font-size: 0.9rem;
@@ -43,8 +43,8 @@
 .mini-post {
   @include vendor("display", "flex");
   @include vendor("flex-direction", "column");
-  background: _palette(bg);
-  border: solid 2px _palette(border);
+  background: var(--color-bg);
+  border: solid 2px var(--color-border);
   margin: 0 0 _size(element-margin);
 
   .image {

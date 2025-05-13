@@ -13,8 +13,8 @@ body {
 #header {
   @include vendor("display", "flex");
   @include vendor("justify-content", "space-between");
-  background-color: _palette(bg);
-  border-bottom: solid 2px _palette(border);
+  background-color: var(--color-bg);
+  border-bottom: solid 2px var(--color-border);
   height: 3.5em;
   left: 0;
   line-height: 3.5em;
@@ -52,7 +52,7 @@ body {
 
   .links {
     @include vendor("flex", "1");
-    border-left: solid 2px _palette(border);
+    border-left: solid 2px var(--color-border);
     height: inherit;
     line-height: inherit;
     margin-left: 1.5em;
@@ -61,7 +61,7 @@ body {
 
     ul {
       li {
-        border-left: solid 2px _palette(border);
+        border-left: solid 2px var(--color-border);
         line-height: 1;
         margin-left: 1em;
         padding-left: 1em;
@@ -84,6 +84,23 @@ body {
     }
   }
 
+  .theme-toggle-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    visibility: visible;
+    
+    /* Optional: add some spacing or styling */
+    #theme-toggle {
+      padding: 0 1em;
+    }
+
+    @include breakpoint(medium) {
+      display: none; // Hide the theme toggle when sidebar becomes visible
+    }
+  }
+
   .main {
     height: inherit;
     line-height: inherit;
@@ -94,7 +111,7 @@ body {
       line-height: inherit;
 
       li {
-        border-left: solid 2px _palette(border);
+        border-left: solid 2px var(--color-border);
         height: inherit;
         line-height: inherit;
         white-space: nowrap;
@@ -116,7 +133,7 @@ body {
         > a {
           @include icon;
           border-bottom: 0;
-          color: _palette(fg-light);
+          color: var(--color-fg-light);
           overflow: hidden;
           position: relative;
           text-indent: 4em;
@@ -182,14 +199,30 @@ body {
 
 /* General sidebar styles */
 .bm-menu {
-  background: _palette(bg);
+  background: var(--color-bg-alt);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  position: relative;
+}
+
+.sidebar-theme-toggle-container {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  
+  #theme-toggle {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.7em;
+  }
 }
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: _palette(fg-bold);
+  color: var(--color-fg-bold);
   padding: 0.8em;
   font-family: "Raleway", Helvetica, sans-serif;
 }

@@ -14,7 +14,7 @@ form {
     position: relative;
 
     &:before {
-      color: _palette(fg-light);
+      color: var(--color-fg-light);
       content: "\f002";
       display: block;
       height: _size(element-height);
@@ -33,7 +33,7 @@ form {
 }
 
 label {
-  color: _palette(fg-bold);
+  color: var(--color-fg-bold);
   display: block;
   font-size: 0.9em;
   font-weight: _font(weight-bold);
@@ -47,9 +47,9 @@ input[type="tel"],
 select,
 textarea {
   @include vendor("appearance", "none");
-  background: _palette(border-bg);
+  background: var(--color-border-bg);
   border: none;
-  border: solid 2px _palette(border);
+  border: solid 2px var(--color-border);
   border-radius: 0;
   color: inherit;
   display: block;
@@ -63,8 +63,8 @@ textarea {
   }
 
   &:focus {
-    border-color: _palette(accent);
-    box-shadow: inset 0 0 0 1px _palette(accent);
+    border-color: var(--color-accent);
+    box-shadow: inset 0 0 0 1px var(--color-accent);
   }
 }
 
@@ -74,7 +74,7 @@ textarea {
   position: relative;
 
   &:before {
-    color: _palette(border);
+    color: var(--color-border);
     content: "\f078";
     display: block;
     height: _size(element-height);
@@ -115,7 +115,7 @@ input[type="radio"] {
 
   & + label {
     @include icon;
-    color: _palette(fg);
+    color: var(--color-fg);
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
@@ -125,8 +125,8 @@ input[type="radio"] {
     position: relative;
 
     &:before {
-      background: _palette(border-bg);
-      border: solid 2px _palette(border);
+      background: var(--color-border-bg);
+      border: solid 2px var(--color-border);
       content: "";
       display: inline-block;
       height: (_size(element-height) * 0.6);
@@ -141,17 +141,17 @@ input[type="radio"] {
 
   &:checked + label {
     &:before {
-      background: _palette(fg-bold);
-      border-color: _palette(fg-bold);
-      color: _palette(bg);
+      background: var(--color-fg-bold);
+      border-color: var(--color-fg-bold);
+      color: var(--color-bg);
       content: "\f00c";
     }
   }
 
   &:focus + label {
     &:before {
-      border-color: _palette(accent);
-      box-shadow: 0 0 0 1px _palette(accent);
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 1px var(--color-accent);
     }
   }
 }
@@ -172,26 +172,26 @@ input[type="radio"] {
 }
 
 ::-webkit-input-placeholder {
-  color: _palette(fg-light) !important;
+  color: var(--color-fg-light) !important;
   opacity: 1;
 }
 
 :-moz-placeholder {
-  color: _palette(fg-light) !important;
+  color: var(--color-fg-light) !important;
   opacity: 1;
 }
 
 ::-moz-placeholder {
-  color: _palette(fg-light) !important;
+  color: var(--color-fg-light) !important;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: _palette(fg-light) !important;
+  color: var(--color-fg-light) !important;
   opacity: 1;
 }
 
 .formerize-placeholder {
-  color: _palette(fg-light) !important;
+  color: var(--color-fg-light) !important;
   opacity: 1;
 }

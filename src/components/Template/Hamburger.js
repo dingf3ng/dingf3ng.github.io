@@ -38,6 +38,21 @@ const Hamburger = () => {
               </li>
             ))}
           </ul>
+          <div className="sidebar-theme-toggle-container">
+            <button
+              className="button borderless"
+              id="theme-toggle"
+              type="button"
+              onClick={() => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', targetTheme);
+                localStorage.setItem('theme', targetTheme);
+              }}
+            >
+              <span className="toggle-text">Toggle Theme</span>
+            </button>
+          </div>
         </Menu>
       </Suspense>
     </div>

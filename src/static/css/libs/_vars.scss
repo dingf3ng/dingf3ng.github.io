@@ -43,7 +43,7 @@ $font: (
 );
 
 // Palette.
-$palette: (
+/* $palette: (
   bg: #FFFFFF,
   bg-alt: #FFFFFE,
   fg: #646464,
@@ -66,6 +66,49 @@ $palette-dark: (
   border-bg: rgba(119, 118, 179, 0.075),
   border-alt: rgba(119, 118, 179, 0.65),
   accent: #66B3BA,
-);
+); */
 
-$is-dark: true;
+$bg-default: #fefcff;
+$bg-alt-default: #fffeff;
+$fg-default: #646464;
+$fg-bold-default: #3c3b3b;
+$fg-light-default: #7776B3;
+$border-default: rgba(119, 118, 179,0.3);
+$border-bg-default: rgba(119, 118, 179, 0.075);
+$border-alt-default: rgba(119, 118, 179, 0.65);
+$accent-default: #66B3BA;
+
+$bg-dark: #201d23;
+$bg-alt-dark: #26252b;
+$fg-dark: #FEFEEE;
+$fg-alt-dark: #EEEEEE;
+$fg-bold-dark: #FFFFFF;
+$fg-light-dark: #FEFEEE;
+$border-dark: rgba(119, 118, 179,0.3);
+$border-bg-dark: rgba(119, 118, 179, 0.075);
+$border-alt-dark: rgba(119, 118, 179, 0.65);
+$accent-dark: #66B3BA;
+
+html[data-theme="light"] {
+  --color-bg: #{$bg-default};
+  --color-bg-alt: #{$bg-alt-default};
+  --color-fg: #{$fg-default};
+  --color-fg-bold: #{$fg-bold-default};
+  --color-fg-light: #{$fg-light-default};
+  --color-border: #{$border-default};
+  --color-border-bg: #{$border-bg-default};
+  --color-border-alt: #{$border-alt-default};
+  --color-accent: #{$accent-default};
+}
+
+html[data-theme="dark"] {
+  --color-bg: #{$bg-dark};
+  --color-bg-alt: #{$bg-alt-dark};
+  --color-fg: #{$fg-dark};
+  --color-fg-bold: #{$fg-bold-dark};
+  --color-fg-light: #{$fg-light-dark};
+  --color-border: #{$border-dark};
+  --color-border-bg: #{$border-bg-dark};
+  --color-border-alt: #{$border-alt-dark};
+  --color-accent: #{$accent-dark};
+}

@@ -59,7 +59,7 @@
 .compilation-box {
 
   margin: 0.5em;
-  border: solid 2px _palette(border);
+  border: solid 2px var(--color-border);
   padding: 1.5em;
 
   width: 321px;
@@ -74,7 +74,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px _palette(border);
+    box-shadow: 0 4px 8px var(--color-border);
   }
   
   .category {
@@ -89,12 +89,12 @@
   position: relative;  // Added to make the date position relative to this box
   margin-bottom: 2em;
   padding: 1.5em;
-  border: solid 2px _palette(border);
+  border: solid 2px var(--color-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px _palette(border);
+    box-shadow: 0 4px 8px var(--color-border);
   }
 
   .date {

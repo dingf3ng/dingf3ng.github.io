@@ -23,13 +23,13 @@
 /// @param {boolean} $dark Whether to use dark mode palette.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _palette($keys...) {
+/* @function var(--color-$keys...) {
   @if $is-dark {
     @return val($palette-dark, $keys...);
   } @else {
     @return val($palette, $keys...);
   }
-}
+} */
 
 /// Gets a size value.
 /// @param {string} $keys Key(s).
