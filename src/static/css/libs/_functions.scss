@@ -21,9 +21,14 @@
 
 /// Gets a palette value.
 /// @param {string} $keys Key(s).
+/// @param {boolean} $dark (optional) Whether to use dark mode palette. Default: false.
 /// @return {string} Value.
-@function _palette($keys...) {
-  @return val($palette, $keys...);
+@function _palette($dark: false, $keys...) {
+  @if $dark {
+    @return val($palette-dark, $keys...);
+  } @else {
+    @return val($palette, $keys...);
+  }
 }
 
 /// Gets a size value.
