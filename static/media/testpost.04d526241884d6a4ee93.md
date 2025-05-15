@@ -5,16 +5,16 @@
 #### 1.1.  example
 
 - Given Computational Problem:
- 	- **Input**: Graph - $G(V,E)$
- 	- **Output**: $True \iff$ $G$ has a cycle
- 	- $L_{cycle} = \{G \mid G\text{ has a cycle}\}$. $G$ has a cycle $\iff G \in L_{cycle}$
+  - **Input**: Graph - $G(V,E)$
+  - **Output**: $True \iff$ $G$ has a cycle
+  - $L_{cycle} = \{G \mid G\text{ has a cycle}\}$. $G$ has a cycle $\iff G \in L_{cycle}$
 
 #### 1.2. Conversion to Satisfiability Checking
 
 - Through some **translation**, a certain computational problem can be converted into a satisfiability checking problem.
 - Computational problem $\xrightarrow{reduction}$ Satisfiability checking
- 	- 1. $\Phi_G$, the **Formulae** generated, is only polynomially **larger** than $|G|$
- 	- 2. $G$ is cyclic $\iff \Phi_G$ is satisfiable
+  - 1; $\Phi_G$, the **Formulae** generated, is only polynomially **larger** than $|G|$
+  - 2; $G$ is cyclic $\iff \Phi_G$ is satisfiable
 - Definition of the **Size of a Formula**: Number of sub-formulae.
 
 ### 2. $\mathcal{K}$-Coloring Problem
@@ -30,10 +30,10 @@
 - Let the **proposition set** $P = \{p_{u, i} \mid u \in V,\; i \in C\}$, which means the vertex $u$ with color $i$.
 - Note that for a valid color scheme, **not only** at least *(1) a $\lambda$ exists*, but also *(2) $\forall p_{u,i},\;p_{u,j} \in P,\;i=j$*, that is the color for each node is unique.
 - Now lets construct the formula $\phi_{G,k}$.
- 	- $\phi_{G, k} = \phi_{G, k}^{=1} \land \phi_{G, k}^{valid}$, *Explanation: The formula is the conjunction of the formulae that obey the above rules.*
- 	- $\phi_{G, k}^{u_0, =1} = \bigvee_{i \in C} \bigwedge_{j \neq i, j \in C} (p_{u_0, i} \land \neg p_{u_0, j})$, *Explanation: for arbitrary vertex $u_0$, the color scheme is unique.*
- 	- $\phi_{G, k}^{valid}= \bigwedge_{\{u, v\}\in E}\bigwedge_{i\in C} \neg(p_{u,i}\land p_{v,i})$, *Explanation: for all adjacent vertex pairs, none of them can have the same color.*
- 	- We have now:$$\phi_{G,k}=(\bigwedge_{u_0 \in V} \phi_{G,k}^{u_0,=1}) \land \phi_{G, k}^{valid}$$
+  - $\phi_{G, k} = \phi_{G, k}^{=1} \land \phi_{G, k}^{valid}$, *Explanation: The formula is the conjunction of the formulae that obey the above rules.*
+  - $\phi_{G, k}^{u_0, =1} = \bigvee_{i \in C} \bigwedge_{j \neq i, j \in C} (p_{u_0, i} \land \neg p_{u_0, j})$, *Explanation: for arbitrary vertex $u_0$, the color scheme is unique.*
+  - $\phi_{G, k}^{valid}= \bigwedge_{\{u, v\}\in E}\bigwedge_{i\in C} \neg(p_{u,i}\land p_{v,i})$, *Explanation: for all adjacent vertex pairs, none of them can have the same color.*
+  - We have now:$$\phi_{G,k}=(\bigwedge_{u_0 \in V} \phi_{G,k}^{u_0,=1}) \land \phi_{G, k}^{valid}$$
 - Theorem 1: $\phi_{G,k}$ is satisfiable $\iff$ G is $\mathcal{K}$-Colorable, which can be proved easily.
 - Theorem 2:  $|\phi_{G,k}|$ is polynomially larger than $|V|,|E|$ and $|C|$
 
@@ -75,4 +75,8 @@ $(\leftarrow)$ If G is $4-colorable$ $\rightarrow$  $\Gamma_G$ is satisfiable
 
 #### 4.2 Binary Encoding
 
+to be continued...
+
 #### 4.3 Sequencial Counter Encoding
+
+to be continued...
