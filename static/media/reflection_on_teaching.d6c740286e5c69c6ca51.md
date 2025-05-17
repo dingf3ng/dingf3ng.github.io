@@ -1,8 +1,10 @@
-# Reflections on Teaching: A Journey of Growth and Learning
+# Reflections on Teaching: Academic Year 24/25
 
-## Introduction
+## Overview
 
-Teaching is a profound journey that extends beyond imparting knowledge to shaping minds and fostering growth. As I reflect on my experiences as an educator, I'm reminded of the challenges, triumphs, and valuable lessons learned along the way.
+It was the first time that, I took the position of teaching assistant in the past academic year. I was teaching the modules *Discrete Structures (CS1231S)* in the first semester and *Data Structure and Algorithms (CS2040S)* in the second semester.
+
+Teaching is a profound journey that extends beyond imparting knowledge to shaping minds and fostering growth, and hence to have a thorough reflection should be recongnized as a part of the educator's responsibility. In this report, I will discuss the curriculum, the common problems among students, and finally my deeds.
 
 ## The Dynamic Classroom Environment
 
@@ -33,6 +35,7 @@ The most rewarding aspect of teaching lies in the mentor-mentee relationships fo
 ## Looking Forward
 
 As I continue this teaching journey, I aim to:
+
 - Remain curious and open to innovative pedagogical approaches
 - Seek regular feedback to refine my methods
 - Foster a learning environment that celebrates curiosity and critical thinking
