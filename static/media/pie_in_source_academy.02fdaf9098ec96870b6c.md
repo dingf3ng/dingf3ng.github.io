@@ -2,13 +2,25 @@
 
 View the source code at: <https://github.com/source-academy/pie-slang>.
 
-> Program testing can be used to show the presence of bugs, but never to show their absence!
+> ***Program testing can be used to show the presence of bugs, but never to show their absence.***
+>
+> — Edsger W. Dijkstra
+
+## Motivation
+
+The need for formal verification arises in critical software systems where runtime bugs carry enormous costs - operating system kernels, public transit systems, and compilers. While complete formal verification of all software remains unattainable, these high-stakes domains demand rigorous verification approaches.
+
+However, formal verification's steep learning curve deters many professionals and students alike. Mainstream proof assistants like *Lean* and *Coq*, while powerful, introduce considerable complexity through their extensive libraries and advanced features. While these features benefit experienced proof engineers, they create significant barriers for newcomers.
+
+*Pie* represents a deliberate simplification, stripping away unnecessary complexity to focus on the fundamental concepts: dependent type systems and the Curry-Howard Correspondence that connects proofs and programs. By integrating *Pie* with *Source Academy*, we further enhance its accessibility, creating an approachable entry point for students and practitioners to explore computer-assisted proving without the overwhelming complexity of industrial-grade systems.
+
+This educational bridge helps learners grasp the core principles before potentially transitioning to more comprehensive proof assistants, fostering broader adoption of formal methods in software development.
 
 ## Introduction
 
 ### What is Pie
 
-[Pie](https://thelittletyper.com) is a small dependently-typed programming language designed for education, as described in "The Little Typer" by Daniel P. Friedman and David Thrane Christiansen. Unlike industrial-strength proof assistants, Pie focuses on clarity and simplicity while still demonstrating the core concepts of dependent types. The interpreter is originally implemented in Racket.
+[Pie](https://thelittletyper.com) is a minimalistic dependently-typed programming language designed for education, as described in "The Little Typer" by Daniel P. Friedman and David Thrane Christiansen. Unlike industrial-strength proof assistants, Pie focuses on clarity and simplicity while still demonstrating the core concepts of dependent types. The interpreter is originally implemented in Racket, and we translate it into Typescript to allow running in browsers.
 
 ### What is Source Academy
 
@@ -248,3 +260,5 @@ The tactics system enables structured proof development:
 - **ProofState**: Tracks current goals and proof environment
 - **Tactics**: Operate on the ProofState to transform goals
 - **ProofManager**: Manages the application of tactics to proofs
+
+Please see the repository and the book *"The Little Typer"* for more insights.
