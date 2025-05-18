@@ -17,7 +17,7 @@ const activities = [
     id: 2,
     date: '2025-01',
     title: 'Start UROP',
-    description: 'Admitted to the UROP program, working under supervision of Prof. Michael',
+    description: 'Admitted to the UROP program, working under supervision of Prof. Michael D. Adams',
     link: '/blog/algo-complexity',
   },
 ];

@@ -2,25 +2,25 @@
     {
       "id": "1",
       "title": "CS4269 Lecture 2",
-      "excerpt": "This is a test post about mathematical logics...",
+      "excerpt": "This is a test post, a lecture note for the Fundamental Logics in Computer Science in Semester 1, AY 24/25.",
       "address": "testpost.md",
       "date": "2024-11-30",
       "category": "Mathematical Logics"
     },
     {
-      "id": "2",
-      "title": "React Tips",
-      "excerpt": "Here are some useful React tips...",
-      "content": "Full post content here...",
-      "date": "2020-01-02",
-      "category": "Computation Theory"
+     "id": "2",
+      "title": "Reflection on Teaching",
+      "excerpt": "A reflection on my teaching experience in past two semesters.",
+      "address": "reflection_on_teaching.md",
+      "date": "2025-05-15",
+      "category": "Else"
     },
     {
       "id": "3",
-      "title": "My First Post",
-      "excerpt": "This is the first post on my blog...",
-      "content": "Full post content here...",
-      "date": "2020-01-03",
+      "title": "Pie in Source Academy",
+      "excerpt": "Pie is a programming language used in the book: The Little Typer. Now we bring it onto Source Academy, a widely used platform for teaching in NUS.",
+      "address": "pie_in_source_academy.md",
+      "date": "2025-05-16",
       "category": "Programming Language"
     },
     {

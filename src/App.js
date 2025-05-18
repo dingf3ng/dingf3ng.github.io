@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   useParams,
@@ -71,7 +71,7 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter basename={PUBLIC_URL}>
+    <HashRouter basename={PUBLIC_URL}>
       <Suspense fallback={<Main />}>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -84,7 +84,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

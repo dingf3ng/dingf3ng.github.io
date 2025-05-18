@@ -10,8 +10,16 @@ const sections = {
   PostsList: () => <PostsList />,
 };
 
+const handleSectionClick = (sectionId, e) => {
+  e.preventDefault();
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const Posts = () => (
-  <Main title="Posts" description="osts on various topics">
+  <Main title="Posts" description="posts on various topics">
     <article className="pagepost" id="posts">
       <header>
         <div className="title">
@@ -21,7 +29,11 @@ const Posts = () => (
           <div className="link-container">
             {Object.keys(sections).map((sec) => (
               <h4 key={sec}>
-                <a href={`#${sec.toLowerCase()}`}>{sec}</a>
+                <a
+                  href={`#${sec.toLowerCase()}`}
+                  onClick={(e) => handleSectionClick(sec.toLowerCase(), e)}
+                >{sec}
+                </a>
               </h4>
             ))}
           </div>
