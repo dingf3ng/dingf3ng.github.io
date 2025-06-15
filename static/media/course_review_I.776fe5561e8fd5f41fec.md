@@ -69,6 +69,7 @@ Teaching team: *Prof. Aaron Tan, Prof. Prabhu Natarajan* et al.
 This could be the most boring and dry CS course I have taken. Take it, if possible, on your exchange or summer school.
 
 Its contents, including assembly analysis and caches are crucially useful, but the way they are covered is really, really terrible - and it gets more terrible considering how important these contents are.
+The lectures are all pre-recorded and totally lack of interactivity and attractiveness, as same as those free course-ware you can find on Youtube, or probably worse.
 The course materials is so old that some of the pictures on the lab sheets come from Windows 7.
 The tutorials and labs are very boring where you need to act like a computer, and calculate things.
 The exams is even more a disaster: you need to count how many clocks the pipeline help you to save, using different branch prediction strategies; you need to count how many cache hits/misses there is in a possibly triple loop written in MIPS assembly.
