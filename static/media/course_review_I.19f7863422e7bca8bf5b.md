@@ -109,7 +109,7 @@ Although this might not be the best way to test students' understanding.
 Good introductory course to linear algebra, and it is very practical compare to an average math module.
 
 - Effectiveness: ★ ★ ★ ★
-- Usefulness: ★ ★ ★ ★
+- Usefulness: ★ ★ ★
 - Importance: Core Module
 - Workload: ★ ★
 
@@ -128,7 +128,7 @@ by not releasing any statistics and give as much free marks as possible - to let
 Not too useful if it does not align with your interest, and not at all useful if it does.
 
 - Effectiveness: ★ ★ ★
-- Usefulness: ★
+- Usefulness: ★ ★
 - Importance: Core Module
 - Workload: ★
 
