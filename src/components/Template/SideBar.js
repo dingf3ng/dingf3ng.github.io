@@ -11,14 +11,9 @@ const SideBar = () => {
     fetch('https://api.github.com/users/dingf3ng/repos')
       .then((res) => res.json())
       .then((repos) => {
-        if (Array.isArray(repos)) {
-          const latestRepo = repos.reduce(
-            (latest, current) => (
-              new Date(current.updated_at) > new Date(latest.updated_at) ? current : latest
-            ),
-            repos[0],
-          );
-          setLastUpdated(new Date(latestRepo.updated_at).toLocaleDateString());
+        const repo = repos.filter((r) => r.name === 'dingf3ng.github.io')[0];
+        if (repo && repo.pushed_at) {
+          setLastUpdated(new Date(repo.pushed_at).toLocaleDateString());
         }
       })
       .catch((error) => {

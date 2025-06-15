@@ -25,7 +25,7 @@ const PostTemplate = ({ post }) => {
     .filter((s) => s.length).length;
 
   return (
-    <Main title={post.title} description="Learn More">
+    <Main title={post.title} fullPage description="Learn More">
       <article className="pagepost markdown" id={post.id}>
         <header>
           <div className="title">
@@ -40,6 +40,7 @@ const PostTemplate = ({ post }) => {
     </Main>
   );
 };
+
 PostTemplate.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.string.isRequired,
