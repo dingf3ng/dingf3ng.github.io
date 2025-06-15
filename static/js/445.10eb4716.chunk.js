@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpersonal_site=self.webpackChunkpersonal_site||[]).push([[445],{1445:(e,s,p)=>{e.exports=p.p+"static/media/course_review_I.ebd3e96017474734c67b.md"}}]);
