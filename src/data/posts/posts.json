@@ -34,7 +34,7 @@
     {
       "id": "5",
       "title": "Course Review I",
-      "excerpt": "This is the first part of the course review",
+      "excerpt": "This is the first part of the course review, contains core modules in computer science curriculum.",
       "address": "course_review_I.md",
       "date": "2025-06-15",
       "category": "NUS Course Review"
@@ -42,7 +42,7 @@
     {
       "id": "6",
       "title": "Course Review II",
-      "excerpt": "This is the second part of the course review",
+      "excerpt": "This is the second part of the course review, contains elective modules in computer science curriculum.",
       "address": "course_review_II.md",
       "date": "2025-06-16",
       "category": "NUS Course Review"

@@ -12,7 +12,7 @@ const PostTemplate = ({ post }) => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    import(`../data/posts/${post.address}`).then((res) => {
+    import(`../data/posts/src/${post.address}`).then((res) => {
       fetch(res.default)
         .then((r) => r.text())
         .then(setMarkdown);
