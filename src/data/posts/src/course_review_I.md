@@ -8,6 +8,8 @@ in 4 dimensions:
 - Importance: to what degree you need to spend your MCs on the course.
 - Workload: how many time you need to spend on the course to gain a decent grade, on average.
 
+In this part of the course review, I will discuss some classic CS courses (including the infamous Trinity), and three core math mods.
+
 ## CS1231S - Discrete Structures
 
 Teaching team: *Prof. Aaron Tan* et al.
@@ -29,7 +31,7 @@ Teaching team: *Prof. Adi Yoga S. Prabawa* et al.
 This module provides a critical introduction to Object-Oriented Programming (OOP) and Functional Programming (FP), covering key concepts such as polymorphism, method binding, sub-typing, monads, and laziness, using *Java*. These principles are valuable for both software engineering careers and academic research.
 
 While the module offers a solid introduction, the theoretical aspects of functional programming are not explored in depth, which is understandable for a nature of foundational course.
-For a more comprehensive theoretical understanding, students may consider taking *CS3234 - Logic and Proofs for Programs*
+For a more comprehensive theoretical understanding, students may consider taking *CS3234 - Logic for Proofs and Programs*
 as a complement.
 Professor Adi effectively conveys the core concepts of the syllabus. However, there are administrative delays, particularly with feedback on assignments and exams. Additional support for the teaching staff could help improve the course's administrative efficiency.
 
@@ -74,7 +76,7 @@ The course materials is so old that some of the pictures on the lab sheets come 
 The tutorials and labs are very boring where you need to act like a computer, and calculate things.
 The exams is even more a disaster: you need to count how many clocks the pipeline help you to save, using different branch prediction strategies; you need to count how many cache hits/misses there is in a possibly triple loop written in MIPS assembly.
 
-In one sentence, you need to know how the computer works without any abstraction layer and work as a computer throughout the course. If I can work in this way so well, what is the purpose to own a computer?
+In one sentence, you need to know how computer works without any abstraction layer, and work as a computer throughout the course. If I can work in this way so well, what is the purpose to own a computer?
 
 - Effectiveness: ★
 - Usefulness: ★ ★ ★ ★
@@ -109,7 +111,7 @@ Although this might not be the best way to test students' understanding.
 Good introductory course to linear algebra, and it is very practical compare to an average math module.
 
 - Effectiveness: ★ ★ ★ ★
-- Usefulness: ★ ★ ★ ★
+- Usefulness: ★ ★ ★
 - Importance: Core Module
 - Workload: ★ ★
 
@@ -122,13 +124,12 @@ Go take ST2131 and ST2132 instead, if the topic is really relevant with your per
 The curriculum is basically classical probability, combinatorics, distributions and sample tests, making it a standard
 module in this topic.
 
-The teaching is generally good, Prof. Yu is approachable and he actively minimizes the disturbance of grade on students -
+The teaching is generally good. Prof. Yu is approachable and he actively minimizes the disturbance of grades on students -
 by not releasing any statistics and give as much free marks as possible - to let people focus on learning but not competition. My TA, Ms. Wong Yean Ling is also responsible and approachable.
 
-Not too useful if it does not align with your interest, and not at all useful if it does.
+To conclude, the module is not too useful if it does not align with your interest, and not at all useful if it does.
 
 - Effectiveness: ★ ★ ★
-- Usefulness: ★
+- Usefulness: ★ ★
 - Importance: Core Module
 - Workload: ★
-
