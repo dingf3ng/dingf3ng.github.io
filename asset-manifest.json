@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.711ec410.css",
-    "main.js": "/static/js/main.8c6c76e0.js",
+    "main.js": "/static/js/main.25145a5b.js",
     "static/js/996.05f03eae.chunk.js": "/static/js/996.05f03eae.chunk.js",
     "static/js/29.04940ee0.chunk.js": "/static/js/29.04940ee0.chunk.js",
     "static/js/900.0c6c1349.chunk.js": "/static/js/900.0c6c1349.chunk.js",
@@ -14,8 +14,8 @@
     "static/js/48.168c02ee.chunk.js": "/static/js/48.168c02ee.chunk.js",
     "static/js/27.fdabb843.chunk.js": "/static/js/27.fdabb843.chunk.js",
     "static/js/266.788c545a.chunk.js": "/static/js/266.788c545a.chunk.js",
-    "static/js/445.3870bba5.chunk.js": "/static/js/445.3870bba5.chunk.js",
-    "static/js/174.1a15c493.chunk.js": "/static/js/174.1a15c493.chunk.js",
+    "static/js/445.6a16ee70.chunk.js": "/static/js/445.6a16ee70.chunk.js",
+    "static/js/174.64591fa6.chunk.js": "/static/js/174.64591fa6.chunk.js",
     "static/js/549.99cf8415.chunk.js": "/static/js/549.99cf8415.chunk.js",
     "static/js/510.e8a9cee2.chunk.js": "/static/js/510.e8a9cee2.chunk.js",
     "static/js/820.9e7eaaec.chunk.js": "/static/js/820.9e7eaaec.chunk.js",
@@ -70,7 +70,7 @@
     "static/media/KaTeX_SansSerif-Regular.woff2": "/static/media/KaTeX_SansSerif-Regular.cd5e231e0cc53b2cb2c0.woff2",
     "static/media/reflection_on_teaching.md": "/static/media/reflection_on_teaching.a5467f7a785b32cc585e.md",
     "static/media/KaTeX_Script-Regular.woff2": "/static/media/KaTeX_Script-Regular.c81d1b2a4b75d3eded60.woff2",
-    "static/media/course_review_I.md": "/static/media/course_review_I.19f7863422e7bca8bf5b.md",
+    "static/media/course_review_I.md": "/static/media/course_review_I.e3ad74483e439f588060.md",
     "static/media/KaTeX_Caligraphic-Bold.woff": "/static/media/KaTeX_Caligraphic-Bold.d757c535a2e5902f1325.woff",
     "static/media/KaTeX_Caligraphic-Regular.woff": "/static/media/KaTeX_Caligraphic-Regular.db074fa22cf224af93d7.woff",
     "static/media/KaTeX_Size3-Regular.ttf": "/static/media/KaTeX_Size3-Regular.8d6b6822586eea3d3b20.ttf",
@@ -88,10 +88,10 @@
     "static/media/aboutmywork.md": "/static/media/aboutmywork.0c16540f7262692e2d09.md",
     "static/media/about.md": "/static/media/about.698698cdd55bb7efb45a.md",
     "index.html": "/index.html",
+    "static/media/course_review_II.md": "/static/media/course_review_II.525148e8dee7107ffe99.md",
     "static/media/my_first_post.md": "/static/media/my_first_post.cb1825d458ba866660d6.md",
-    "static/media/course_review_II.md": "/static/media/course_review_II.4bf59a097f47b8ab5376.md",
     "main.711ec410.css.map": "/static/css/main.711ec410.css.map",
-    "main.8c6c76e0.js.map": "/static/js/main.8c6c76e0.js.map",
+    "main.25145a5b.js.map": "/static/js/main.25145a5b.js.map",
     "996.05f03eae.chunk.js.map": "/static/js/996.05f03eae.chunk.js.map",
     "29.04940ee0.chunk.js.map": "/static/js/29.04940ee0.chunk.js.map",
     "900.0c6c1349.chunk.js.map": "/static/js/900.0c6c1349.chunk.js.map",
@@ -106,6 +106,6 @@
   },
   "entrypoints": [
     "static/css/main.711ec410.css",
-    "static/js/main.8c6c76e0.js"
+    "static/js/main.25145a5b.js"
   ]
 }
