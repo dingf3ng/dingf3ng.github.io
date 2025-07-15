@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.711ec410.css",
-    "main.js": "/static/js/main.25145a5b.js",
+    "main.js": "/static/js/main.700ae025.js",
     "static/js/996.05f03eae.chunk.js": "/static/js/996.05f03eae.chunk.js",
-    "static/js/29.04940ee0.chunk.js": "/static/js/29.04940ee0.chunk.js",
+    "static/js/29.f57ccd92.chunk.js": "/static/js/29.f57ccd92.chunk.js",
     "static/js/900.0c6c1349.chunk.js": "/static/js/900.0c6c1349.chunk.js",
     "static/js/785.4fb7ea4d.chunk.js": "/static/js/785.4fb7ea4d.chunk.js",
     "static/js/798.ce026174.chunk.js": "/static/js/798.ce026174.chunk.js",
@@ -91,9 +91,9 @@
     "static/media/course_review_II.md": "/static/media/course_review_II.525148e8dee7107ffe99.md",
     "static/media/my_first_post.md": "/static/media/my_first_post.cb1825d458ba866660d6.md",
     "main.711ec410.css.map": "/static/css/main.711ec410.css.map",
-    "main.25145a5b.js.map": "/static/js/main.25145a5b.js.map",
+    "main.700ae025.js.map": "/static/js/main.700ae025.js.map",
     "996.05f03eae.chunk.js.map": "/static/js/996.05f03eae.chunk.js.map",
-    "29.04940ee0.chunk.js.map": "/static/js/29.04940ee0.chunk.js.map",
+    "29.f57ccd92.chunk.js.map": "/static/js/29.f57ccd92.chunk.js.map",
     "900.0c6c1349.chunk.js.map": "/static/js/900.0c6c1349.chunk.js.map",
     "785.4fb7ea4d.chunk.js.map": "/static/js/785.4fb7ea4d.chunk.js.map",
     "798.ce026174.chunk.js.map": "/static/js/798.ce026174.chunk.js.map",
@@ -106,6 +106,6 @@
   },
   "entrypoints": [
     "static/css/main.711ec410.css",
-    "static/js/main.25145a5b.js"
+    "static/js/main.700ae025.js"
   ]
 }
