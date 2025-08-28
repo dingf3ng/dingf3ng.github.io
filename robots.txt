@@ -1,2 +1,9 @@
 User-agent: *
+Allow: /
 Disallow: /api
+
+# Sitemap
+Sitemap: https://dingf3ng.github.io/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
