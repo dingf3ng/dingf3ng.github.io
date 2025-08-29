@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useParams } from 'react-router-dom';
 import Markdown from 'react-markdown';
-import 'katex/dist/katex.min.css';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 
 import Main from '../layouts/Main';
 
@@ -13,8 +10,28 @@ const PostTemplate = ({ post: propPost }) => {
   const [post, setPost] = useState(propPost);
   const [markdown, setMarkdown] = useState('');
   const [loading, setLoading] = useState(!propPost);
+  const [mathPlugins, setMathPlugins] = useState({ remarkMath: null, rehypeKatex: null });
 
   useEffect(() => {
+    const loadMathPlugins = async () => {
+      try {
+        const [remarkMathModule, rehypeKatexModule] = await Promise.all([
+          import('remark-math'),
+          import('rehype-katex'),
+        ]);
+
+        // Import KaTeX CSS
+        await import('katex/dist/katex.min.css');
+
+        setMathPlugins({
+          remarkMath: remarkMathModule.default,
+          rehypeKatex: rehypeKatexModule.default,
+        });
+      } catch (error) {
+        console.error('Error loading math plugins:', error);
+      }
+    };
+
     const loadPostAndContent = () => {
       let currentPost = propPost;
 
@@ -43,6 +60,7 @@ const PostTemplate = ({ post: propPost }) => {
         });
     };
 
+    loadMathPlugins();
     loadPostAndContent();
   }, [propPost, id]);
 
@@ -88,7 +106,12 @@ const PostTemplate = ({ post: propPost }) => {
             <p>(in about {count} words)</p>
           </div>
         </header>
-        <Markdown rehypePlugins={[rehypeKatex]} remarkPlugins={[remarkMath]}>{markdown}</Markdown>
+        <Markdown
+          rehypePlugins={mathPlugins.rehypeKatex ? [mathPlugins.rehypeKatex] : []}
+          remarkPlugins={mathPlugins.remarkMath ? [mathPlugins.remarkMath] : []}
+        >
+          {markdown}
+        </Markdown>
       </article>
     </Main>
   );
