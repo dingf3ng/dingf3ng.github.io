@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Markdown from 'react-markdown';
 import 'katex/dist/katex.min.css';
 import remarkMath from 'remark-math';
@@ -8,16 +8,69 @@ import rehypeKatex from 'rehype-katex';
 
 import Main from '../layouts/Main';
 
-const PostTemplate = ({ post }) => {
+const PostTemplate = ({ post: propPost }) => {
+  const { id } = useParams();
+  const [post, setPost] = useState(propPost);
   const [markdown, setMarkdown] = useState('');
+  const [loading, setLoading] = useState(!propPost);
 
   useEffect(() => {
-    import(`../data/posts/src/${post.address}`).then((res) => {
-      fetch(res.default)
-        .then((r) => r.text())
-        .then(setMarkdown);
-    });
-  }, []);
+    const loadPostAndContent = () => {
+      let currentPost = propPost;
+
+      // If no post prop was provided, load posts and find the one we need
+      (!propPost && id
+        ? import('../data/posts/posts')
+          .then((module) => {
+            const posts = module.default;
+            currentPost = posts.find((p) => p.id === id);
+            setPost(currentPost);
+            return currentPost;
+          }) : Promise.resolve(currentPost))
+        .then(async (foundPost) => {
+          if (foundPost?.address) {
+            const res = await import(`../data/posts/src/${foundPost.address}`);
+            const response = await fetch(res.default);
+            const markdownContent = await response.text();
+            return setMarkdown(markdownContent);
+          }
+          return Promise.resolve();
+        })
+        .then(() => setLoading(false))
+        .catch((error) => {
+          console.error('Error loading post:', error);
+          setLoading(false);
+        });
+    };
+
+    loadPostAndContent();
+  }, [propPost, id]);
+
+  if (loading) {
+    return (
+      <Main title="Loading..." description="Loading post...">
+        <article className="pagepost markdown">
+          <p>Loading content...</p>
+        </article>
+      </Main>
+    );
+  }
+
+  if (!post) {
+    return (
+      <Main title="Not Found" description="Post not found">
+        <article className="pagepost markdown">
+          <header>
+            <div className="title">
+              <h2>
+                <Link to="/posts">Post not found</Link>
+              </h2>
+            </div>
+          </header>
+        </article>
+      </Main>
+    );
+  }
 
   const count = markdown
     .split(/\s+/)
@@ -30,7 +83,7 @@ const PostTemplate = ({ post }) => {
         <header>
           <div className="title">
             <h2>
-              <Link to={`/post/${post.id}`}>{post.title}</Link>
+              <Link to={`/posts/${post.id}`}>{post.title}</Link>
             </h2>
             <p>(in about {count} words)</p>
           </div>
@@ -46,7 +99,11 @@ PostTemplate.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
+};
+
+PostTemplate.defaultProps = {
+  post: null,
 };
 
 export default PostTemplate;

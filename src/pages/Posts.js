@@ -19,7 +19,12 @@ const handleSectionClick = (sectionId, e) => {
 };
 
 const Posts = () => (
-  <Main title="Posts" description="posts on various topics">
+  <Main
+    title="Blog Posts by Ding Feng"
+    description="Blog posts by Ding Feng covering theoretical computer science, programming, technology, and academic insights. Computer Science student at NUS Singapore."
+    keywords="Ding Feng Blog, Computer Science Posts, Programming Blog, Theoretical Computer Science, NUS Singapore, Technology Articles"
+    path="/posts"
+  >
     <article className="pagepost" id="posts">
       <header>
         <div className="title">

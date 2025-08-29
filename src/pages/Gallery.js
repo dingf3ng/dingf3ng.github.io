@@ -7,7 +7,12 @@ import Cell from '../components/Gallery/Cell';
 import data from '../data/projects';
 
 const Gallery = () => (
-  <Main title="Gallery" description="Learn about Ding Feng's projects.">
+  <Main
+    title="Gallery - Ding Feng"
+    description="Explore Ding Feng's project gallery and portfolio. Computer Science projects, programming work, and creative endeavors from NUS Singapore student."
+    keywords="Ding Feng Gallery, Projects Portfolio, Computer Science Projects, Programming Portfolio, NUS Projects, Software Development"
+    path="/gallery"
+  >
     <article className="pagepost" id="gallery">
       <header>
         <div className="title">

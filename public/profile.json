@@ -1,0 +1,17 @@
+{
+    "name": "Ding Feng",
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "url": "https://dingf3ng.github.io",
+    "image": "https://dingf3ng.github.io/images/me.jpg",
+    "jobTitle": "Computer Science Student",
+    "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": "National University of Singapore"
+    },
+    "sameAs": [
+        "https://github.com/dingf3ng",
+        "https://www.linkedin.com/in/feng-ding-277872287/",
+        "https://www.instagram.com/dingf3ng/"
+    ]
+}

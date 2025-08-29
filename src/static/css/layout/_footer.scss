@@ -20,7 +20,7 @@
     text-transform: uppercase;
   }
 
-  body.single & {
+  body.is-menu-visible & {
     text-align: center;
   }
 }

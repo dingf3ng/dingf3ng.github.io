@@ -7,8 +7,10 @@ import ContactIcons from '../components/Contact/ContactIcons';
 
 const Contact = () => (
   <Main
-    title="Contact"
-    description="Contact me @ dingfeng@u.nus.edu"
+    title="Contact Ding Feng"
+    description="Contact Ding Feng - Computer Science Student at NUS Singapore. Get in touch via email: dingfeng@u.nus.edu or connect through social media."
+    keywords="Contact Ding Feng, Email, dingfeng@u.nus.edu, NUS Singapore, Computer Science Student"
+    path="/contact"
   >
     <article className="pagepost" id="contact">
       <header>

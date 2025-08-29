@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import postsData from '../../data/posts/posts.json';
-import compilationData from '../../data/posts/compilations.json';
+import postsData from '../../data/posts/posts';
+import compilationData from '../../data/posts/compilations';
 
 const Compilations = () => {
   const categories = postsData.reduce((acc, post) => {

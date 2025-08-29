@@ -21,7 +21,12 @@ const Personal = () => {
     .filter((s) => s.length).length;
 
   return (
-    <Main title="Personal" description="Learn More">
+    <Main
+      title="Personal - Ding Feng"
+      description="Get to know Ding Feng personally. Background, interests, hobbies, and personal journey from Tianjin, China to Singapore. Computer Science student at NUS."
+      keywords="Ding Feng Personal, About Ding Feng, Background, Tianjin China, NUS Singapore, Personal Interests, Hobbies, Biography"
+      path="/personal"
+    >
       <article className="pagepost markdown" id="personal">
         <header>
           <div className="title">

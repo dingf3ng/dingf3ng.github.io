@@ -6,7 +6,9 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!pathname.includes('post')) { // Do not scroll to top on post page
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return null;
