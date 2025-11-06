@@ -17,16 +17,13 @@ const initializeTheme = () => {
 
 const setupThemeListener = () => {
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
   const handleThemeChange = (e) => {
     const newTheme = e.matches ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', newTheme);
   };
-  if (mediaQuery.addEventListener) {
-    mediaQuery.addEventListener('change', handleThemeChange);
-  } else {
-    // Fallback for older browsers
-    mediaQuery.addListener(handleThemeChange);
-  }
+
+  mediaQuery.addEventListener('change', handleThemeChange);
 };
 
 // Initialize theme on load

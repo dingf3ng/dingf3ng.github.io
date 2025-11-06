@@ -1,68 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useEffect, lazy, Suspense,
+} from 'react';
 import PropTypes from 'prop-types';
 import { Link, useParams } from 'react-router-dom';
-import Markdown from 'react-markdown';
 
 import Main from '../layouts/Main';
+
+// This is the correct use of lazy() - for component code-splitting
+const MathMarkdown = lazy(() => Promise.all([
+  import('react-markdown'),
+  import('remark-math'),
+  import('rehype-katex'),
+  import('katex/dist/katex.min.css'),
+]).then(([markdown, remarkMath, rehypeKatex]) => ({
+  default: ({ children }) => (
+    <markdown.default
+      rehypePlugins={[rehypeKatex.default]}
+      remarkPlugins={[remarkMath.default]}
+    >
+      {children}
+    </markdown.default>
+  ),
+})));
 
 const PostTemplate = ({ post: propPost }) => {
   const { id } = useParams();
   const [post, setPost] = useState(propPost);
-  const [markdown, setMarkdown] = useState('');
   const [loading, setLoading] = useState(!propPost);
-  const [mathPlugins, setMathPlugins] = useState({ remarkMath: null, rehypeKatex: null });
+  const [error, setError] = useState(false);
 
+  // Data loading logic goes in useEffect, not lazy()
   useEffect(() => {
-    const loadMathPlugins = async () => {
-      try {
-        const [remarkMathModule, rehypeKatexModule] = await Promise.all([
-          import('remark-math'),
-          import('rehype-katex'),
-        ]);
-
-        // Import KaTeX CSS
-        await import('katex/dist/katex.min.css');
-
-        setMathPlugins({
-          remarkMath: remarkMathModule.default,
-          rehypeKatex: rehypeKatexModule.default,
-        });
-      } catch (error) {
-        console.error('Error loading math plugins:', error);
-      }
-    };
-
-    const loadPostAndContent = () => {
-      let currentPost = propPost;
-
-      // If no post prop was provided, load posts and find the one we need
-      (!propPost && id
-        ? import('../data/posts/posts')
-          .then((module) => {
-            const posts = module.default;
-            currentPost = posts.find((p) => p.id === id);
-            setPost(currentPost);
-            return currentPost;
-          }) : Promise.resolve(currentPost))
-        .then(async (foundPost) => {
+    if (!propPost && id) {
+      setLoading(true);
+      import('../data/posts/posts')
+        .then((module) => {
+          const posts = module.default;
+          const foundPost = posts.find((p) => p.id === id);
           if (foundPost?.address) {
-            const res = await import(`../data/posts/src/${foundPost.address}`);
-            const response = await fetch(res.default);
-            const markdownContent = await response.text();
-            return setMarkdown(markdownContent);
+            return import(`../data/posts/src/${foundPost.address}`)
+              .then((res) => fetch(res.default))
+              .then((response) => response.text())
+              .then((content) => ({ ...foundPost, content }));
           }
-          return Promise.resolve();
+          throw new Error('Post not found');
         })
-        .then(() => setLoading(false))
-        .catch((error) => {
-          console.error('Error loading post:', error);
-          setLoading(false);
-        });
-    };
-
-    loadMathPlugins();
-    loadPostAndContent();
+        .then(setPost)
+        .catch(() => setError(true))
+        .finally(() => setLoading(false));
+    }
   }, [propPost, id]);
+
+  const count = (content) => {
+    if (!content) return 0;
+    return content.split(/\s+/).filter((s) => s.trim().length).length;
+  };
 
   if (loading) {
     return (
@@ -74,15 +66,13 @@ const PostTemplate = ({ post: propPost }) => {
     );
   }
 
-  if (!post) {
+  if (error || !post) {
     return (
       <Main title="Not Found" description="Post not found">
         <article className="pagepost markdown">
           <header>
             <div className="title">
-              <h2>
-                <Link to="/posts">Post not found</Link>
-              </h2>
+              <h2><Link to="/posts">Post not found</Link></h2>
             </div>
           </header>
         </article>
@@ -90,28 +80,18 @@ const PostTemplate = ({ post: propPost }) => {
     );
   }
 
-  const count = markdown
-    .split(/\s+/)
-    .map((s) => s.replace(/\W/g, ''))
-    .filter((s) => s.length).length;
-
   return (
     <Main title={post.title} fullPage description="Learn More">
       <article className="pagepost markdown" id={post.id}>
         <header>
           <div className="title">
-            <h2>
-              <Link to={`/posts/${post.id}`}>{post.title}</Link>
-            </h2>
-            <p>(in about {count} words)</p>
+            <h2><Link to={`/posts/${post.id}`}>{post.title}</Link></h2>
+            <p>(in about {count(post.content)} words)</p>
           </div>
         </header>
-        <Markdown
-          rehypePlugins={mathPlugins.rehypeKatex ? [mathPlugins.rehypeKatex] : []}
-          remarkPlugins={mathPlugins.remarkMath ? [mathPlugins.remarkMath] : []}
-        >
-          {markdown}
-        </Markdown>
+        <Suspense fallback={<div>Loading math support...</div>}>
+          <MathMarkdown>{post.content}</MathMarkdown>
+        </Suspense>
       </article>
     </Main>
   );

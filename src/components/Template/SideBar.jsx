@@ -26,10 +26,18 @@ const SideBar = () => {
       <section id="intro">
         <div className="table">
           <Link to="/" className="logo">
-            <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
+            <img
+              src={`${PUBLIC_URL}/images/me.jpg`}
+              alt=""
+              loading="lazy"
+            />
           </Link>
           <Link to="/" className="logo">
-            <img src={`${PUBLIC_URL}/signature.png`} alt="" />
+            <img
+              src={`${PUBLIC_URL}/signature.png`}
+              alt=""
+              loading="lazy"
+            />
           </Link>
         </div>
         <header>
