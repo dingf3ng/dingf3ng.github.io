@@ -1,23 +1,37 @@
 const activities = [
   {
     id: 1,
+    date: '2025-11',
+    title: 'Pie-web',
+    description: 'Our team has developed a web-based IDE for the Pie, an educational language introduced in The Little Typer. It is now available at https://source-academy.github.io/pie-slang/!',
+    link: '/projects/tcs',
+  },
+  {
+    id: 1,
+    date: '2025-10',
+    title: 'We won the 3rd prize at ICFP 2025 SRC',
+    description: 'Me and my teammate Kyriel got into the finalist at ICFP 2025 SRC and won the 3rd prize, thanks to our hard work and dedication, also thank you prof. Michael for your support.',
+    link: '/projects/tcs',
+  },
+  {
+    id: 1,
     date: '2025-07',
     title: 'Accepted to ICFP 2025 SRC',
-    description: 'MiniMu: A Language for Understanding Duality will be presented at ICFP 2025.',
+    description: 'Our work: "Mini-Mu - A Language for Understanding Duality" got accepted to ICFP 2025! See you there!',
     link: '/projects/tcs',
   },
   {
     id: 1,
     date: '2025-05',
     title: 'Summer Break',
-    description: 'Beginning of summer break, working on personal projects and the UROP project on duality',
+    description: 'Beginning of summer break, working on personal projects and the UROP project on computational duality',
     link: '/projects/tcs',
   },
   {
     id: 1,
     date: '2025-04',
     title: 'STEP26',
-    description: 'Attending the STEP26 showcase, presenting Pie in Source Academy',
+    description: 'Attending the STEP26 showcase in NUS, presenting the work: "Pie in Source Academy". We got Best Project Award! Many thanks to my teammates, prof. Martin and everyone who supported us!',
     link: '/projects/tcs',
   },
   {
@@ -25,6 +39,13 @@ const activities = [
     date: '2025-01',
     title: 'Start UROP',
     description: 'Admitted to the UROP program, working under supervision of Prof. Michael D. Adams',
+    link: '/blog/algo-complexity',
+  },
+  {
+    id: 2,
+    date: '2024-12',
+    title: 'Trip to Europe',
+    description: 'From Paris to Instanbul, had a wonderful time exploring the culture and history of Europe!',
     link: '/blog/algo-complexity',
   },
 ];

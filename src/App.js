@@ -7,7 +7,7 @@ import {
 import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
 
-const { PUBLIC_URL } = process.env.PUBLIC_URL;
+const PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 const initializeTheme = () => {
   const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;

@@ -7,14 +7,14 @@
 /* Sidebar */
 
 #sidebar {
-  margin-right: _size(section-spacing);
-  min-width: 22em;
-  width: 22em;
+  margin-right: _size(section-spacing) * 0.7;
+  min-width: 21em;
+  width: 21em;
 
   > * {
     border-top: solid 2px var(--color-border);
-    margin: _size(section-spacing) 0 0 0;
-    padding: _size(section-spacing) 0 0 0;
+    margin: _size(section-spacing) * 0.7 0 0 0;
+    padding: _size(section-spacing) * 0.7 0 0 0;
   }
 
   > :first-child {
@@ -25,9 +25,9 @@
 
   @include breakpoint(large) {
     border-top: solid 2px var(--color-border);
-    margin: _size(section-spacing) 0 0 0;
+    margin: _size(section-spacing) * 0.7 0 0 0;
     min-width: 0;
-    padding: _size(section-spacing) 0 0 0;
+    padding: _size(section-spacing) * 0.7 0 0 0;
     width: 100%;
   }
 }
