@@ -51,9 +51,9 @@ const SideBar = () => {
       <section className="blurb">
         <h2>About</h2>
         <p>
-          Hi, I&apos;m Ding Feng, an undergraduate (Science & Technology Scholar) @{' '}
+          Hi, I&apos;m Ding Feng, an undergraduate (formerly Science & Technology Scholar) @{' '}
           <a href="https://www.comp.nus.edu.sg">National University of Singapore</a>.
-          I am majoring at CS and taking Mathematics and Economics as Minor. I will be
+          I am majoring at computer science and taking mathematics as minor. I will be
           graduating in 2027.
         </p>
         <ul className="actions">

@@ -3,7 +3,7 @@ const activities = [
     id: 1,
     date: '2025-11',
     title: 'Pie-web',
-    description: 'Our team has developed a web-based IDE for the Pie, an educational language introduced in The Little Typer. It is now available at https://source-academy.github.io/pie-slang/!',
+    description: 'Our team has developed a web-based IDE for the Pie, an educational language introduced in The Little Typer. It is now available at <a href="https://source-academy.github.io/pie-slang/">https://source-academy.github.io/pie-slang/!</a>',
     link: '/projects/tcs',
   },
   {
