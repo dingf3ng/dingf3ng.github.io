@@ -3,7 +3,7 @@
 Born in Tianjin, China, I was raised in a nurturing family environment that provided me with a strong foundation.
 My early years were enriched by time spent both in Tianjin and, occasionally, in Linzi (the capital of [Qi](https://en.wikipedia.org/wiki/Qi_(state))), a small town in Shandong where my father was born.
 My "academic" journey began at age six, following the standard educational timeline in China.
-Since then, I have completed studies in my beautiful [elementary school](https://baike.baidu.com/item/天津市南开区科技实验小学/7850747), [junior high](https://baike.baidu.com/item/天津市第二十五中学/6441189) (where I luckily meet my girlfriend) and [high school](https://zh.wikipedia.org/zh-sg/天津市新华中学).
+Since then, I have completed studies in my beautiful [elementary school](https://baike.baidu.com/item/天津市南开区科技实验小学/7850747), [junior high](https://baike.baidu.com/item/天津市第二十五中学/6441189) (where I luckily met my girlfriend) and [high school](https://zh.wikipedia.org/zh-sg/天津市新华中学).
 Throughout these educational stages, I was fortunate to develop meaningful relationships with educators and peers who contributed significantly to my  personal growth.
 In the year of 2023, I started my journey in Singapore, a disciplined city state.
 I have been a student in School of Computing of National University of Singapore and have been keeping explore new possibilities since then.
