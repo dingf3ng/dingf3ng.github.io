@@ -84,6 +84,6 @@
       "--disable-setuid-sandbox"
     ],
     "skipThirdPartyRequests": true,
-    "crawl": false
+    "crawl": true
   }
 }

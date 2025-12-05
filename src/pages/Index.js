@@ -7,11 +7,11 @@ import Main from '../layouts/Main';
 const Index = () => (
   <Main
     description={
-      'Ding Feng - Computer Science Student at National University of Singapore (NUS). '
-      + 'Science & Technology Scholar with interests in programming languages, '
-      + 'programming, and technology. Personal website and blog.'
+      'Ding Feng - Computer Science Student at National University of Singapore. '
+      + 'Science & Technology Scholar with interests in programming language research. '
+      + 'Personal website and blog.'
     }
-    keywords="Ding Feng, Computer Science, NUS, Science & Technology Scholar, Programming, Software Engineering, Personal Website, Blog, Theoretical Computer Science, Algorithms, Data Structures, Programming Languages"
+    keywords="Ding Feng, Computer Science, National University of Singapore, Science & Technology Scholar, Programming Language, Personal Website, Blog, Theoretical Computer Science, Algorithms, Data Structures, Education"
     path="/"
   >
     <article className="pagepost" id="index">

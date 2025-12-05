@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContactIcons from '../Contact/ContactIcons';
 
-const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+const { PUBLIC_URL, NODE_ENV } = process.env; // set automatically from package.json:homepage
 
 const SideBar = () => {
   const [lastUpdated, setLastUpdated] = useState(null);
@@ -71,8 +71,19 @@ const SideBar = () => {
           &copy; Ding Feng, 2024, <Link to="/">dingf3ng.github.io</Link>.
         </p>
         <p className="copyright">
-          last updated on {lastUpdated || 'loading...'}
+          Last updated on {lastUpdated || 'loading...'}
         </p>
+        {NODE_ENV === 'production' ? (
+          <p className="copyright">
+            <span id="busuanzi_container_site_pv">
+              Site views: <span id="busuanzi_value_site_pv" />
+            </span>
+          </p>
+        ) : (
+          <p className="copyright">
+            <span>Site views: (local)</span>
+          </p>
+        )}
       </section>
     </section>
   );
