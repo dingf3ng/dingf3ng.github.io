@@ -55,10 +55,17 @@
 @import "layout/wrapper";
 @import "layout/main";
 @import "layout/sidebar";
+@import "layout/sidebar-content";
 @import "layout/intro";
 @import "layout/footer";
+@import "layout/global-footer";
 @import "layout/menu";
 
 @import "pages/contact";
 @import "pages/notFound";
 @import "pages/posts";
+
+// Dark mode dim filter
+html[data-theme="dark"] .dark-mode-dim {
+  opacity: 1 !important;
+}

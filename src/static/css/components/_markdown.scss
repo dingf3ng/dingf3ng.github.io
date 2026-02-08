@@ -7,10 +7,9 @@
 
   // Headers
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 1.5em;
+    font-size: 1em;
     margin-left: 0.5em;
-    margin-bottom: 0.5em;
-    font-weight: 600;
+    font-weight: _font(weight-heading-bold);
   }
 
   // Math formulas

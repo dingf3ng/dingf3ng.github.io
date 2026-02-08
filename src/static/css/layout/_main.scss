@@ -7,7 +7,11 @@
 /* Main */
 
 #main {
-  @include vendor("flex-grow", "1");
-  @include vendor("flex", "1");
   width: 100%;
+  max-width: 50em;
+  margin: 0 auto;
+
+  @include breakpoint(large) {
+    max-width: 100%;
+  }
 }

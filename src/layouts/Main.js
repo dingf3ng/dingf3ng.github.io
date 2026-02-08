@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import Analytics from '../components/Template/Analytics';
 import Navigation from '../components/Template/Navigation';
-import SideBar from '../components/Template/SideBar';
+import GlobalFooter from '../components/Template/GlobalFooter';
 import ScrollToTop from '../components/Template/ScrollToTop';
 
 const Main = (props) => {
@@ -89,9 +89,7 @@ const Main = (props) => {
       <div id="wrapper">
         <Navigation />
         <div id="main">{props.children}</div>
-        {
-          props.fullPage ? null : <SideBar />
-        }
+        <GlobalFooter />
       </div>
     </HelmetProvider>
   );
@@ -102,7 +100,6 @@ Main.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  fullPage: PropTypes.bool,
   title: PropTypes.string,
   description: PropTypes.string,
   keywords: PropTypes.string,
@@ -112,7 +109,6 @@ Main.propTypes = {
 
 Main.defaultProps = {
   children: null,
-  fullPage: false,
   title: null,
   description: 'Ding Feng\'s personal website.',
   keywords: null,

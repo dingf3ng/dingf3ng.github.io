@@ -38,7 +38,7 @@ const activities = [
     id: 1,
     date: '2025-07',
     title: 'Accepted to ICFP 2025 SRC',
-    description: 'Our work: "Mini-Mu - A Language for Understanding Duality" got accepted to ICFP 2025! See you there!',
+    description: 'Our work: "Mini-Mu - A Language for Understanding Duality" got accepted to ICFP 2025 SRC! See you there!',
     link: '/projects/tcs',
   },
   {
