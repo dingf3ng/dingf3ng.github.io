@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MeshGradient } from '@mesh-gradient/react';
 import Activities from '../components/Home/Activities';
-import SideBarContent from '../components/Template/SideBarContent';
+import ProfileSection from '../components/Template/ProfileSection';
 
 import Main from '../layouts/Main';
 
@@ -55,7 +55,7 @@ const Index = () => (
       }}
     />
     <article className="page-content" id="introduction">
-      <SideBarContent />
+      <ProfileSection />
     </article>
     <article className="page-content" id="index">
       <header>
