@@ -13,13 +13,13 @@ const Gallery = () => (
     keywords="Ding Feng Gallery, Projects Portfolio, Computer Science Projects, Programming Portfolio, NUS Projects, Software Development"
     path="/gallery"
   >
-    <article className="pagepost" id="gallery">
+    <article className="page-content" id="gallery">
       <header>
         <div className="title">
           <h2>
             <Link to="/gallery">Gallery</Link>
           </h2>
-          <p>A selection of interesting stuffs</p>
+          <p>A selection of interesting stuff made by me</p>
         </div>
       </header>
       {data.map((project) => (

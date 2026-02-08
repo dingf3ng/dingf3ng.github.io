@@ -21,7 +21,7 @@ $size: (
 // Font.
 $font: (
   family: (
-    "Source Sans Pro",
+    "Inter",
     Helvetica,
     sans-serif,
   ),
@@ -30,16 +30,16 @@ $font: (
     monospace,
   ),
   family-heading: (
-    "Raleway",
+    "Inter",
     Helvetica,
     sans-serif,
   ),
   weight: 400,
-  weight-bold: 700,
-  weight-heading: 400,
-  weight-heading-bold: 800,
-  weight-heading-extrabold: 900,
-  kerning-heading: 0.25em,
+  weight-bold: 500,
+  weight-heading: 500,
+  weight-heading-bold: 700,
+  weight-heading-extrabold: 700,
+  kerning-heading: 0.01em,
 );
 
 // Palette.

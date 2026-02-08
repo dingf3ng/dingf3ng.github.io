@@ -27,15 +27,14 @@ button,
   cursor: pointer;
   display: inline-block;
   font-family: _font(family-heading);
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-weight: _font(weight-heading-bold);
-  height: _size(element-height) * 1.75;
+  height: _size(element-height) * 1.5;
   letter-spacing: _font(kerning-heading);
-  line-height: _size(element-height) * 1.75;
-  padding: 0 2.5em;
+  line-height: _size(element-height) * 1.5;
+  padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
 
   &:hover {

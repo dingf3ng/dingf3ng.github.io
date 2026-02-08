@@ -12,16 +12,17 @@ const Contact = () => (
     keywords="Contact Ding Feng, Email, dingfeng@u.nus.edu, National University of Singapore, Computer Science Student"
     path="/contact"
   >
-    <article className="pagepost" id="contact">
+    <article className="page-content" id="contact">
       <header>
         <div className="title">
           <h2>
             <Link to="/contact">Contact</Link>
           </h2>
+          <p>Get in touch with me through email or social media</p>
         </div>
       </header>
       <div className="email-at">
-        <p>Feel free to get in touch. You can email me at: </p>
+        <p>To get in touch, email me at:</p>
         <EmailLink email="dingfeng@u.nus.edu" />
       </div>
       <ContactIcons />

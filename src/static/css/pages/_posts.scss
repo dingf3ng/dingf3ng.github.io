@@ -59,54 +59,39 @@
   margin-bottom: 0.2em;
 }
 
-.compilation-box {
-
-  margin: 0.5em;
-  border: solid 2px var(--color-border);
-  padding: 1.5em;
-
-  width: 321px;
-  min-height: 200px;
-  max-height: 200px;
-
-
-  h4 {
-    font-weight: normal;
-  }
-
-  transition: transform 0.3s ease,
-  box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px var(--color-border);
-  }
-
-  .category {
-    margin-bottom: 0.1em;
-    text-transform: none;
-    letter-spacing: 0.16em;
-    font-size: 0.8em;
-  }
-}
-
 .postbox {
   position: relative; // Added to make the date position relative to this box
   margin-bottom: 2em;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 1em 1.5em;
   border: solid 2px var(--color-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px var(--color-border);
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.3em 0.5em var(--color-border);
+  }
+
+  h3 {
+    font-size: 1em;
+    font-weight: _font(weight-heading-bold);
+  }
+
+  .category {
+    font-size: 0.9em;
+    font-weight: _font(weight-heading-bold);
   }
 
   .date {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 1.5em;
+    right: 1.5em;
     font-style: italic;
+    font-size: 0.9em;
+    font-weight: _font(weight-heading);
+  }
+
+  p {
+    font-size: 0.9em;
   }
 }
 

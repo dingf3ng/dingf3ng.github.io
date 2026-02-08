@@ -1,6 +1,13 @@
 const activities = [
   {
     id: 1,
+    date: '2026-01',
+    title: 'plse',
+    description: 'Working as research assistant with Prof. Chin Wei Ngan, focusing on program analysis and verification.',
+    link: '/projects/tcs',
+  },
+  {
+    id: 1,
     date: '2025-12',
     title: 'winter break',
     description: 'Beginning of winter break, I am going to have a great time relaxing and recharging!',

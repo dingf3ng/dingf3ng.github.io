@@ -41,7 +41,7 @@ const SideBar = () => {
           </Link>
         </div>
         <header>
-          <h2>DING Feng</h2>
+          <h2>Ding Feng</h2>
           <p>
             <a href="mailto:dingfeng@u.nus.edu">dingfeng@u.nus.edu</a>
           </p>

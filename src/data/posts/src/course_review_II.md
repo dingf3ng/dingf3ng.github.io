@@ -10,28 +10,47 @@ in 4 dimensions:
 
 In this part of course review, I will review some electives coded in CS.
 
-## CS2104 - Programming Language Concepts
+## CS2104 - Programming Language Concepts - SEM 1, AY 24/25
 
 Teaching team: *Prof. Martin Henz* et al.
 
-## CS4215 - Programming Language Implementation
+- Effectiveness: ★ ★
+- Usefulness: ★ ★ ★
+- Importance: ★
+- Workload: ★
 
-Teaching team: *Prof. Martin Henz* et al.
-
-## CS3234 - Logic for Proofs and Programs
-
-Teaching team: *Prof. Olivier Danvy* et al.
-
-## CS3231 - Theory of Computation
+## CS3231 - Theory of Computation - SEM 1, AY 24/25
 
 Teaching team: *Prof. Sanjay Jain* et al.
 
-## CS4269 - Fundamentals of Logic in Computer Science
+- Effectiveness: ★
+- Usefulness: ★ ★ ★
+- Importance: ★ ★ ★
+- Workload: ★ ★ ★
+
+## CS4269 - Fundamentals of Logic in Computer Science - SEM 1, AY 24/25
 
 Teaching team: *Prof. Umang Mathur* et al.
 
----
+- Effectiveness: ★ ★ ★ ★
+- Usefulness: ★ ★ ★
+- Importance: ★ ★ ★
+- Workload: ★ ★ ★ ★ ★
 
-## CP2106 - Orbital
+## CS4215 - Programming Language Implementation - SEM 2, AY 24/25
 
-## CP3108A/B - Independent Project
+Teaching team: *Prof. Martin Henz* et al.
+
+- Effectiveness: ★ ★
+- Usefulness: ★ ★ ★
+- Importance: ★ ★
+- Workload: ★ ★
+
+## CS3234 - Logic for Proofs and Programs - SEM 2, AY 24/25
+
+Teaching team: *Prof. Olivier Danvy* et al.
+
+- Effectiveness: ★ ★ ★ ★
+- Usefulness: ★ ★ ★
+- Importance: ★ ★ ★ ★
+- Workload: ★ ★ ★

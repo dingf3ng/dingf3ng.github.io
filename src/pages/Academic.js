@@ -27,7 +27,7 @@ const Academic = () => {
       keywords="Ding Feng Academic, NUS Computer Science, Research, Educational Background, Academic Achievements, University Singapore"
       path="/academic"
     >
-      <article className="pagepost markdown" id="academic">
+      <article className="page-content page-content-md" id="academic">
         <header>
           <div className="title">
             <h2>

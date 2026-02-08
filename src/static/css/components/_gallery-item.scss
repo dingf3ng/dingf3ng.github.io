@@ -4,7 +4,7 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
-/* Mini Post */
+/* Gallery Item */
 .cell-container {
   position: relative;
 
@@ -15,7 +15,7 @@
     border-top: solid 2px var(--color-border);
 
     p {
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       margin: 0;
       padding: 1.25em;
       background-color: rgba(255, 255, 255, 0.7);
@@ -40,7 +40,7 @@
   }
 }
 
-.mini-post {
+.gallery-item {
   @include vendor("display", "flex");
   @include vendor("flex-direction", "column");
   background: var(--color-bg);
@@ -74,17 +74,17 @@
     @include vendor("flex-grow", "1");
 
     h3 {
-      font-size: 0.7em;
+      font-size: 0.9em;
+      font-weight: _font(weight-heading);
     }
 
     .published {
       display: block;
       font-family: _font(family-heading);
-      font-size: 0.6em;
+      font-size: 0.9em;
       font-weight: _font(weight-heading);
       letter-spacing: _font(kerning-heading);
       margin: -0.625em 0 (_size(element-margin) * 0.85) 0;
-      text-transform: uppercase;
     }
 
     .author {
@@ -95,7 +95,7 @@
   }
 }
 
-.mini-posts {
+.gallery-items {
   margin: 0 0 _size(element-margin);
   @include breakpoint(large) {
     @include vendor("display", "flex");

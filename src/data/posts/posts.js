@@ -47,6 +47,22 @@ const posts = [
     date: '2025-06-16',
     category: 'NUS Course Review',
   },
+  {
+    id: '7',
+    title: 'Course Review III',
+    excerpt: 'This is the third part of the course review, contains more core modules in computer science curriculum.',
+    address: 'course_review_III.md',
+    date: '2025-12-28',
+    category: 'NUS Course Review',
+  },
+  {
+    id: '8',
+    title: 'Course Review IV',
+    excerpt: 'This is the fourth part of the course review, contains more elective modules in computer science curriculum.',
+    address: 'course_review_IV.md',
+    date: '2025-12-29',
+    category: 'NUS Course Review',
+  },
 ];
 
 export default posts;

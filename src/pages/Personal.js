@@ -27,7 +27,7 @@ const Personal = () => {
       keywords="Ding Feng Personal, About Ding Feng, Background, Tianjin China, NUS Singapore, Personal Interests, Hobbies, Biography"
       path="/personal"
     >
-      <article className="pagepost markdown" id="personal">
+      <article className="page-content page-content-md" id="personal">
         <header>
           <div className="title">
             <h2>

@@ -59,7 +59,7 @@ const PostTemplate = ({ post: propPost }) => {
   if (loading) {
     return (
       <Main title="Loading..." description="Loading post...">
-        <article className="pagepost markdown">
+        <article className="page-content page-content-md">
           <p>Loading content...</p>
         </article>
       </Main>
@@ -69,7 +69,7 @@ const PostTemplate = ({ post: propPost }) => {
   if (error || !post) {
     return (
       <Main title="Not Found" description="Post not found">
-        <article className="pagepost markdown">
+        <article className="page-content page-content-md">
           <header>
             <div className="title">
               <h2><Link to="/posts">Post not found</Link></h2>
@@ -82,7 +82,7 @@ const PostTemplate = ({ post: propPost }) => {
 
   return (
     <Main title={post.title} fullPage description="Learn More">
-      <article className="pagepost markdown" id={post.id}>
+      <article className="page-content page-content-md" id={post.id}>
         <header>
           <div className="title">
             <h2><Link to={`/posts/${post.id}`}>{post.title}</Link></h2>

@@ -46,7 +46,7 @@ body {
     white-space: nowrap;
 
     a {
-      font-size: 0.7em;
+      font-size: 0.9em;
     }
   }
 
@@ -75,10 +75,9 @@ body {
         a {
           border-bottom: 0;
           font-family: _font(family-heading);
-          font-size: 0.7em;
+          font-size: 0.9em;
           font-weight: _font(weight-heading);
           letter-spacing: _font(kerning-heading);
-          text-transform: uppercase;
         }
       }
     }
@@ -94,6 +93,7 @@ body {
     /* Optional: add some spacing or styling */
     #theme-toggle {
       padding: 0 1em;
+      font-size: 0.9em;
     }
 
     @include breakpoint(medium) {
@@ -201,7 +201,7 @@ body {
 .bm-menu {
   background: var(--color-bg-alt);
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  font-size: 1em;
   position: relative;
 }
 
@@ -216,7 +216,7 @@ body {
   #theme-toggle {
     width: 100%;
     margin: 0 auto;
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
 }
 

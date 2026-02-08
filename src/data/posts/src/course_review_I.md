@@ -10,7 +10,7 @@ in 4 dimensions:
 
 In this part of the course review, I will discuss some classic CS courses (including the infamous Trinity), and three core math mods.
 
-## CS1231S - Discrete Structures
+## CS1231S - Discrete Structures - Sem 1, AY 23/24
 
 Teaching team: *Prof. Aaron Tan* et al.
 
@@ -24,7 +24,7 @@ Integrating applications and examples would bridge this gap and better illustrat
 - Importance: Core Module
 - Workload: ★ ★ ★ ★
 
-## CS2030S - Programming Methodology II
+## CS2030S - Programming Methodology II - Sem 1, AY 23/24
 
 Teaching team: *Prof. Adi Yoga S. Prabawa* et al.
 
@@ -44,7 +44,7 @@ Notably, Practical Exams can be disastrous if you are not a good typer or not fa
 - Importance: Core Module
 - Workload: ★ ★ ★
 
-## CS2040S - Data Structures and Algorithms
+## CS2040S - Data Structures and Algorithms - Sem 2, AY 23/24
 
 Teaching team: *Prof. Seth Gilbert, Prof. Shao Lin* et al.
 
@@ -64,7 +64,7 @@ One thing to be aware of is that the grading scheme is hidden, which means you s
 - Importance: Core Module
 - Workload: ★ ★ ★ ★ ★
 
-## CS2100 - Computer Organization
+## CS2100 - Computer Organization - Sem 2, AY 23/24
 
 Teaching team: *Prof. Aaron Tan, Prof. Prabhu Natarajan* et al.
 
@@ -83,7 +83,7 @@ In one sentence, you need to know how computer works without any abstraction lay
 - Importance: Core Module
 - Workload: ★ ★
 
-## MA1521 - Calculus for Computing
+## MA1521 - Calculus for Computing - Sem 1, AY 23/24
 
 Teaching team: *Prof. To Wing Keung* et al.
 
@@ -97,7 +97,7 @@ While it is a required module, some may find its content inapplicable to their p
 - Importance: Core Module
 - Workload: ★
 
-## MA1522 - Linear Algebra for Computing
+## MA1522 - Linear Algebra for Computing - Sem 1, AY 23/24
 
 Teaching team: *Dr. Jonathan Teo*
 
@@ -115,7 +115,7 @@ Good introductory course to linear algebra, and it is very practical compare to 
 - Importance: Core Module
 - Workload: ★ ★
 
-## ST2334 - Probability and Statistics
+## ST2334 - Probability and Statistics - Sem 2, AY 24/25
 
 Teaching team: *Prof. Yu Tao* et al.
 

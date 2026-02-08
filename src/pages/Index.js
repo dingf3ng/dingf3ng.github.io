@@ -14,7 +14,7 @@ const Index = () => (
     keywords="Ding Feng, Computer Science, National University of Singapore, Science & Technology Scholar, Programming Language, Personal Website, Blog, Theoretical Computer Science, Algorithms, Data Structures, Education"
     path="/"
   >
-    <article className="pagepost" id="index">
+    <article className="page-content" id="index">
       <header>
         <div className="title">
           <h2>

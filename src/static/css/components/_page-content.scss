@@ -6,7 +6,7 @@
 
 /* Post */
 
-.pagepost {
+.page-content {
   @include padding(_size(section-spacing), _size(section-spacing));
   background: var(--color-bg);
   border: solid 2px var(--color-border);
@@ -30,6 +30,11 @@
       h2 {
         font-weight: _font(weight-heading-extrabold);
         font-size: 1.5em;
+      }
+
+      p {
+        font-weight: _font(weight-heading);
+        font-size: 0.9em;
       }
 
       > :last-child {
@@ -60,7 +65,6 @@
         font-weight: _font(weight-heading-bold);
         letter-spacing: _font(kerning-heading);
         margin-top: 0.5em;
-        text-transform: uppercase;
         white-space: nowrap;
       }
     }
@@ -106,7 +110,6 @@
         line-height: 1;
         margin: 0 0 0 2em;
         padding: 0 0 0 2em;
-        text-transform: uppercase;
 
         &:first-child {
           border-left: 0;
