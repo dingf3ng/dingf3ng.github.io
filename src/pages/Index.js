@@ -34,8 +34,8 @@ const Index = () => (
         width: '100vw',
         height: '100vh',
         zIndex: 0,
-        backdropFilter: 'blur(1em)',
-        WebkitBackdropFilter: 'blur(1em)',
+        backdropFilter: 'blur(0.9em)',
+        WebkitBackdropFilter: 'blur(0.9em)',
         pointerEvents: 'none',
       }}
     />
