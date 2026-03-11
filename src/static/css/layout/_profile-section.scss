@@ -15,7 +15,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 3em;
+    gap: 1em;
     flex-wrap: wrap;
 
     .profile-info {
@@ -98,7 +98,7 @@
 
   @include breakpoint(medium) {
     .profile-container {
-      gap: 2em;
+      gap: 1em;
 
       .profile-info {
         header {
@@ -125,7 +125,7 @@
     margin-bottom: _size(section-spacing-small);
 
     .profile-container {
-      gap: 1.5em;
+      gap: 1em;
 
       .profile-info {
         header {

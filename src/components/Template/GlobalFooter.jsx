@@ -24,7 +24,7 @@ const GlobalFooter = () => {
     <footer id="global-footer">
       <div className="footer-content">
         <p className="copyright">
-          &copy; Ding Feng, 2024, <Link to="/">dingf3ng.github.io</Link>.
+          &copy; Ding Feng, 2026, <Link to="/">dingf3ng.github.io</Link>.
         </p>
         {NODE_ENV === 'production' ? (
           <p className="copyright">

@@ -25,10 +25,14 @@ const ProfileSection = () => (
         </header>
         <div className="intro-text">
           <p>
-            Hi, I&apos;m Ding Feng, an undergraduate (formerly Science & Technology Scholar) @{' '}
-            <a href="https://www.comp.nus.edu.sg">National University of Singapore</a>.
-            I am majoring at computer science and taking mathematics as minor. I will be
-            graduating in 2027.
+            I am a penultimate-year undergraduate student @{' '}
+            <a href="https://www.comp.nus.edu.sg">School of Computing, National University of Singapore</a>.
+            I am majoring in computer science and taking mathematics as a minor. I expect to graduate in 2027.
+          </p>
+          <p>
+            I have a broad interest in aspects of programming languages and software engineering.
+            I do research on the logical foundations of software, machine/AI-assisted approaches for building reliable software, and next-generation methodologies for understanding and interpreting programs.
+            I also have experience in full-stack development with modern frameworks.
           </p>
           <ul className="actions">
             <li>
