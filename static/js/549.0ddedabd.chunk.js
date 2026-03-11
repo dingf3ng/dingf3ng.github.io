@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkpersonal_site=globalThis.webpackChunkpersonal_site||[]).push([[549],{549(s,a,e){s.exports=e.p+"static/media/my_first_post.cb1825d458ba866660d6.md"}}]);
