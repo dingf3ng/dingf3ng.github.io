@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Markdown from 'react-markdown';
 
@@ -23,8 +23,8 @@ const Academic = () => {
   return (
     <Main
       title="Academic Matters - Ding Feng"
-      description="Learn about Ding Feng's academic work, research interests, and educational journey at National University of Singapore (NUS). Computer Science studies and achievements."
-      keywords="Ding Feng Academic, NUS Computer Science, Research, Educational Background, Academic Achievements, University Singapore"
+      description="Learn about Ding Feng's academic thoughts and work, research interests, and experience as an educator at National University of Singapore. Computer Science studies and achievements."
+      keywords="Ding Feng Academic, Computer Science, Research, Educational Background, Academic Achievements, National University of Singapore"
       path="/academic"
     >
       <article className="page-content page-content-md" id="academic">

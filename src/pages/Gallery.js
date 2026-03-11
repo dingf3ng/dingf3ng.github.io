@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
@@ -9,8 +8,8 @@ import data from '../data/projects';
 const Gallery = () => (
   <Main
     title="Gallery - Ding Feng"
-    description="Explore Ding Feng's project gallery and portfolio. Computer Science projects, programming work, and creative endeavors from NUS Singapore student."
-    keywords="Ding Feng Gallery, Projects Portfolio, Computer Science Projects, Programming Portfolio, NUS Projects, Software Development"
+    description="Explore Ding Feng's project gallery and portfolio. Computer Science projects, and creative works."
+    keywords="Ding Feng Gallery, Projects Portfolio, Computer Science Projects, Programming Portfolio, Software Development"
     path="/gallery"
   >
     <article className="page-content" id="gallery">

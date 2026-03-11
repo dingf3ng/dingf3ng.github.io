@@ -1,4 +1,4 @@
-import React, {
+import {
   useState, useEffect, lazy, Suspense,
 } from 'react';
 import PropTypes from 'prop-types';

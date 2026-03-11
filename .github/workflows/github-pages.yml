@@ -64,8 +64,8 @@ jobs:
           retry npm run predeploy
         env:
           NODE_ENV: production
-          # Remove this line if you would like to skip using google analytics
-          REACT_APP_GA_TRACKING_ID: UA-68649021-1
+          # Google Analytics 4 Measurement ID
+          REACT_APP_GA_TRACKING_ID: G-RWW69BCP28
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

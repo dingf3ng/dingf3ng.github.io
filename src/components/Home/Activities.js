@@ -1,4 +1,3 @@
-import React from 'react';
 import activities from '../../data/activities';
 
 // Renders recent activities; descriptions may include inline HTML (e.g. <a> tags)

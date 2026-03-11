@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -52,7 +51,7 @@ const Main = (props) => {
       <ScrollToTop />
       <Helmet
         titleTemplate="%s - Ding Feng"
-        defaultTitle="Ding Feng's Website"
+        defaultTitle="Ding Feng"
         defer={false}
       >
         {props.title && <title>{props.title}</title>}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { MeshGradient } from '@mesh-gradient/react';
 import Activities from '../components/Home/Activities';
