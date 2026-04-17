@@ -2,7 +2,7 @@
 
 .sections {
   display: grid;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 
 .section + .section {
@@ -16,127 +16,155 @@
 
 .sectionTitle {
   margin-bottom: 0.3rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .sectionIntro {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-body-sm);
-}
-
-.entries {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.entry {
-  display: grid;
-  grid-template-columns: 4.5rem minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-  padding: 1.3rem 0;
-  border-top: solid var(--surface-border-width) var(--color-border);
-}
-
-.entry:first-child {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.entryDate {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.15rem;
-  padding-top: 0.15rem;
-}
-
-.entryYear {
-  color: var(--color-text-strong);
-  font-size: 1rem;
-  font-weight: var(--font-weight-bold);
-  line-height: 1;
-}
-
-.entryMonth {
-  color: var(--color-text-muted);
-  font-size: 0.68rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-wide);
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.entryBody {
-  min-width: 0;
-}
-
-.entryType {
-  margin: 0 0 0.35rem;
-  color: var(--color-text-muted);
-  font-size: 0.68rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-wide);
-  text-transform: uppercase;
-}
-
-.entryTitle {
-  margin-bottom: 0.35rem;
-  font-size: 0.98rem;
-}
-
-.entryTitleLink {
-  border-bottom: 0;
-}
-
-.citation {
-  margin: 0 0 0.5rem;
-  color: var(--color-text-strong);
-  font-size: var(--font-size-body-sm);
-}
-
-.abstract {
   margin: 0;
   color: var(--color-text);
   font-size: var(--font-size-body-sm);
 }
 
-.links {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
+.publications {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.assetLink {
+.publicationItem {
+  padding: var(--space-sm) 0;
+}
+
+.publicationItem:first-child {
+  padding-top: 0;
+}
+
+.publicationBody {
+  min-width: 0;
+}
+
+.publicationHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: baseline;
+  margin-bottom: var(--space-2xs);
+}
+
+.publicationTitle {
+  margin: 0;
+  font-size: var(--font-size-body);
+  line-height: 1.35;
+}
+
+.publicationTitleLink {
   border-bottom: 0;
+}
+
+.publicationAuthors {
+  margin: 0 0 0.2rem;
   color: var(--color-text-strong);
-  font-size: 0.72rem;
+  font-size: var(--font-size-body-sm);
+  line-height: 1.5;
+}
+
+.publicationVenue {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--font-size-body-sm);
+  line-height: 1.5;
+}
+
+.publicationLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.publicationButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1rem;
+  padding: 0 var(--space-md);
+  border: 0;
+  background: var(--color-bg);
+  box-shadow: inset 0 0 0 2px var(--color-border);
+  color: var(--color-text);
+  font-size: var(--font-size-caption);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
+  transition:
+    box-shadow var(--transition-fast),
+    color var(--transition-fast);
 }
 
-.assetLink::before {
-  content: '[';
+.publicationButton:hover {
+  box-shadow: inset 0 0 0 2px var(--color-border);
+  color: var(--color-text-strong);
+  opacity: 0.72;
 }
 
-.assetLink::after {
-  content: ']';
+.talkList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: var(--font-weight-regular);
+}
+
+.talkItem + .talkItem {
+  margin-top: var(--space-lg);
+}
+
+.talkHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: baseline;
+  margin-bottom: var(--space-2xs);
+}
+
+.talkTitle {
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+}
+
+.talkVenues {
+  margin: var(--space-2xs) 0 0;
+  padding: 0 0 0 var(--space-lg);
+  list-style: square;
+}
+
+.talkVenue {
+  color: var(--color-text);
+  font-size: var(--font-size-body-sm);
+}
+
+.talkVenue + .talkVenue {
+  margin-top: var(--space-2xs);
+}
+
+.talkVenueLink {
+  border-bottom: 0;
+  color: var(--color-accent);
 }
 
 @include mobile {
-  .entry {
-    grid-template-columns: 1fr;
-    gap: 0.65rem;
+  .publicationItem {
     padding: 1rem 0;
   }
 
-  .entryDate {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 0.45rem;
-    padding-top: 0;
+  .publicationHeader {
+    gap: var(--space-2xs);
+  }
+
+  .talkHeader {
+    gap: var(--space-2xs);
+  }
+
+  .talkVenues {
+    padding-left: var(--space-md);
   }
 }

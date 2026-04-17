@@ -7,75 +7,96 @@ import talks from '../data/talks.json';
 import styles from './Gallery.module.scss';
 
 const sortByDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
+const getLatestSessionDate = (sessions = []) => sessions
+  .map((session) => new Date(session.date))
+  .sort((a, b) => b - a)[0];
 
-const resolvePdfLink = (href) => (
+const resolveAssetLink = (href) => (
   href.startsWith('http://') || href.startsWith('https://')
     ? href
     : `${process.env.PUBLIC_URL}${href}`
 );
 
 const formatDate = (value) => dayjs(value).format('MMMM YYYY');
-const formatMonth = (value) => dayjs(value).format('MMM');
 const formatYear = (value) => dayjs(value).format('YYYY');
 
 const publicationItems = [...publications].sort(sortByDateDesc);
-const talkItems = [...talks].sort(sortByDateDesc);
+const talkItems = [...talks]
+  .map((item) => ({
+    ...item,
+    sessions: [...item.sessions].sort(sortByDateDesc),
+  }))
+  .sort((a, b) => getLatestSessionDate(b.sessions) - getLatestSessionDate(a.sessions));
 
 const Gallery = () => (
   <Main
-    title="Publications & Talks - Ding Feng"
-    description="A temporary list of Ding Feng's publications and talks, with PDF links for papers, abstracts, and presentation materials."
-    keywords="Ding Feng Publications, Ding Feng Talks, Research Papers, Presentations, Programming Languages, Software Research"
+    title="Gallery | Ding Feng"
+    description="A list of Ding Feng's publications and talks, with PDF links for papers, abstracts, and presentation materials."
+    keywords="Ding Feng Publications, Ding Feng Talks, Research Papers, Presentations, Programming Languages, Software Engineering, Computer Science, NUS"
     path="/gallery"
   >
     <article className="surface-panel">
       <header className="surface-panel__header">
         <div className="surface-panel__title-block">
           <h2 className="surface-panel__title">
-            <Link to="/gallery">Publications & Talks</Link>
+            <Link to="/gallery">Gallery: Publications and Talks</Link>
           </h2>
-          <p className="surface-panel__subtitle">Selected publications, preprints, and research presentations</p>
+          <p className="surface-panel__subtitle">List of publications, drafts and talks</p>
         </div>
       </header>
       <div className={styles.sections}>
         <section className={styles.section}>
           <header className={styles.sectionHeader}>
-            <h3 className={styles.sectionTitle}>Selected Publications</h3>
-            <p className={styles.sectionIntro}>A reverse-chronological list of papers, abstracts, and working notes.</p>
+            <h3 className={styles.sectionTitle}>Publications and Drafts</h3>
           </header>
-          <ol className={styles.entries}>
+          <ol className={styles.publications}>
             {publicationItems.map((item) => (
-              <li className={styles.entry} key={`${item.title}-${item.date}`}>
-                <div className={styles.entryDate}>
-                  <span className={styles.entryYear}>{formatYear(item.date)}</span>
-                  <time className={styles.entryMonth} dateTime={item.date}>{formatMonth(item.date)}</time>
-                </div>
-                <article className={styles.entryBody}>
-                  <p className={styles.entryType}>{item.type}</p>
-                  <h4 className={styles.entryTitle}>
-                    <a
-                      className={styles.entryTitleLink}
-                      href={resolvePdfLink(item.pdf)}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {item.title}
-                    </a>
-                  </h4>
-                  <p className={styles.citation}>
-                    {item.authors}. {item.venue}. {formatDate(item.date)}.
-                  </p>
-                  <p className={styles.abstract}>{item.summary}</p>
-                  <div className={styles.links}>
-                    <a
-                      className={styles.assetLink}
-                      href={resolvePdfLink(item.pdf)}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      PDF
-                    </a>
+              <li className={styles.publicationItem} key={`${item.title}-${item.date}`}>
+                <article className={styles.publicationBody}>
+                  <div className={styles.publicationHeader}>
+                    <h4 className={styles.publicationTitle}>
+                      {item.pdf || item.artifact ? (
+                        <a
+                          className={styles.publicationTitleLink}
+                          href={resolveAssetLink(item.pdf || item.artifact)}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        item.title
+                      )}
+                    </h4>
+                    {(item.pdf || item.artifact) && (
+                      <div className={styles.publicationLinks}>
+                        {item.pdf && (
+                          <a
+                            className={styles.publicationButton}
+                            href={resolveAssetLink(item.pdf)}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            PDF
+                          </a>
+                        )}
+                        {item.artifact && (
+                          <a
+                            className={styles.publicationButton}
+                            href={resolveAssetLink(item.artifact)}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            Artifact
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
+                  <p className={styles.publicationAuthors}>{item.authors}</p>
+                  <p className={styles.publicationVenue}>
+                    {item.venue}. {formatYear(item.date)}. {item.type}.
+                  </p>
                 </article>
               </li>
             ))}
@@ -84,46 +105,48 @@ const Gallery = () => (
 
         <section className={styles.section}>
           <header className={styles.sectionHeader}>
-            <h3 className={styles.sectionTitle}>Talks & Presentations</h3>
-            <p className={styles.sectionIntro}>Conference, showcase, and seminar presentations with linked materials.</p>
+            <h3 className={styles.sectionTitle}>Talks and Presentations</h3>
+            <p className={styles.sectionIntro}>Conference, workshops and seminar presentations with linked materials.</p>
           </header>
-          <ol className={styles.entries}>
+          <ul className={styles.talkList}>
             {talkItems.map((item) => (
-              <li className={styles.entry} key={`${item.title}-${item.date}`}>
-                <div className={styles.entryDate}>
-                  <span className={styles.entryYear}>{formatYear(item.date)}</span>
-                  <time className={styles.entryMonth} dateTime={item.date}>{formatMonth(item.date)}</time>
+              <li className={styles.talkItem} key={item.title}>
+                <div className={styles.talkHeader}>
+                  <h4 className={styles.talkTitle}>{item.title}</h4>
+                  {item.slides && (
+                    <a
+                      className={styles.publicationButton}
+                      href={resolveAssetLink(item.slides)}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Slides
+                    </a>
+                  )}
                 </div>
-                <article className={styles.entryBody}>
-                  <p className={styles.entryType}>Talk</p>
-                  <h4 className={styles.entryTitle}>
-                    <a
-                      className={styles.entryTitleLink}
-                      href={resolvePdfLink(item.pdf)}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {item.title}
-                    </a>
-                  </h4>
-                  <p className={styles.citation}>
-                    {item.event}. {item.location}. {formatDate(item.date)}.
-                  </p>
-                  <p className={styles.abstract}>{item.summary}</p>
-                  <div className={styles.links}>
-                    <a
-                      className={styles.assetLink}
-                      href={resolvePdfLink(item.pdf)}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      PDF
-                    </a>
-                  </div>
-                </article>
+                <ul className={styles.talkVenues}>
+                  {item.sessions.map((session) => (
+                    <li className={styles.talkVenue} key={`${item.title}-${session.event}-${session.date}`}>
+                      {session.link ? (
+                        <a
+                          className={styles.talkVenueLink}
+                          href={resolveAssetLink(session.link)}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          {session.event}
+                        </a>
+                      ) : (
+                        <span>{session.event}</span>
+                      )}
+                      {session.note && `, ${session.note}`}
+                      {`, ${session.location}, ${formatDate(session.date)}`}
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
-          </ol>
+          </ul>
         </section>
       </div>
     </article>

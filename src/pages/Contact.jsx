@@ -7,7 +7,7 @@ import styles from './Contact.module.scss';
 
 const Contact = () => (
   <Main
-    title="Contact Ding Feng"
+    title="Contact | Ding Feng"
     description="Contact Ding Feng. Get in touch via email: dingfeng@u.nus.edu or connect through social media."
     keywords="Contact Ding Feng, Email, dingfeng@u.nus.edu, National University of Singapore, Computer Science Student"
     path="/contact"

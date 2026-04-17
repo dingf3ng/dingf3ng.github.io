@@ -15,7 +15,8 @@
     "type": "Project Report",
     "date": "2025-04-01",
     "summary": "A project report describing a browser-based implementation of Pie designed for classroom use in Source Academy.",
-    "pdf": "/cv.pdf"
+    "pdf": "/cv.pdf",
+    "artifact": "https://github.com/source-academy/pie-slang"
   },
   {
     "title": "Correctness and Incorrectness Reasoning for Reliable Software",
