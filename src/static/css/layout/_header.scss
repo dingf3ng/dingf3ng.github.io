@@ -96,7 +96,7 @@ body {
       font-size: 0.9em;
     }
 
-    @include breakpoint(medium) {
+    @include breakpoint(desktop) {
       display: none; // Hide the theme toggle when sidebar becomes visible
     }
   }
@@ -155,13 +155,13 @@ body {
     }
   }
 
-  @include breakpoint(medium) {
+  @include breakpoint(desktop) {
     .links {
       display: none;
     }
   }
 
-  @include breakpoint(small) {
+  @include breakpoint(mobile) {
     height: 2.75em;
     line-height: 2.75em;
 
@@ -261,7 +261,7 @@ body {
   display: none;
 }
 
-@include breakpoint(medium) {
+@include breakpoint(desktop) {
   .hamburger-container {
     display: initial;
   }

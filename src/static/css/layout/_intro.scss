@@ -32,7 +32,7 @@
     }
   }
 
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     margin: 0 0 _size(section-spacing) 0;
     text-align: center;
 
@@ -47,7 +47,7 @@
     }
   }
 
-  @include breakpoint(small) {
+  @include breakpoint(mobile) {
     margin: 0 0 _size(section-spacing-small) 0;
     padding: 1.25em 0;
 

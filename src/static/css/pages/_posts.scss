@@ -105,7 +105,7 @@
   // display: none;
 }
 
-@include breakpoint(small) {
+@include breakpoint(mobile) {
   .course-dot {
     display: none;
   }

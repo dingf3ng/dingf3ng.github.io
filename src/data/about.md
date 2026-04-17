@@ -24,7 +24,4 @@ My football experience includes representing Nankai district on a competitive te
 These experiences have fostered valuable spirits and friendships and continue to influence my life. I am also engaging in tennis as a developing skill, and occasionally enjoy swimming and cycling for recreation, though I acknowledge my proficiency in these activities is still evolving.
 
 Computer gaming constituted a significant interest during earlier periods of my life. Several titles have either shaped my views or have provided substantial enjoyment for me, or both. 
-This is also partly the reason  why I am studying computer science now.
-
-Photography represents another occasional creative outlet, one that I pursue opportunistically rather than systematically.
-Some of my more successful photographic works will hopefully be available in [Gallery](https://dingf3ng.github.io/#/gallery).
+This is also partly the reason why I am studying computer science now.

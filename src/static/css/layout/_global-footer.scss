@@ -26,11 +26,11 @@
     }
   }
 
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     max-width: 100%;
   }
 
-  @include breakpoint(small) {
+  @include breakpoint(mobile) {
     margin-top: 1em;
     padding-top: 0;
   }

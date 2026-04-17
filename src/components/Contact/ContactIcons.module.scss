@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  color: var(--color-text-strong);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}

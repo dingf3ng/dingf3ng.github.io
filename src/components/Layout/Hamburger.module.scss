@@ -1,0 +1,118 @@
+@use '../../styles/mixins' as *;
+
+.container {
+  display: none;
+}
+
+.trigger {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.triggerList {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.triggerItem {
+  display: flex;
+  align-items: stretch;
+  border-left: solid var(--surface-border-width) var(--color-border);
+}
+
+.triggerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.triggerButton:hover {
+  color: var(--color-accent);
+}
+
+.menuList {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menuItem + .menuItem {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: dotted 2px var(--color-border);
+}
+
+.menuLink {
+  display: flex;
+  justify-content: center;
+  border-bottom: 0;
+  text-align: center;
+}
+
+.menuTitle {
+  margin: 0;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.themeToggle {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+  padding: 1rem 1.5rem;
+}
+
+.container :global(.bm-menu-wrap) {
+  top: 0;
+}
+
+.container :global(.bm-menu) {
+  background: var(--color-bg-alt);
+  padding: 2.5rem 1.5rem 5.5rem;
+  font-size: 1rem;
+}
+
+.container :global(.bm-item-list) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: var(--color-text-strong);
+  padding: 0.8rem;
+}
+
+.container :global(.bm-overlay) {
+  position: fixed !important;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1) !important;
+  cursor: pointer;
+}
+
+@include desktop {
+  .container {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+}
+
+@include mobile {
+  .triggerButton {
+    width: 3.5rem;
+  }
+}

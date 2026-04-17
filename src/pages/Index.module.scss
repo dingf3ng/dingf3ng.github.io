@@ -1,0 +1,21 @@
+.mesh {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-gradient);
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--color-overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-panel);
+}
+
+:global(:root[data-theme='dark']) .overlay {
+  opacity: 1;
+}

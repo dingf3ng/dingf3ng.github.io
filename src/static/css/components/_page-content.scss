@@ -129,7 +129,7 @@
     }
   }
 
-  @include breakpoint(medium) {
+  @include breakpoint(desktop) {
     border-left: 0;
     border-right: 0;
     left: _size(section-spacing) * -1;
@@ -195,7 +195,7 @@
     }
   }
 
-  @include breakpoint(small) {
+  @include breakpoint(mobile) {
     @include padding(
       _size(section-spacing-small),
       _size(section-spacing-small)
@@ -220,11 +220,7 @@
           font-size: 1.1em;
         }
       }
-    }
-  }
 
-  @include breakpoint(xsmall) {
-    > header {
       .meta {
         @include vendor("align-items", "center");
         @include vendor("flex-direction", "column");

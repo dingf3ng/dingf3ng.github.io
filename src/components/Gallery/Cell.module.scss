@@ -1,0 +1,81 @@
+@use '../../styles/mixins' as *;
+
+.container {
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-stack);
+  background: var(--color-bg);
+  border: solid var(--surface-border-width) var(--color-border);
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  min-height: 4rem;
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.titleLink {
+  border-bottom: 0;
+}
+
+.published {
+  display: block;
+  margin: -0.625em 0 1.7rem 0;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.imageLink {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 0;
+}
+
+.image {
+  width: 100%;
+  transition: transform var(--transition-fast);
+}
+
+.imageLink:hover .image {
+  transform: scale(1.05);
+}
+
+.description {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: solid var(--surface-border-width) var(--color-border);
+}
+
+.descriptionText {
+  margin: 0;
+  padding: 1.25rem;
+  color: #3c3b3b;
+  font-size: 0.75rem;
+  background: var(--color-surface-overlay);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.descriptionText:hover {
+  background: var(--color-surface-overlay-hover);
+}
+
+@include mobile {
+  .description {
+    position: static;
+  }
+}

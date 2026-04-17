@@ -21,15 +21,12 @@
     opacity: 0.15;
   }
 
-  @include breakpoint(xlarge) {
+  @include breakpoint(desktop) {
+    display: block;
     padding: _size(section-spacing);
   }
 
-  @include breakpoint(large) {
-    display: block;
-  }
-
-  @include breakpoint(small) {
+  @include breakpoint(mobile) {
     padding: _size(section-spacing-small);
   }
 

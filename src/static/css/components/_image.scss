@@ -55,7 +55,7 @@
       width: 100%;
     }
 
-    @include breakpoint(small) {
+    @include breakpoint(mobile) {
       margin: 0 0 _size(section-spacing-small) 0;
     }
   }

@@ -16,26 +16,6 @@ textarea {
   font-weight: _font(weight);
   line-height: 1.75;
   letter-spacing: -0.01em;
-
-  @include breakpoint(xlarge) {
-    font-size: 11pt;
-  }
-
-  @include breakpoint(large) {
-    font-size: 11pt;
-  }
-
-  @include breakpoint(medium) {
-    font-size: 11pt;
-  }
-
-  @include breakpoint(small) {
-    font-size: 11pt;
-  }
-
-  @include breakpoint(xsmall) {
-    font-size: 11pt;
-  }
 }
 
 a {

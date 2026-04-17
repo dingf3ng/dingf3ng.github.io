@@ -1,0 +1,112 @@
+@use '../../styles/mixins' as *;
+
+.section {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'header photo'
+    'contact photo'
+    'intro photo';
+  align-items: start;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.header {
+  grid-area: header;
+  min-width: 0;
+  text-align: left;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: var(--profile-name-gap);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  margin: 0;
+  font-size: var(--font-size-profile-name);
+}
+
+.signature {
+  width: var(--profile-signature-width);
+  height: auto;
+  object-fit: contain;
+}
+
+.intro p {
+  margin: 0 0 1em 0;
+  font-size: 0.9rem;
+}
+
+.contactRow {
+  grid-area: contact;
+}
+
+.intro {
+  grid-area: intro;
+  min-width: 0;
+}
+
+.imageWrap {
+  grid-area: photo;
+  align-self: center;
+  flex-shrink: 0;
+  width: var(--profile-photo-size);
+  min-width: var(--profile-photo-size);
+}
+
+.photoLink {
+  display: block;
+  border-bottom: 0;
+}
+
+.photo {
+  width: var(--profile-photo-size);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@include mobile {
+  .container {
+    grid-template-areas:
+      'header photo'
+      'intro intro'
+      'contact contact';
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+
+  .nameRow {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .imageWrap {
+    align-self: start;
+    width: clamp(5.5rem, 30vw, var(--profile-photo-size));
+    min-width: clamp(5.5rem, 30vw, var(--profile-photo-size));
+    margin-top: 0.25rem;
+    justify-self: end;
+  }
+
+  .header {
+    align-self: center;
+  }
+
+  .contactRow {
+    margin-top: 0.25rem;
+  }
+
+  .photo {
+    width: 100%;
+  }
+}

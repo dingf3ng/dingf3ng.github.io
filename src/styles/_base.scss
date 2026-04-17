@@ -1,0 +1,116 @@
+body {
+  min-height: 100vh;
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-tight);
+  padding-top: var(--header-height);
+}
+
+a {
+  border-bottom: dotted 2px var(--color-border);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    border-bottom-color var(--transition-fast);
+}
+
+a:hover {
+  border-bottom-color: transparent;
+  color: var(--color-accent);
+}
+
+strong,
+b {
+  color: var(--color-text-strong);
+  font-weight: var(--font-weight-medium);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 var(--space-stack) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-strong);
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--line-height-heading);
+  margin: 0 0 calc(var(--space-stack) * 0.5) 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+blockquote {
+  border-left: solid 4px var(--color-border);
+  font-style: italic;
+  margin: 0 0 var(--space-stack) 0;
+  padding: calc(var(--space-stack) / 4) 0 calc(var(--space-stack) / 4)
+    var(--space-stack);
+}
+
+code {
+  background: var(--color-border-soft);
+  border: solid var(--surface-border-width) var(--color-border);
+  border-radius: var(--border-radius-soft);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  margin: 0 0 var(--space-stack) 0;
+}
+
+pre code {
+  display: block;
+  line-height: 1.75em;
+  overflow-x: auto;
+  padding: 1em 1.5em;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid var(--surface-border-width) var(--color-border);
+  margin: var(--space-stack) 0;
+}
+
+::selection {
+  background: var(--color-border-soft);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

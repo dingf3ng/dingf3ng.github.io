@@ -1,3 +1,10 @@
+---
+title: Course Review III
+date: 2025-12-28
+category: NUS Course Review
+excerpt: This is the third part of the course review, contains more core modules in computer science curriculum.
+---
+
 *Note: The teaching team might vary from year to year, as does the validity of the review. The review is just my personal view.*
 
 For each course, I will cover what it is about, and point out its uniqueness, if any. Finally rate the course

@@ -1,0 +1,85 @@
+@use '../styles/mixins' as *;
+
+.controls {
+  --control-width: max(18rem, 24ch);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.controlButton,
+.selectWrap {
+  flex: 0 0 var(--control-width);
+  width: var(--control-width);
+}
+
+.controlButton,
+.select {
+  min-height: 4.125rem;
+  padding: 0 1.5rem;
+  border: 0;
+  border-radius: 0;
+  background: var(--color-bg-alt);
+  box-shadow: inset 0 0 0 2px var(--color-border);
+  color: var(--color-text-strong);
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    box-shadow var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.controlButton:hover,
+.select:hover {
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+  color: var(--color-accent);
+}
+
+.controlButton {
+  white-space: nowrap;
+}
+
+.selectWrap {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  padding-right: 3rem;
+  appearance: none;
+  border-radius: 0;
+  text-align-last: center;
+}
+
+.selectWrap::after {
+  content: '\25BE';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  color: var(--color-text-muted);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.loading {
+  margin: 0;
+}
+
+@include mobile {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controlButton,
+  .selectWrap {
+    width: 100%;
+  }
+}

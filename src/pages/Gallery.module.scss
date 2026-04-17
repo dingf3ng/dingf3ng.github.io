@@ -1,0 +1,142 @@
+@use '../styles/mixins' as *;
+
+.sections {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.section + .section {
+  padding-top: 2.25rem;
+  border-top: solid var(--surface-border-width) var(--color-border);
+}
+
+.sectionHeader {
+  margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.sectionIntro {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body-sm);
+}
+
+.entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.3rem 0;
+  border-top: solid var(--surface-border-width) var(--color-border);
+}
+
+.entry:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.entryDate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  padding-top: 0.15rem;
+}
+
+.entryYear {
+  color: var(--color-text-strong);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.entryMonth {
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.entryBody {
+  min-width: 0;
+}
+
+.entryType {
+  margin: 0 0 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.entryTitle {
+  margin-bottom: 0.35rem;
+  font-size: 0.98rem;
+}
+
+.entryTitleLink {
+  border-bottom: 0;
+}
+
+.citation {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-strong);
+  font-size: var(--font-size-body-sm);
+}
+
+.abstract {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--font-size-body-sm);
+}
+
+.links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.assetLink {
+  border-bottom: 0;
+  color: var(--color-text-strong);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.assetLink::before {
+  content: '[';
+}
+
+.assetLink::after {
+  content: ']';
+}
+
+@include mobile {
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 1rem 0;
+  }
+
+  .entryDate {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding-top: 0;
+  }
+}

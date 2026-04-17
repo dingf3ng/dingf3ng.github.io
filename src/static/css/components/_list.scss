@@ -96,7 +96,7 @@ ul {
         }
       }
 
-      @include breakpoint(large) {
+      @include breakpoint(desktop) {
         text-align: center;
 
         .next,
@@ -105,7 +105,7 @@ ul {
         }
       }
 
-      @include breakpoint(small) {
+      @include breakpoint(mobile) {
         .next,
         .previous {
           min-width: 18em;
@@ -170,7 +170,7 @@ ul {
       }
     }
 
-    @include breakpoint(xsmall) {
+    @include breakpoint(mobile) {
       margin: 0 0 _size(element-margin) 0;
 
       li {

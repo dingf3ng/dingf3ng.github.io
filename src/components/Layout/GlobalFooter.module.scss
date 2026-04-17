@@ -1,0 +1,38 @@
+@use '../../styles/mixins' as *;
+
+.footer {
+  position: relative;
+  z-index: var(--z-content);
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+}
+
+.copy {
+  margin: 0.5rem 0;
+  color: var(--color-text-muted);
+  font-size: 0.6rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.copy a {
+  border-bottom: 0;
+}
+
+@include desktop {
+  .footer {
+    max-width: 100%;
+  }
+}
+
+@include mobile {
+  .footer {
+    margin-top: 1rem;
+  }
+}

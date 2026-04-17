@@ -1,3 +1,10 @@
+---
+title: CS4269 Lecture 2
+date: 2024-11-30
+category: Mathematical Logics
+excerpt: This is a test post, a lecture note for the Fundamental Logics in Computer Science in Semester 1, AY 24/25.
+---
+
 ### Propositional Logic - Applications
 
 ### 1. Introduction

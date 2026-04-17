@@ -31,7 +31,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @include breakpoint(mobile) {
     .description {
       position: inherit;
       padding: 0;
@@ -97,7 +97,7 @@
 
 .gallery-items {
   margin: 0 0 _size(element-margin);
-  @include breakpoint(large) {
+  @include breakpoint(desktop) {
     @include vendor("display", "flex");
     @include vendor("flex-wrap", "wrap");
     width: calc(100% + #{_size(element-margin)});
@@ -111,7 +111,7 @@
       margin-top: 0;
     }
   }
-  @include breakpoint(xsmall) {
+  @include breakpoint(mobile) {
     display: block;
     width: 100%;
 

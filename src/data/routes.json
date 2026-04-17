@@ -1,0 +1,27 @@
+[
+  {
+    "index": true,
+    "label": "Ding Feng",
+    "path": "/"
+  },
+  {
+    "label": "Academic",
+    "path": "/academic"
+  },
+  {
+    "label": "Personal",
+    "path": "/personal"
+  },
+  {
+    "label": "Posts",
+    "path": "/posts"
+  },
+  {
+    "label": "Gallery",
+    "path": "/gallery"
+  },
+  {
+    "label": "Contact",
+    "path": "/contact"
+  }
+]

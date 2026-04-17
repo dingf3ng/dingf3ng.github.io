@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Pie in Source Academy",
+    "event": "STEP26 Undergraduate Research Showcase",
+    "location": "National University of Singapore",
+    "date": "2025-04-01",
+    "summary": "Presentation materials for an undergraduate research showcase on building an educational Pie environment for the browser.",
+    "pdf": "/cv.pdf"
+  },
+  {
+    "title": "Mini-Mu: A Language for Understanding Duality",
+    "event": "ACM SIGPLAN ICFP 2025 Student Research Competition",
+    "location": "Singapore",
+    "date": "2025-10-01",
+    "summary": "Student research presentation on duality-oriented language design and its value for understanding programs.",
+    "pdf": "/cv.pdf"
+  },
+  {
+    "title": "Dual Languages for Program Understanding",
+    "event": "Singapore Programming Languages Summit 2025",
+    "location": "Singapore Management University",
+    "date": "2025-11-24",
+    "summary": "Talk materials for a programming languages audience on dual languages and program understanding.",
+    "pdf": "/cv.pdf"
+  }
+]

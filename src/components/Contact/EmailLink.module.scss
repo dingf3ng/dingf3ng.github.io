@@ -1,0 +1,14 @@
+.container {
+  display: inline-flex;
+}
+
+.link {
+  display: inline-flex;
+  border-bottom: 0;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.link:hover {
+  color: var(--color-accent);
+}

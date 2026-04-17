@@ -1,18 +1,11 @@
-///
-/// Future Imperfect by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
-/* Profile Section (shown horizontally on index page) */
+/* Profile Section */
 
 #profile-section {
   width: 100%;
-  margin-bottom: _size(section-spacing);
+  margin-bottom: var(--profile-spacing);
 
   .profile-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 1em;
@@ -23,41 +16,34 @@
       text-align: left;
 
       header {
-        margin-bottom: 1em;
-
         .name-signature {
           display: flex;
           align-items: center;
-          gap: 1em;
-          margin-bottom: 0.5em;
+          gap: var(--profile-name-gap);
+          margin-bottom: 1em;
 
           h2 {
-            font-size: 2em;
+            font-size: var(--profile-name-font-size);
             font-weight: _font(weight-heading-extrabold);
             margin: 0;
           }
 
-          .logo.signature {
-            border-bottom: 0;
-
-            img {
-              width: 10em;
-              height: auto;
-              object-fit: contain;
-            }
+          .signature {
+            width: var(--profile-signature-width);
+            height: auto;
+            object-fit: contain;
           }
         }
 
         p {
-          font-size: 0.9em;
-          margin: 0 0 0.8em 0;
+          margin-bottom: 3em;
         }
 
         .icons {
           margin: 0;
           padding: 0;
           list-style: none;
-          
+
           li {
             display: inline-block;
             margin-right: 0.5em;
@@ -65,100 +51,26 @@
         }
       }
 
-      .intro-text {
-        p {
-          margin: 0 0 1em 0;
-          line-height: 1.75;
-          font-size: 0.9em;
-        }
-
-        .actions {
-          margin: 0;
-        }
+      .intro-text p {
+        margin: 0 0 1em 0;
+        line-height: 1.75;
+        font-size: 0.9em;
       }
     }
 
     .profile-images {
       flex-shrink: 0;
-      width: 16em;
-      min-width: 16em;
+      width: var(--profile-photo-size);
+      min-width: var(--profile-photo-size);
 
       .logo.photo {
         border-bottom: 0;
 
         img {
-          width: 16em;
+          width: var(--profile-photo-size);
           display: block;
           object-fit: cover;
           border-radius: 50%;
-        }
-      }
-    }
-  }
-
-  @include breakpoint(medium) {
-    .profile-container {
-      gap: 1em;
-
-      .profile-info {
-        header {
-          .name-signature {
-            h2 {
-              font-size: 1.6em;
-            }
-          }
-        }
-      }
-
-      .profile-images {
-        width: 14em;
-        min-width: 14em;
-        
-        .logo.photo img {
-          width: 14em;
-        }
-      }
-    }
-  }
-
-  @include breakpoint(small) {
-    margin-bottom: _size(section-spacing-small);
-
-    .profile-container {
-      gap: 1em;
-
-      .profile-info {
-        header {
-          .name-signature {
-            flex-direction: column;
-            gap: 0.3em;
-            align-items: flex-start;
-
-            h2 {
-              font-size: 1.3em;
-            }
-
-            .logo.signature img {
-              width: 8em;
-            }
-          }
-
-          p {
-            font-size: 0.75em;
-          }
-        }
-
-        .intro-text p {
-          font-size: 0.85em;
-        }
-      }
-
-      .profile-images {
-        width: 12em;
-        min-width: 12em;
-
-        .logo.photo img {
-          width: 12em;
         }
       }
     }

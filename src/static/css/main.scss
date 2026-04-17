@@ -14,11 +14,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@include skel-breakpoints((xlarge: "(max-width: 1680px)",
-    large: "(max-width: 1280px)",
-    medium: "(max-width: 980px)",
-    small: "(max-width: 736px)",
-    xsmall: "(max-width: 480px)",
+@include skel-breakpoints((
+    desktop: "(max-width: 980px)",
+    mobile: "(max-width: 736px)",
   ));
 
 @include skel-layout((reset: "full",
@@ -26,6 +24,24 @@
     grid: (gutters: 2em,
     ),
   ));
+
+// Layout token responsive overrides — all breakpoint changes for var() tokens live here.
+
+@include breakpoint(desktop) {
+  :root {
+    --profile-photo-size: 14em;
+    --profile-name-gap: 2em;
+    --profile-spacing: #{_size(section-spacing)};
+  }
+}
+
+@include breakpoint(mobile) {
+  :root {
+    --profile-photo-size: 12em;
+    --profile-signature-width: 5em;
+    --profile-spacing: #{_size(section-spacing-small)};
+  }
+}
 
 // Base.
 
@@ -52,7 +68,6 @@
 @import "layout/header";
 @import "layout/wrapper";
 @import "layout/main";
-@import "layout/sidebar";
 @import "layout/profile-section";
 @import "layout/intro";
 @import "layout/footer";

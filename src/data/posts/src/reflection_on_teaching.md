@@ -1,3 +1,10 @@
+---
+title: Reflection on Teaching
+date: 2025-05-15
+category: Else
+excerpt: A reflection on my teaching experience in past two semesters.
+---
+
 # Reflections on Teaching: Academic Year 24/25
 
 ## Overview

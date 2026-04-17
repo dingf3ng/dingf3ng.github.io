@@ -88,7 +88,7 @@
     visibility: visible;
   }
 
-  @include breakpoint(small) {
+  @include breakpoint(mobile) {
     > * {
       padding: _size(section-spacing-small);
     }
