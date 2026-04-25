@@ -9,7 +9,7 @@ const Academic = () => {
 
   return (
     <Main
-      title="Academic Matters | Ding Feng"
+      title="Academic Matters"
       description="Learn about Ding Feng's academic thoughts and work, research interests, and experience as an educator at National University of Singapore. Computer Science studies and achievements."
       keywords="Ding Feng Academic, Computer Science, Research, Educational Background, Academic Achievements, National University of Singapore"
       path="/academic"

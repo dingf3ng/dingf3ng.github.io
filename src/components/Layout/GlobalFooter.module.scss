@@ -5,7 +5,7 @@
   z-index: var(--z-content);
   width: 100%;
   max-width: var(--content-max-width);
-  margin: 1.5rem auto 0 auto;
+  margin: var(--space-lg) auto 0;
   text-align: center;
 }
 
@@ -14,9 +14,9 @@
 }
 
 .copy {
-  margin: 0.5rem 0;
+  margin: var(--space-xs) 0;
   color: var(--color-text-muted);
-  font-size: 0.6rem;
+  font-size: var(--font-size-caption);
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--letter-spacing-wide);
 }
@@ -33,6 +33,6 @@
 
 @include mobile {
   .footer {
-    margin-top: 1rem;
+    margin-top: var(--space-md);
   }
 }

@@ -9,7 +9,7 @@ const Personal = () => {
 
   return (
     <Main
-      title="Personal - Ding Feng"
+      title="Personal Matters"
       description="Get to know Ding Feng personally. Background, interests, hobbies, and personal journey from Tianjin, China to Singapore. Computer Science student at NUS."
       keywords="Ding Feng Personal, About Ding Feng, Background, Tianjin China, NUS Singapore, Personal Interests, Hobbies, Biography"
       path="/personal"

@@ -1,30 +1,20 @@
 [
   {
-    "title": "Mini-Mu: A Language for Understanding Duality",
-    "authors": "Ding Feng et al.",
-    "venue": "Student Research Competition at ICFP 2025",
+    "title": "PieLoT: LLM-driven Toolbox for Theorem Proving Education",
+    "authors": "Ding Feng, Li Daoxin, Zhang Qixiang, Martin Henz",
+    "venue": "AI4X-AC 2026",
     "type": "Extended Abstract",
-    "date": "2025-07-01",
-    "summary": "An exploratory extended abstract on using a compact core language to teach and study computational duality.",
-    "pdf": "/cv.pdf"
-  },
-  {
-    "title": "Pie in Source Academy",
-    "authors": "Ding Feng et al.",
-    "venue": "NUS STEP Undergraduate Research Showcase",
-    "type": "Project Report",
-    "date": "2025-04-01",
-    "summary": "A project report describing a browser-based implementation of Pie designed for classroom use in Source Academy.",
-    "pdf": "/cv.pdf",
+    "date": "2026-03-01",
+    "pdf": "/pubs/pielot.pdf",
     "artifact": "https://github.com/source-academy/pie-slang"
   },
   {
-    "title": "Correctness and Incorrectness Reasoning for Reliable Software",
-    "authors": "Ding Feng",
-    "venue": "Technical Report",
-    "type": "Working Paper",
-    "date": "2026-01-01",
-    "summary": "A working paper on combining correctness and incorrectness reasoning in reliable and AI-assisted software development.",
-    "pdf": "/cv.pdf"
+    "title": "Mini-Mu: A Language for Understanding Duality",
+    "authors": "Ding Feng, Kyriel Mortel Abad, Michael D. Adams",
+    "venue": "Student Research Competition Track, ICFP 2025",
+    "type": "Extended Abstract",
+    "date": "2025-07-01",
+    "summary": "An exploratory extended abstract on using a compact core language to teach and study computational duality.",
+    "pdf": "/pubs/minimu.pdf"
   }
 ]

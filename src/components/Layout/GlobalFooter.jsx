@@ -6,6 +6,19 @@ const { NODE_ENV } = process.env;
 
 const GlobalFooter = () => {
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [siteViews, setSiteViews] = useState('');
+
+  useEffect(() => {
+    if (NODE_ENV !== 'production') return;
+    const el = document.getElementById('busuanzi_value_site_pv');
+    if (!el) return;
+    if (el.innerText) { setSiteViews(el.innerText); return; }
+    const observer = new MutationObserver(() => {
+      if (el.innerText) { setSiteViews(el.innerText); observer.disconnect(); }
+    });
+    observer.observe(el, { childList: true, characterData: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     fetch('https://api.github.com/users/dingf3ng/repos')
@@ -29,9 +42,13 @@ const GlobalFooter = () => {
         </p>
         {NODE_ENV === 'production' ? (
           <p className={styles.copy}>
-            <span id="busuanzi_container_site_pv">
-              Site views: <span id="busuanzi_value_site_pv" />. Last updated on {lastUpdated || 'loading...'}
-            </span>
+            {siteViews ? (
+              <>Site views: {siteViews}. Last updated on {lastUpdated || 'loading...'}</>
+            ) : (
+              <span id="busuanzi_container_site_pv">
+                Site views: <span id="busuanzi_value_site_pv" />. Last updated on {lastUpdated || 'loading...'}
+              </span>
+            )}
           </p>
         ) : (
           <p className={styles.copy}>

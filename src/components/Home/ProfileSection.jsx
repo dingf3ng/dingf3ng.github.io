@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import ContactIcons from '../Contact/ContactIcons';
+import EmailLink from '../Contact/EmailLink';
+import contactData from '../../data/contact.json';
 import styles from './ProfileSection.module.scss';
+
+const emailEntry = contactData.find((s) => s.icon === 'email');
 
 const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
@@ -29,6 +33,7 @@ const ProfileSection = () => (
         </Link>
       </div>
       <div className={styles.contactRow}>
+        {emailEntry && <EmailLink email={emailEntry.link.replace('mailto:', '')} />}
         <ContactIcons />
       </div>
       <div className={styles.intro}>

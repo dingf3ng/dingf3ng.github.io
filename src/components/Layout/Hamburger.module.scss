@@ -33,9 +33,9 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-primary);
   cursor: pointer;
-  font-size: 1.35rem;
+  font-size: var(--font-size-title);
   line-height: 1;
 }
 
@@ -59,14 +59,14 @@
 
 .menuLink {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   border-bottom: 0;
   text-align: center;
 }
 
 .menuTitle {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: var(--font-size-caption);
   text-align: center;
 }
 
@@ -99,7 +99,7 @@
 .container :global(.bm-overlay) {
   position: fixed !important;
   inset: 0;
-  background: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(0, 0, 0, 0.21) !important;
   cursor: pointer;
 }
 

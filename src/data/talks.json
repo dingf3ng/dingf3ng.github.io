@@ -1,7 +1,8 @@
 [
   {
-    "title": "Dual Languages for Program Understanding",
-    "slides": "/cv.pdf",
+    "title": "Dual Languages: Programming with Continuations",
+    "slides": "/talks/duality.pdf",
+    "video": "https://www.youtube.com/watch?v=4ocM21x4INw",
     "sessions": [
       {
         "event": "Singapore Programming Languages Summit 2025",
@@ -9,40 +10,29 @@
         "date": "2025-11-24"
       },
       {
-        "event": "School of Computing Research Forum",
+        "event": "UROP Final Presentation",
         "location": "National University of Singapore",
-        "date": "2025-09-12"
-      }
-    ]
-  },
-  {
-    "title": "Mini-Mu: A Language for Understanding Duality",
-    "slides": "/cv.pdf",
-    "sessions": [
-      {
-        "event": "ACM SIGPLAN ICFP 2025 Student Research Competition",
-        "location": "Singapore",
-        "date": "2025-10-01"
+        "date": "2025-11-18"
       },
       {
-        "event": "Undergraduate Research Opportunities Symposium",
-        "location": "National University of Singapore",
-        "date": "2025-08-15"
+        "event": "Student Research Competition Track, ICFP 2025",
+        "location": "Marina Bay Sands Convention Center",
+        "date": "2025-10-13"
       }
     ]
   },
   {
     "title": "Pie in Source Academy",
-    "slides": "/cv.pdf",
+    "slides": "/talks/pie.png",
     "sessions": [
       {
-        "event": "STEP26 Undergraduate Research Showcase",
+        "event": "STEP26 Project Showcase",
         "location": "National University of Singapore",
         "date": "2025-04-01"
       },
       {
         "event": "Singapore Programming Languages Summit 2024",
-        "location": "National University of Singapore",
+        "location": "A*STAR",
         "date": "2024-12-04"
       }
     ]

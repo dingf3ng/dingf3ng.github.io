@@ -13,15 +13,11 @@
     "path": "/personal"
   },
   {
-    "label": "Posts",
-    "path": "/posts"
-  },
-  {
     "label": "Gallery",
     "path": "/gallery"
   },
   {
-    "label": "Contact",
-    "path": "/contact"
+    "label": "Posts",
+    "path": "/posts"
   }
 ]

@@ -48,6 +48,9 @@
 
 .contactRow {
   grid-area: contact;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
 }
 
 .intro {

@@ -30,7 +30,7 @@ const talkItems = [...talks]
 
 const Gallery = () => (
   <Main
-    title="Gallery | Ding Feng"
+    title="Gallery"
     description="A list of Ding Feng's publications and talks, with PDF links for papers, abstracts, and presentation materials."
     keywords="Ding Feng Publications, Ding Feng Talks, Research Papers, Presentations, Programming Languages, Software Engineering, Computer Science, NUS"
     path="/gallery"
@@ -39,7 +39,7 @@ const Gallery = () => (
       <header className="surface-panel__header">
         <div className="surface-panel__title-block">
           <h2 className="surface-panel__title">
-            <Link to="/gallery">Gallery: Publications and Talks</Link>
+            <Link to="/gallery">Gallery</Link>
           </h2>
           <p className="surface-panel__subtitle">List of publications, drafts and talks</p>
         </div>
@@ -55,18 +55,7 @@ const Gallery = () => (
                 <article className={styles.publicationBody}>
                   <div className={styles.publicationHeader}>
                     <h4 className={styles.publicationTitle}>
-                      {item.pdf || item.artifact ? (
-                        <a
-                          className={styles.publicationTitleLink}
-                          href={resolveAssetLink(item.pdf || item.artifact)}
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          {item.title}
-                        </a>
-                      ) : (
-                        item.title
-                      )}
+                      {item.title}
                     </h4>
                     {(item.pdf || item.artifact) && (
                       <div className={styles.publicationLinks}>
@@ -121,6 +110,16 @@ const Gallery = () => (
                       target="_blank"
                     >
                       Slides
+                    </a>
+                  )}
+                  {item.video && (
+                    <a
+                      className={styles.publicationButton}
+                      href={resolveAssetLink(item.video)}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Video
                     </a>
                   )}
                 </div>

@@ -15,7 +15,7 @@ const icons = {
 
 const ContactIcons = () => (
   <ul className={styles.list}>
-    {data.map((s) => (
+    {data.filter((s) => s.icon !== 'email').map((s) => (
       <li key={s.label}>
         <a className={styles.link} href={s.link} aria-label={s.label}>
           <FontAwesomeIcon className={styles.icon} icon={icons[s.icon]} />

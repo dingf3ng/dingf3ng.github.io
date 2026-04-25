@@ -2,7 +2,7 @@
 
 .sections {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .section + .section {
@@ -94,7 +94,6 @@
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-wide);
-  text-transform: uppercase;
   transition:
     box-shadow var(--transition-fast),
     color var(--transition-fast);
@@ -102,7 +101,7 @@
 
 .publicationButton:hover {
   box-shadow: inset 0 0 0 2px var(--color-border);
-  color: var(--color-text-strong);
+  color: var(--color-accent);
   opacity: 0.72;
 }
 
