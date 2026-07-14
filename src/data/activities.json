@@ -1,7 +1,11 @@
 [
   {
+    "date": "2026-05",
+    "description": "Working on proof of metatheory of [Par programming language](https://par.run): A linear, total, concurrent language based on a novel process calculus."
+  },
+  {
     "date": "2026-01",
-    "description": "Working as research assistant with [Dr. Chin Wei Ngan](https://www.comp.nus.edu.sg/~chinwn/), focusing on correctness and incorrectness reasoning."
+    "description": "Working as research assistant with [Prof. Chin Wei Ngan](https://www.comp.nus.edu.sg/~chinwn/), focusing on correctness and incorrectness reasoning."
   },
   {
     "date": "2025-12",
@@ -33,7 +37,7 @@
   },
   {
     "date": "2025-01",
-    "description": "Admitted to the UROP program, working under supervision of [Dr. Michael D. Adams](https://michaeldadams.org)."
+    "description": "Admitted to the UROP program, working under supervision of [Prof. Michael D. Adams](https://michaeldadams.org)."
   },
   {
     "date": "2024-12",
