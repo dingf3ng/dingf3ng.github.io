@@ -1,8 +1,15 @@
 [
   {
+    "title": "Client-Server Sessions by Nondeterministic Recursion",
+    "authors": "Michal Strba, Ding Feng, Michael D. Adams",
+    "venue": "Submitted to POPL",
+    "date": "2026-08-01",
+    "pdf": "/pubs/pollsub.pdf"    
+  },
+  {
     "title": "PieLoT: LLM-driven Toolbox for Theorem Proving Education",
     "authors": "Ding Feng, Li Daoxin, Zhang Qixiang, Martin Henz",
-    "venue": "AI4X-AC 2026",
+    "venue": "AI4X-AC",
     "type": "Extended Abstract",
     "date": "2026-03-01",
     "pdf": "/pubs/pielot.pdf",
@@ -11,7 +18,7 @@
   {
     "title": "Mini-Mu: A Language for Understanding Duality",
     "authors": "Ding Feng, Kyriel Mortel Abad, Michael D. Adams",
-    "venue": "Student Research Competition Track, ICFP 2025",
+    "venue": "Student Research Competition Track, ICFP",
     "type": "Extended Abstract",
     "date": "2025-07-01",
     "summary": "An exploratory extended abstract on using a compact core language to teach and study computational duality.",

@@ -38,7 +38,7 @@ const ProfileSection = () => (
       </div>
       <div className={styles.intro}>
         <p>
-          I am a penultimate-year undergraduate student at{' '}
+          I am a final year undergraduate student at{' '}
           <a href="https://www.comp.nus.edu.sg">School of Computing, National University of Singapore</a>.
           I am majoring in Computer Science and minoring in Mathematics. I expect to graduate in 2027.
         </p>

@@ -1,6 +1,6 @@
 ## Basic Coursework
 
-I am a third-year Computer Science major at the National University of Singapore (NUS) with a minor in Mathematics. Over the past two years, I have completed extensive coursework in programming languages, a field where I have cultivated a deep academic interest.
+I am a final year Computer Science major at the National University of Singapore with a minor in Mathematics. Over the past two years, I have completed extensive coursework in programming languages, a field where I have cultivated a deep academic interest.
 
 ---
 

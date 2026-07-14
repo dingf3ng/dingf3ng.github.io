@@ -6,7 +6,12 @@ import publications from '../data/publications.json';
 import talks from '../data/talks.json';
 import styles from './Gallery.module.scss';
 
-const sortByDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
+const sortByDateDesc = (a, b) => {
+  if (!a.date && !b.date) return 0;
+  if (!a.date) return 1;
+  if (!b.date) return -1;
+  return new Date(b.date) - new Date(a.date);
+};
 const getLatestSessionDate = (sessions = []) => sessions
   .map((session) => new Date(session.date))
   .sort((a, b) => b - a)[0];
@@ -19,6 +24,11 @@ const resolveAssetLink = (href) => (
 
 const formatDate = (value) => dayjs(value).format('MMMM YYYY');
 const formatYear = (value) => dayjs(value).format('YYYY');
+const formatPublicationDetails = (item) => [
+  item.venue,
+  item.date && formatYear(item.date),
+  item.type,
+].filter(Boolean).join('. ');
 
 const publicationItems = [...publications].sort(sortByDateDesc);
 const talkItems = [...talks]
@@ -51,7 +61,7 @@ const Gallery = () => (
           </header>
           <ol className={styles.publications}>
             {publicationItems.map((item) => (
-              <li className={styles.publicationItem} key={`${item.title}-${item.date}`}>
+              <li className={styles.publicationItem} key={item.title}>
                 <article className={styles.publicationBody}>
                   <div className={styles.publicationHeader}>
                     <h4 className={styles.publicationTitle}>
@@ -84,7 +94,7 @@ const Gallery = () => (
                   </div>
                   <p className={styles.publicationAuthors}>{item.authors}</p>
                   <p className={styles.publicationVenue}>
-                    {item.venue}. {formatYear(item.date)}. {item.type}.
+                    {formatPublicationDetails(item)}.
                   </p>
                 </article>
               </li>
