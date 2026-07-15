@@ -1,37 +1,29 @@
-## Basic Coursework
+## Background
 
-I am a final year Computer Science major at the National University of Singapore with a minor in Mathematics. Over the past two years, I have completed extensive coursework in programming languages, a field where I have cultivated a deep academic interest.
+I am a final year Computer Science undergraduate at the National University of Singapore, with a minor in Mathematics. My coursework and research interests lie mainly in programming languages, software engineering, and the mathematical foundations of computing.
 
----
+## Academic focus
 
-## Academic Focus
+My work is guided by a broad question:
 
-My curiosity is driven by a well-known rule of thumb:
+> how can we build software that is easier to understand and trust?
 
-> programmers spend about 80% of their time debugging.
+I currently think about this question in two areas.
 
-Motivated by this reality, I explore innovations in programming languages and frameworks to enhance developer productivity.
+***The first is agentic program verification.*** As large language models write more code, reviewing generated software entirely by hand becomes increasingly difficult. Methods from program analysis and verification give us ways to specify what programs should do and check whether they behave as intended. I am interested in how LLM agents can take part in this process: writing specifications, constructing proofs, finding mistakes, and helping people specify and verify larger software systems. The central problem is making this work trustworthy, not merely fast and autonomous.
 
-Currently, my primary focus is the design and implementation of both general-purpose and domain-specific languages.
-I have contributed to two published projects in this area and am developing several side projects for future public release.
-I view innovations in programming paradigms as powerful tools for augmenting communication between humans and machines, as well as among machines themselves. 
-In the age of AI, enabling more expressive, efficient, and natural interaction between people and computing systems is a frontier I am eager to explore.
+***The second area is the design of programming languages***, especially *[dual languages](https://github.com/plilab/mini-mu)*. Dual languages expose relationships between concepts that are often taught or implemented separately, such as data and codata, or expression and continuation. Their connection to process calculi can also support better [models of concurrency](https://par.run) in which concurrent programs are deadlock-free. I find this approach both fun to study and promising for the design of future programming languages. I am interested in its theory as well as the practical questions involved in making these languages usable.
 
-Recently, I have also expanded into program specification and analysis.
-I view this as a necessary complement to my previous work: while better language design reduces the frequency of errors, better specification and analysis tools ensure that inevitable errors are detected and resolved efficiently.
+These two directions approach the central question from different sides. Program verification helps ensure that a program follows human intent. Language design determines how clearly people can express those intentions to a computer. Together, they can improve how we write, reason about, and trust computer programs.
 
----
+My past work includes projects in [theorem-proving education](https://github.com/source-academy/pie-slang), type systems, and [incorrectness reasoning](https://dl.acm.org/doi/10.1145/3371078). Those experiences helped form my current interests.
 
-## Teaching Experience
+## Teaching experience
 
-Parallel to my research, I am actively involved in education at NUS as an Undergraduate Teaching Assistant for the following modules:
+Alongside my research, I have served as an Undergraduate Teaching Assistant at the National University of Singapore for:
 
-* CS1231S – Discrete Mathematics, AY24/25 Semester 1
-* CS2040S – Data Structures and Algorithms, AY24/25 Semester 2
-* CS2040S – Data Structures and Algorithms, AY25/26 Semester 2
+* CS1231S, Discrete Mathematics, AY2024/25 Semester 1
+* CS2040S, Data Structures and Algorithms, AY2024/25 Semester 2
+* CS2040S, Data Structures and Algorithms, AY2025/26 Semester 2
 
-While discrete mathematics and algorithms may seem distinct from programming languages, they are deeply interconnected. Writing Proofs is, in essence, writing programs; algorithms and data structures rely on rigorous proofs to guarantee correctness. 
-
-Students often perceive these courses as overly abstract. In my experience, this disconnect stems from a lack of visibility into why these concepts matter in real-world development. Bridging this gap is crucial.
-
-At present, I am also exploring ways to integrate modern programming language concepts into introductory computer science courses to help students build a deeper, more connected understanding of what they are doing daily — ***programming*** — both as an art and a science.
+I am also interested in bringing ideas from programming languages and formal reasoning into introductory computer science courses. My goal is to help students see programming as more than producing ***code*** that runs. It is also the ***art*** of explaining what the code means and making it express what the programmer intends.

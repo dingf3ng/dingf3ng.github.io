@@ -50,8 +50,8 @@ const Posts = () => {
   return (
     <Main
       title="Blog Posts"
-      description="Blog posts by Ding Feng covering computer science, programming, technology, and academic insights. Computer Science student at NUS Singapore."
-      keywords="Ding Feng Blog, Computer Science Posts, Programming Blog, Computer Science, NUS Singapore, Technology Articles"
+      description="Blog posts by Ding Feng covering computer science, programming, technology, and academic insights. Computer Science student at NUS."
+      keywords="Ding Feng Blog, Computer Science Posts, Programming Blog, Computer Science, NUS, Technology Articles"
       path="/posts"
     >
       <article className="surface-panel">

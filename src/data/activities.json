@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-06",
+    "description": "Awarded \"Outstanding Computing Project Prize\" for our work on Pie in Source Academy"
+  },
+  {
     "date": "2026-05",
     "description": "Working on proof of metatheory of [Par programming language](https://par.run): A linear, total, concurrent language based on a novel process calculus."
   },

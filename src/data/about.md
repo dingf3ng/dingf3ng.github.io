@@ -1,27 +1,21 @@
-### Autobiography in One Paragraph
+### A short autobiography
 
-Born in Tianjin, China, I was raised in a nurturing family environment that provided me with a strong foundation.
-My early years were enriched by time spent both in Tianjin and, occasionally, in Linzi (the capital of [Qi](https://en.wikipedia.org/wiki/Qi_(state))), a small town in Shandong where my father was born.
-My "academic" journey began at age six, following the standard educational timeline in China.
-Since then, I have completed studies in my beautiful [elementary school](https://baike.baidu.com/item/天津市南开区科技实验小学/7850747), [junior high](https://baike.baidu.com/item/天津市第二十五中学/6441189) (where I luckily met my girlfriend) and [high school](https://zh.wikipedia.org/zh-sg/天津市新华中学).
-Throughout these educational stages, I was fortunate to develop meaningful relationships with educators and peers who contributed significantly to my  personal growth.
-In the year of 2023, I started my journey in Singapore, a disciplined city state.
-I have been a student in School of Computing of National University of Singapore and have been keeping explore new possibilities since then.
+I was born and raised in [Tianjin](https://en.wikipedia.org/wiki/Tianjin), China. I also spent time in [Linzi](https://en.wikipedia.org/wiki/Linzi,_Zibo), a town in Shandong where my father was born and, rather more interestingly, the ancient capital of [Qi](https://en.wikipedia.org/wiki/Qi_(state)).
+
+My "academic" career began at the age of six, on exactly the same schedule as nearly every other child in China. I studied at this lovely [elementary school](https://baike.baidu.com/item/天津市南开区科技实验小学/7850747), then attended [junior high](https://baike.baidu.com/item/天津市第二十五中学/6441189), where I had the good fortune to meet my girlfriend. After [high school](https://zh.wikipedia.org/zh-sg/天津市新华中学), I moved to Singapore in 2023 to study at the School of Computing, National University of Singapore.
+
+The schools matter to me because of the people I met there. Teachers, classmates, friends, and family have shaped how I think and where I have ended up. I am still figuring out where I will go next, which is probably the most honest description of being a student.
 
 ***
-### What I Like To Do
 
-Born into an artistic family, I inherited a natural inclination toward creative expression.
-Music serves as both a passion and relaxation method in my life. 
-I can play guitar, keyboard, harmonica at amateur level, and sing during leisure hours.
-My girlfriend is a music lover too, she can play piano very well and she also like to sing. As a result, singing is a common activity when we are together.
-I am very happy to admit that  my perspective and even life track are significantly influenced by serveral musical works and artists.
+### What I like to do
 
-While not an sports enthusiast, I engage in sport activities regularly.
-Football has been my most-played sport since childhood, beginning around age 7~8.
-This interest developed through my father's enthusiasm for the sport, and was further cultivated by the fever during the World Cup 2014.
-My football experience includes representing Nankai district on a competitive team during elementary school and later playing for my high school team in mutiple leagues.
-These experiences have fostered valuable spirits and friendships and continue to influence my life. I am also engaging in tennis as a developing skill, and occasionally enjoy swimming and cycling for recreation, though I acknowledge my proficiency in these activities is still evolving.
+I grew up in an artistic family, so music has always been part of my life. I play guitar, keyboard, and harmonica, all at a firmly amateur level, and I sing (better) in my spare time. My girlfriend plays the piano far better than I play any of those instruments, and she also enjoys singing. Singing together has therefore become one of our usual activities.
 
-Computer gaming constituted a significant interest during earlier periods of my life. Several titles have either shaped my views or have provided substantial enjoyment for me, or both. 
-This is also partly the reason why I am studying computer science now.
+Some music has changed how I see the world and even the direction of my life. I will resist turning this paragraph into a very long playlist.
+
+I enjoy playing sports even though I do not follow them devotedly. Football has been my main one since I was seven or eight, thanks first to my father and later to the excitement of the 2014 World Cup. In elementary school, I represented Nankai District on a competitive team. I later played for my high school in several leagues. Football gave me good friends, plenty of memories, and a good way to relax.
+
+These days, I am also learning tennis. I swim and cycle from time to time, with enthusiasm that still runs somewhat ahead of technique.
+
+I used to spend a great deal of time playing computer games. Some games shaped the way I think; others were simply fun. Both are respectable achievements. Gaming is also one reason I chose to study computer science, so at least some of those hours turned out to be academically relevant.

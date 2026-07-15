@@ -58,6 +58,10 @@
   margin: 0 var(--space-xl) var(--space-xl);
 }
 
+.rich-text__content blockquote p {
+  margin: 0;
+}
+
 .rich-text__content :where(ul, ol) {
   margin: 0 0 var(--space-lg);
   padding-left: calc(var(--space-xl) + var(--space-md));
