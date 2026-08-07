@@ -50,8 +50,19 @@
 }
 
 .rich-text__content :where(h1, h2, h3, h4, h5, h6) {
-  font-size: 1rem;
   margin-left: var(--space-xs);
+}
+
+.rich-text__content :where(h1) {
+  font-size: 1.1rem;
+}
+
+.rich-text__content :where(h2) {
+  font-size: 1rem;
+}
+
+.rich-text__content :where(h3, h4, h5, h6) {
+  font-size: 1rem;
 }
 
 .rich-text__content :where(p) {

@@ -1,7 +1,7 @@
 ---
 title: Reflection on Teaching
 date: 2025-05-15
-category: Else
+category: Articles
 excerpt: A reflection on my teaching experience in past two semesters.
 ---
 
