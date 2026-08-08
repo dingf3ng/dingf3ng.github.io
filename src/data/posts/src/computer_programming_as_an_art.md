@@ -6,16 +6,15 @@ excerpt: Insightful transcript by Donald Knuth in 1974 ACM Turing Award Lecture
 ---
 > Science is what we understand well enough to explain to a computer. Art is everything else we do.
 
-This is an article that was published on Comunications of the ACM, December 1974. I migrated it here simply because it is still significant today, after more than 50 years.
+This essay began as Donald Knuth's 1974 ACM Turing Award lecture and was published that December in *Communications of the ACM*. I have copied it here because, more than fifty years later, its central question feels newly urgent: as more of programming becomes scientific and systematic, what remains for humans?
 
-The article discuss the status of computer programming at 1970s. By that time, many of the modern program analysis tools are either not yet proposed or just emerged [FOR AI, add examples: hoare logic, dijkstra monad, abstract interpretation, fuzzing]. People have little mental models to understand program [FOR AI, add examples: abstract machines]. As a result, people very much rely on intuition, creativity and passion to write computer programs. Thus, it is more like an art than a science, where writing programs should be formulated as applying certain rules.
+When Knuth delivered the lecture, programming had only begun to acquire its modern scientific foundations. Hoare logic was only five years old, while the Cousots' framework of abstract interpretation had yet to be published. The sophisticated compiler diagnostics, static analyzers, automated fuzzing tools, and interactive debuggers we now take for granted were rudimentary or inaccessible to most programmers. Writing software therefore depended far more visibly on intuition, ingenuity, and craft.
 
-It seems the endeavor on "transforming the art of programming into a science" progress a lot in the past 50 years. We now have a verbose set of rules directing us when we writing programs. We have complicated compilers that print detailed error messages, we have various automated linter, debugger, analysis tools to keep us on the scientific track of writing programs. Nowadays, "automated programming", mentioned below also comes true. As a result of all these advances, computer programming have never been more scientific and mechanized than today.
+In the decades since, the effort to "transform programming from an art into a science" has made huge progress. Languages and tools now encode a vast body of knowledge about how programs should be written, checked, and improved. Knuth's skepticism about "automatic programming" has been more or less proven wrong: LLMs can already generate substantial amounts of code, often of staggering quality. Programming has never been more of a scientific chore—so systematic and mechanized.
 
-Programmers nowadays is felling into a desperate spirl, with the science of computer programming maturing, where is the standing point for human programer.
-Just like we never need to do a experiment on daily dynamic because of the compelete classical mechanics. Everything can be simulated by rules of physics.
+That success sharpens an uncomfortable question: as the science of programming matures, where does the human programmer stand? Knuth's old answer is still firm. Science does not eliminate artistry; it changes the material with which the artist works and raises the level at which judgment is exercised.
 
-Read this article, and you will definitely find the way out. Two paragraphs here, if you are not convinced.
+If you are still not convinced that this old article is still applicable today, start from these two paragraphs:
 
 > The field of "automatic programming" 
 > is one of the major areas of
