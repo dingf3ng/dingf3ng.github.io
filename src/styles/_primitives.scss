@@ -69,6 +69,10 @@
   margin: 0 var(--space-xl) var(--space-xl);
 }
 
+.rich-text__content :where(blockquote) {
+  margin: 0 var(--space-xl) var(--space-xl);
+}
+
 .rich-text__content blockquote p {
   margin: 0;
 }

@@ -6,7 +6,57 @@ excerpt: Insightful transcript by Donald Knuth in 1974 ACM Turing Award Lecture
 ---
 > Science is what we understand well enough to explain to a computer. Art is everything else we do.
 
-This is an article that was published on Comunications of the ACM, December 1974. I migrated it here, simply because it is still significant today, after more than 50 years. I recommend all computer science student to read this article.
+This is an article that was published on Comunications of the ACM, December 1974. I migrated it here simply because it is still significant today, after more than 50 years.
+
+The article discuss the status of computer programming at 1970s. By that time, many of the modern program analysis tools are either not yet proposed or just emerged [FOR AI, add examples: hoare logic, dijkstra monad, abstract interpretation, fuzzing]. People have little mental models to understand program [FOR AI, add examples: abstract machines]. As a result, people very much rely on intuition, creativity and passion to write computer programs. Thus, it is more like an art than a science, where writing programs should be formulated as applying certain rules.
+
+It seems the endeavor on "transforming the art of programming into a science" progress a lot in the past 50 years. We now have a verbose set of rules directing us when we writing programs. We have complicated compilers that print detailed error messages, we have various automated linter, debugger, analysis tools to keep us on the scientific track of writing programs. Nowadays, "automated programming", mentioned below also comes true. As a result of all these advances, computer programming have never been more scientific and mechanized than today.
+
+Programmers nowadays is felling into a desperate spirl, with the science of computer programming maturing, where is the standing point for human programer.
+Just like we never need to do a experiment on daily dynamic because of the compelete classical mechanics. Everything can be simulated by rules of physics.
+
+Read this article, and you will definitely find the way out. Two paragraphs here, if you are not convinced.
+
+> The field of "automatic programming" 
+> is one of the major areas of
+> artificial intelligence research
+> today. Its proponents would love to be
+> able to give a lecture entitled
+> "Computer Programming as an Artifact"
+> (meaning that programming has become 
+> merely a relic of bygone days),
+> because their aim is to create
+> machines that write programs better
+> than we can, given only the problem
+> specification. Personally I don't
+> think such a goal will ever be
+> completely attained, but I do think 
+> that their research is extremely
+> important, because everything we learn
+> about programming helps us to improve
+> our own artistry. In this sense we
+> should continually be striving to
+> transform every art into a science: in
+> the process, we advance the art.
+
+> Film-makers strongly resisted the
+> introduction of talking pictures in
+> the 1920's because they were justly
+> proud of the way they could convey
+> words without sound. Similarly, a true
+> programming artist might well resent
+> the introduction of more powerful
+> equipment; today's mass storage
+> devices tend to spoil much of the
+> beauty of our old tape sorting
+> methods. But today's film makers don't
+> want to go back to silent films, not
+> because they're lazy but because they
+> know it is quite possible to make
+> beautiful movies using the improved
+> technology. The form of their art has
+> changed, but there is still plenty of
+> room for artistry.
 
 ---
 
@@ -53,9 +103,9 @@ Many authors wrote about the relationship between art and science in the ninetee
 > production of the different and heterogeneous conditions necessary
 > to each effect which the exigencies of practical life require.
 
-As I was looking up these things about the meanings of "art," I found that authors have been calling for a transition from art to science for at least two centuries. For example, the preface to a textbook on mineralogy, written in 1784, said the following [17]: "Previous to the year 1780, mineralogy, though tolerably understood by many as an Art, could scarce be deemed a Science."
+As I was looking up these things about the meanings of "art", I found that authors have been calling for a transition from art to science for at least two centuries. For example, the preface to a textbook on mineralogy, written in 1784, said the following: "Previous to the year 1780, mineralogy, though tolerably understood by many as an Art, could scarce be deemed a Science."
 
-According to most dictionaries "science" means knowledge that has been logically arranged and systematized in the form of general "laws." The advantage of science is that it saves us from the need to think things through in each individual case; we can turn our thoughts to higher-level concepts. As John Ruskin wrote in 1853 [32]: "The work of science is to substitute facts for appearances, and demonstrations for impressions."
+According to most dictionaries "science" means knowledge that has been logically arranged and systematized in the form of general "laws". The advantage of science is that it saves us from the need to think things through in each individual case; we can turn our thoughts to higher-level concepts. As John Ruskin wrote in 1853: "The work of science is to substitute facts for appearances, and demonstrations for impressions."
 
 It seems to me that if the authors I studied were writing today, they would agree with the following characterization: Science is knowledge which we understand so well that we can teach it to a computer; and if we don't fully understand something, it is an art to deal with it. Since the notion of an algorithm or a computer program provides us with an extremely useful test for the depth of our knowledge about any given subject, the process of going from an art to a science means that we learn how to automate something.
 
@@ -65,49 +115,64 @@ From this standpoint it is certainly desirable to make computer programming a sc
 
 The field of "automatic programming" is one of the major areas of artificial intelligence research today. Its proponents would love to be able to give a lecture entitled "Computer Programming as an Artifact" (meaning that programming has become merely a relic of bygone days), because their aim is to create machines that write programs better than we can, given only the problem specification. Personally I don't think such a goal will ever be completely attained, but I do think that their research is extremely important, because everything we learn about programming helps us to improve our own artistry. In this sense we should continually be striving to transform every art into a science: in the process, we advance the art.
 
-Science and Art
+## Science and Art
 
-Our discussion indicates that computer programming is by now both a science and an art, and that the two aspects nicely complement each other. Apparently most authors who examine such a question come to this same conclusion, that their subject is both a science and an art, whatever their subject is (cf. [25]). I found a book about elementary photography, written in 1893, which stated that "the development of the photographic image is both an art and a science" [13]. In fact, when I first picked up a dictionary in order to study the words "art" and "science," I happened to glance at the editor's preface, which began by saying, "The making of a dictionary is both a science and an art." The editor of Funk & Wagnall's dictionary [27] observed that the painstaking accumulation and classification of data about words has a scientific character, while a well-chosen phrasing of definitions demands the ability to write with economy and precision: "The science without the art is likely to be ineffective; the art without the science is certain to be inaccurate."
+Our discussion indicates that computer programming is by now both a science and an art, and that the two aspects nicely complement each other. Apparently most authors who examine such a question come to this same conclusion, that their subject is both a science and an art, whatever their subject is. I found a book about elementary photography, written in 1893, which stated that "the development of the photographic image is both an art and a science". In fact, when I first picked up a dictionary in order to study the words "art" and "science," I happened to glance at the editor's preface, which began by saying, "the making of a dictionary is both a science and an art". The editor of Funk & Wagnall's dictionary observed that the painstaking accumulation and classification of data about words has a scientific character, while a well-chosen phrasing of definitions demands the ability to write with economy and precision: "The science without the art is likely to be ineffective; the art without the science is certain to be inaccurate."
 
 When preparing this talk I looked through the card catalog at Stanford library to see how other people have been using the words "art" and "science" in the titles of their books. This turned out to be quite interesting.
 
-For example, I found two books entitled The Art of Playing the Piano [5, 15], and others called The Science of Pianoforte Technique [10], The Science of Pianoforte Practice [30]. There is also a book called The Art of Piano Playing: A Scientific Approach [22].
+For example, I found two books entitled The Art of Playing the Piano, and others called The Science of Pianoforte Technique, The Science of Pianoforte Practice. There is also a book called The Art of Piano Playing: A Scientific Approach.
 
-Then I found a nice little book entitled The Gentle Art of Mathematics [31], which made me somewhat sad that I can't honestly describe computer programming as a "gentle art." I had known for several years about a book called The Art of Computation, published in San Francisco, 1879, by a man named C. Frusher Howard [14]. This was a book on practical business arithmetic that had sold over 400,000 copies in various editions by 1890. I was amused to read the preface, since it shows that Howard's philosophy and the intent of his title were quite different from mine; he wrote: "A knowledge of the Science of Number is of minor importance; skill in the Art of Reckoning is absolutely indispensible."
+Then I found a nice little book entitled The Gentle Art of Mathematics, which made me somewhat sad that I can't honestly describe computer programming as a "gentle art". I had known for several years about a book called The Art of Computation, published in San Francisco, 1879, by a man named C. Frusher Howard. This was a book on practical business arithmetic that had sold over 400,000 copies in various editions by 1890. I was amused to read the preface, since it shows that Howard's philosophy and the intent of his title were quite different from mine; he wrote: "A knowledge of the Science of Number is of minor importance; skill in the Art of Reckoning is absolutely indispensible."
 
-Several books mention both science and art in their titles, notably The Science of Being and Art of Living by Maharishi Mahesh Yogi [24]. There is also a book called The Art of Scientific Discovery [11], which analyzes how some of the great discoveries of science were made.
+Several books mention both science and art in their titles, notably The Science of Being and Art of Living by Maharishi Mahesh Yogi. There is also a book called The Art of Scientific Discovery, which analyzes how some of the great discoveries of science were made.
 
-So much for the word "art" in its classical meaning. Actually when I chose the title of my books, I wasn't thinking primarily of art in this sense, I was thinking more of its current connotations. Probably the most interesting book which turned up in my search was a fairly recent work by Robert E. Mueller called The Science of Art [29]. Of all the books I've mentioned, Mueller's comes closest to expressing what I want to make the central theme of my talk today, in terms of real artistry as we now understand the term. He observes: "It was once thought that the imaginative outlook of the artist was death for the scientist. And the logic of science seemed to spell doom to all possible artistic flights of fancy." He goes on to explore the advantages which actually do result from a synthesis of science and art.
+So much for the word "art" in its classical meaning. Actually when I chose the title of my books, I wasn't thinking primarily of art in this sense, I was thinking more of its current connotations. Probably the most interesting book which turned up in my search was a fairly recent work by Robert E. Mueller called The Science of Art. Of all the books I've mentioned, Mueller's comes closest to expressing what I want to make the central theme of my talk today, in terms of real artistry as we now understand the term. He observes: "It was once thought that the imaginative outlook of the artist was death for the scientist. And the logic of science seemed to spell doom to all possible artistic flights of fancy." He goes on to explore the advantages which actually do result from a synthesis of science and art.
 
 A scientific approach is generally characterized by the words logical, systematic, impersonal, calm, rational, while an artistic approach is characterized by the words aesthetic, creative, humanitarian, anxious, irrational. It seems to me that both of these apparently contradictory approaches have great value with respect to computer programming.
 
-Emma Lehmer wrote in 1956 that she had found coding to be "an exacting science as well as an intriguing art" [23]. H.S.M. Coxeter remarked in 1957 that he sometimes felt "more like an artist than a scientist" [7]. This was at the time C.P. Snow was beginning to voice his alarm at the growing polarization between "two cultures" of educated people [34, 35]. He pointed out that we need to combine scientific and artistic values if we are to make real progress.
+Emma Lehmer wrote in 1956 that she had found coding to be "an exacting science as well as an intriguing art". H.S.M. Coxeter remarked in 1957 that he sometimes felt "more like an artist than a scientist". This was at the time C.P. Snow was beginning to voice his alarm at the growing polarization between "two cultures" of educated people. He pointed out that we need to combine scientific and artistic values if we are to make real progress.
 
-Works of Art
+## Works of Art
 
 When I'm sitting in an audience listening to a long lecture, my attention usually starts to wane at about this point in the hour. So I wonder, are you getting a little tired of my harangue about "science" and "art"? I really hope that you'll be able to listen carefully to the rest of this, anyway, because now comes the part about which I feel most deeply.
 
-When I speak about computer programming as an art, I am thinking primarily of it as an art form, in an aesthetic sense. The chief goal of my work as educator and author is to help people learn how to write beautiful programs. It is for this reason I was especially pleased to learn recently [32] that my books actually appear in the Fine Arts Library at Cornell University. (However, the three volumes apparently sit there neatly on the shelf, without being used, so I'm afraid the librarians may have made a mistake by interpreting my title literally.)
+When I speak about computer programming as an art, I am thinking primarily of it as an art form, in an aesthetic sense. The chief goal of my work as educator and author is to help people learn how to write beautiful programs. It is for this reason I was especially pleased to learn recently that my books actually appear in the Fine Arts Library at Cornell University. (However, the three volumes apparently sit there neatly on the shelf, without being used, so I'm afraid the librarians may have made a mistake by interpreting my title literally.)
 
-My feeling is that when we prepare a program, it can be like composing poetry or music; as Andrei Ershov has said [9], programming can give us both intellectual and emotional satisfaction, because it is a real achievement to master complexity and to establish a system of consistent rules.
+My feeling is that when we prepare a program, it can be like composing poetry or music; as Andrei Ershov has said, programming can give us both intellectual and emotional satisfaction, because it is a real achievement to master complexity and to establish a system of consistent rules.
 
 Furthermore when we read other people's programs, we can recognize some of them as genuine works of art. I can still remember the great thrill it was for me to read the listing of Stan Poley's SOAP II assembly program in 1958; you probably think I'm crazy, and styles have certainly changed greatly since then, but at the time it meant a great deal to me to see how elegant a system program could be, especially by comparison with the heavy-handed coding found in other listings I had been studying at the same time. The possibility of writing beautiful programs, even in assembly language, is what got me hooked on programming in the first place.
 
 Some programs are elegant, some are exquisite, some are sparkling. My claim is that it is possible to write grand programs, noble programs, truly magnificent ones!
 
-Taste and Style
+## Taste and Style
 
-The idea of style in programming is now coming to the forefront at last, and I hope that most of you have seen the excellent little book on Elements of Programming Style by Kernighan and Plauger [16]. In this connection it is most important for us all to remember that there is no one "best" style; everybody has his own preferences, and it is a mistake to try to force people into an unnatural mold. We often hear the saying, "I don't know anything about art, but I know what I like." The important thing is that you really like the style you are using; it should be the best way you prefer to express yourself.
+The idea of style in programming is now coming to the forefront at last, and I hope that most of you have seen the excellent little book on Elements of Programming Style by Kernighan and Plauger. In this connection it is most important for us all to remember that there is no one "best" style; everybody has his own preferences, and it is a mistake to try to force people into an unnatural mold. We often hear the saying, "I don't know anything about art, but I know what I like." The important thing is that you really like the style you are using; it should be the best way you prefer to express yourself.
 
-Edsger Dijkstra stressed this point in the preface to his Short Introduction to the Art of Programming [8]:
-It is my purpose to transmit the importance of good taste and style in programming, [but] the specific elements of style presented serve only to illustrate what benefits can be derived from "style" in general. In this respect I feel akin to the teacher of composition at a conservatory: He does not teach his pupils how to compose a particular symphony, he must help his pupils to find their own style and must explain to them what is implied by this. (It has been this analogy that made me talk about "The Art of Programming.")
-Now we must ask ourselves, What is good style, and what is bad style? We should not be too rigid about this in judging other people's work. The early nineteenth-century philosopher Jeremy Bentham put it this way [3, Bk. 3, Ch. 1]:
-Judges of elegance and taste consider themselves as benefactors to the human race, whilst they are really only the interrupters of their pleasure... There is no taste which deserves the epithet good, unless it be the taste for such employments which, to the pleasure actually produced by them, conjoin some contingent or future utility: there is no taste which deserves to be characterized as bad, unless it be a taste for some occupation which has a mischievous tendency.
+Edsger Dijkstra stressed this point in the preface to his Short Introduction to the Art of Programming:
+
+> It is my purpose to transmit the importance of good taste and style in
+> programming, [but] the specific elements of style presented serve only to
+> illustrate what benefits can be derived from "style" in general. In this respect I
+> feel akin to the teacher of composition at a conservatory: He does not teach his
+> pupils how to compose a particular symphony, he must help his pupils to find their
+> own style and must explain to them what is implied by this. (It has been this
+> analogy that made me talk about "The Art of Programming".)
+
+Now we must ask ourselves, What is good style, and what is bad style? We should not be too rigid about this in judging other people's work. The early nineteenth-century philosopher Jeremy Bentham put it this way:
+
+> Judges of elegance and taste consider themselves as benefactors to the human race,
+> whilst they are really only the interrupters of their pleasure... There is no
+> taste which deserves the epithet good, unless it be the taste for such employments
+> which, to the pleasure actually produced by them, conjoin some contingent or
+> future utility: there is no taste which deserves to be characterized as bad,
+> unless it be a taste for some occupation which has a mischievous tendency.
+
 When we apply our own prejudices to "reform" someone else's taste, we may be unconsciously denying him some entirely legitimate pleasure. That's why I don't condemn a lot of things programmers do, even though I would never enjoy doing them myself. The important thing is that they are creating something they feel is beautiful.
 
 In the passage I just quoted, Bentham does give us some advice about certain principles of aesthetics which are better than others, namely the "utility" of the result. We have some freedom in setting up our personal standards of beauty, but it is especially nice when the things we regard as beautiful are also regarded by other people as useful. I must confess that I really enjoy writing computer programs; and I especially enjoy writing programs which do the greatest good, in some sense.
 
-There are many senses in which a program can be "good," of course. In the first place, it's especially good to have a program that works correctly. Secondly it is often good to have a program that won't be hard to change, when the time for adaptation arises. Both of these goals are achieved when the program is easily readable and understandable to a person who knows the appropriate language.
+There are many senses in which a program can be "good", of course. In the first place, it's especially good to have a program that works correctly. Secondly it is often good to have a program that won't be hard to change, when the time for adaptation arises. Both of these goals are achieved when the program is easily readable and understandable to a person who knows the appropriate language.
 
 Another important way for a production program to be good is for it to interact gracefully with its users, especially when recovering from human errors in the input data. It's a real art to compose meaningful error messages or to design flexible input formats which are not error-prone.
 
@@ -115,21 +180,21 @@ Another important aspect of program quality is the efficiency with which the com
 
 The real problem is that programmers have spent far too much time worrying about efficiency in the wrong places and at the wrong times; premature optimization is the root of all evil (or at least most of it) in programming.
 
-We shouldn't be penny wise and pound foolish, nor should we always think of efficiency in terms of so many percent gained or lost in total running time or space. When we buy a car, many of us are almost oblivious to a difference of $50 or $100 in its price, while we might make a special trip to a particular store in order to buy a 50 cent item for only 25 cents. My point is that there is a time and place for efficiency; I have discussed its proper role in my paper on structured programming, which appears in the current issue of Computing Surveys [21].
+We shouldn't be penny wise and pound foolish, nor should we always think of efficiency in terms of so many percent gained or lost in total running time or space. When we buy a car, many of us are almost oblivious to a difference of $50 or $100 in its price, while we might make a special trip to a particular store in order to buy a 50 cent item for only 25 cents. My point is that there is a time and place for efficiency; I have discussed its proper role in my paper on structured programming, which appears in the current issue of Computing Surveys.
 
-Less Facilities: More Enjoyment
+## Less Facilities: More Enjoyment
 
 One rather curious thing I've noticed about aesthetic satisfaction is that our pleasure is significantly enhanced when we accomplish something with limited tools. For example, the program of which I personally am most pleased and proud is a compiler I once wrote for a primitive minicomputer which had only 4096 words of memory, 16 bits per word. It makes a person feel like a real virtuoso to achieve something under such severe restrictions.
 
-A similar phenomenon occurs in many other contexts. For example, people often seem to fall in love with their Volkswagens but rarely with their Lincoln Continentals (which presumably run much better). When I learned programming, it was a popular pastime to do as much as possible with programs that fit on only a single punched card. I suppose it's this same phenomenon that makes APL enthusiasts relish their "one-liners." When we teach programming nowadays, it is a curious fact that we rarely capture the heart of a student for computer science until he has taken a course which allows "hands on" experience with a minicomputer. The use of our large-scale machines with their fancy operating systems and languages doesn't really seem to engender any love for programming, at least not at first.
+A similar phenomenon occurs in many other contexts. For example, people often seem to fall in love with their Volkswagens but rarely with their Lincoln Continentals (which presumably run much better). When I learned programming, it was a popular pastime to do as much as possible with programs that fit on only a single punched card. I suppose it's this same phenomenon that makes APL enthusiasts relish their "one-liners". When we teach programming nowadays, it is a curious fact that we rarely capture the heart of a student for computer science until he has taken a course which allows "hands on" experience with a minicomputer. The use of our large-scale machines with their fancy operating systems and languages doesn't really seem to engender any love for programming, at least not at first.
 
-It's not obvious how to apply this principle to increase programmers' enjoyment of their work. Surely programmers would groan if their manager suddenly announced that the new machine will have only half as much memory as the old. And I don't think anybody, even the most dedicated "programming artists," can be expected to welcome such a prospect, since nobody likes to lose facilities unnecessarily. Another example may help to clarify the situation: Film-makers strongly resisted the introduction of talking pictures in the 1920's because they were justly proud of the way they could convey words without sound. Similarly, a true programming artist might well resent the introduction of more powerful equipment; today's mass storage devices tend to spoil much of the beauty of our old tape sorting methods. But today's film makers don't want to go back to silent films, not because they're lazy but because they know it is quite possible to make beautiful movies using the improved technology. The form of their art has changed, but there is still plenty of room for artistry.
+It's not obvious how to apply this principle to increase programmers' enjoyment of their work. Surely programmers would groan if their manager suddenly announced that the new machine will have only half as much memory as the old. And I don't think anybody, even the most dedicated "programming artists", can be expected to welcome such a prospect, since nobody likes to lose facilities unnecessarily. Another example may help to clarify the situation: Film-makers strongly resisted the introduction of talking pictures in the 1920's because they were justly proud of the way they could convey words without sound. Similarly, a true programming artist might well resent the introduction of more powerful equipment; today's mass storage devices tend to spoil much of the beauty of our old tape sorting methods. But today's film makers don't want to go back to silent films, not because they're lazy but because they know it is quite possible to make beautiful movies using the improved technology. The form of their art has changed, but there is still plenty of room for artistry.
 
 How did they develop their skill? The best film makers through the years usually seem to have learned their art in comparatively primitive circumstances, often in other countries with a limited movie industry. And in recent years the most important things we have been learning about programming seem to have originated with people who did not have access to very large computers. The moral of this story, it seems to me, is that we should make use of the idea of limited resources in our own education. We can all benefit by doing occasional "toy" programs, when artificial restrictions are set up, so that we are forced to push our abilities to the limit. We shouldn't live in the lap of luxury all the time, since that tends to make us lethargic. The art of tackling miniproblems with all our energy will sharpen our talents for the real problems, and the experience will help us to get more pleasure from our accomplishments on less restricted equipment.
 
-In a similar vein, we shouldn't shy away from "art for art's sake"; we shouldn't feel guilty about programs that are just for fun. I once got a great kick out of writing a one-statement ALGOL program that invoked an innerproduct procedure in such an unusual way that it calculated the mth prime number, instead of an innerproduct [19]. Some years ago the students at Stanford were excited about finding the shortest FORTRAN program which prints itself out, in the sense that the program's output is identical to its own source text. The same problem was considered for many other languages. I don't think it was a waste of time for them to work on this; nor would Jeremy Bentham, whom I quoted earlier, deny the "utility" of such pastimes [3, Bk. 3, Ch. 1]. "On the contrary," he wrote, "there is nothing, the utility of which is more incontestable. To what shall the character of utility be ascribed, if not to that which is a source of pleasure?"
+In a similar vein, we shouldn't shy away from "art for art's sake"; we shouldn't feel guilty about programs that are just for fun. I once got a great kick out of writing a one-statement ALGOL program that invoked an innerproduct procedure in such an unusual way that it calculated the $m_{th}$ prime number, instead of an innerproduct. Some years ago the students at Stanford were excited about finding the shortest FORTRAN program which prints itself out, in the sense that the program's output is identical to its own source text. The same problem was considered for many other languages. I don't think it was a waste of time for them to work on this; nor would Jeremy Bentham, whom I quoted earlier, deny the "utility" of such pastimes. "On the contrary," he wrote, "there is nothing, the utility of which is more incontestable. To what shall the character of utility be ascribed, if not to that which is a source of pleasure?"
 
-Providing Beautiful Tools
+## Providing Beautiful Tools
 
 Another characteristic of modern art is its emphasis on creativity. It seems that many artists these days couldn't care less about creating beautiful things; only the novelty of an idea is important. I'm not recommending that computer programming should be like modern art in this sense, but it does lead me to an observation that I think is important. Sometimes we are assigned to a programming task which is almost hopelessly dull, giving us no outlet whatsoever for any creativity; and at such times a person might well come to me and say, "So programming is beautiful? It's all very well for you to declaim that I should take pleasure in creating elegant and charming programs, but how am I supposed to make this mess into a work of art?"
 
@@ -139,14 +204,14 @@ Therefore I want to address my closing remarks to the system programmers and the
 
 It's very hard for me to convince college freshmen that programming is beautiful, when the first thing I have to tell them is how to punch "slash slash JoB equals so-and-so." Even job control languages can be designed so that they are a pleasure to use, instead of being strictly functional.
 
-Computer hardware designers can make their machines much more pleasant to use, for example by providing floating-point arithmetic which satisfies simple mathematical laws. The facilities presently available on most machines make the job of rigorous error analysis hopelessly difficult, but properly designed operations would encourage numerical analysts to provide better subroutines which have certified accuracy (cf. [20, p. 204]).
+Computer hardware designers can make their machines much more pleasant to use, for example by providing floating-point arithmetic which satisfies simple mathematical laws. The facilities presently available on most machines make the job of rigorous error analysis hopelessly difficult, but properly designed operations would encourage numerical analysts to provide better subroutines which have certified accuracy.
 
-Let's consider also what software designers can do. One of the best ways to keep up the spirits of a system user is to provide routines that he can interact with. We shouldn't make systems too automatic, so that the action always goes on behind the scenes; we ought to give the programmer-user a chance to direct his creativity into useful channels. One thing all programmers have in common is that they enjoy working with machines; so let's keep them in the loop. Some tasks are best done by machine, while others are best done by human insight; and a properly designed system will find the right balance. (I have been trying to avoid misdirected automation for many years, cf. [18].)
+Let's consider also what software designers can do. One of the best ways to keep up the spirits of a system user is to provide routines that he can interact with. We shouldn't make systems too automatic, so that the action always goes on behind the scenes; we ought to give the programmer-user a chance to direct his creativity into useful channels. One thing all programmers have in common is that they enjoy working with machines; so let's keep them in the loop. Some tasks are best done by machine, while others are best done by human insight; and a properly designed system will find the right balance. (I have been trying to avoid misdirected automation for many years.)
 
-Program measurement tools make a good case in point. For years, programmers have been unaware of how the real costs of computing are distributed in their programs. Experience indicates that nearly everybody has the wrong idea about the real bottlenecks in his programs; it is no wonder that attempts at efficiency go awry so often, when a programmer is never given a breakdown of costs according to the lines of code he has written. His job is something like that of a newly married couple who try to plan a balanced budget without knowing how much the individual items like food, shelter, and clothing will cost. All that we have been giving programmers is an optimizing compiler, which mysteriously does something to the programs it translates but which never explains what it does. Fortunately we are now finally seeing the appearance of systems which give the user credit for some intelligence; they automatically provide instrumentation of programs and appropriate feedback about the real costs. These experimental systems have been a huge success, because they produce measurable improvements, and especially because they are fun to use, so I am confident that it is only a matter of time before the use of such systems is standard operating procedure. My paper in Computing Surveys [21] discusses this further, and presents some ideas for other ways in which an appropriate interactive routine can enhance the satisfaction of user programmers.
+Program measurement tools make a good case in point. For years, programmers have been unaware of how the real costs of computing are distributed in their programs. Experience indicates that nearly everybody has the wrong idea about the real bottlenecks in his programs; it is no wonder that attempts at efficiency go awry so often, when a programmer is never given a breakdown of costs according to the lines of code he has written. His job is something like that of a newly married couple who try to plan a balanced budget without knowing how much the individual items like food, shelter, and clothing will cost. All that we have been giving programmers is an optimizing compiler, which mysteriously does something to the programs it translates but which never explains what it does. Fortunately we are now finally seeing the appearance of systems which give the user credit for some intelligence; they automatically provide instrumentation of programs and appropriate feedback about the real costs. These experimental systems have been a huge success, because they produce measurable improvements, and especially because they are fun to use, so I am confident that it is only a matter of time before the use of such systems is standard operating procedure. My paper in Computing Surveys discusses this further, and presents some ideas for other ways in which an appropriate interactive routine can enhance the satisfaction of user programmers.
 
 Language designers also have an obligation to provide languages that encourage good style, since we all know that style is strongly influenced by the language in which it is expressed. The present surge of interest in structured programming has revealed that none of our existing languages is really ideal for dealing with program and data structure, nor is it clear what an ideal language should be. Therefore I look forward to many careful experiments in language design during the next few years.
 
-Summary
+## Summary
 
 To summarize: We have seen that computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better. Therefore we can be glad that people who lecture at computer conferences speak about the state of the Art.
