@@ -1,7 +1,7 @@
 ---
 title: Pie in Source Academy
 date: 2025-05-16
-category: Programming Language
+category: Articles
 excerpt: Pie is a programming language used in the book The Little Typer. Now we bring it onto Source Academy, a widely used platform for teaching in NUS.
 ---
 
