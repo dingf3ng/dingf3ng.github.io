@@ -1,4 +1,6 @@
 import dayjs from 'dayjs';
+import { faGoogleScholar } from '@fortawesome/free-brands-svg-icons/faGoogleScholar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
@@ -29,6 +31,7 @@ const formatPublicationDetails = (item) => [
   item.date && formatYear(item.date),
   item.type,
 ].filter(Boolean).join('. ');
+const scholarUrl = 'https://scholar.google.com/citations?user=lYCr9xoAAAAJ&hl=en';
 
 const publicationItems = [...publications].sort(sortByDateDesc);
 const talkItems = [...talks]
@@ -57,7 +60,18 @@ const Gallery = () => (
       <div className={styles.sections}>
         <section className={styles.section}>
           <header className={styles.sectionHeader}>
-            <h3 className={styles.sectionTitle}>Publications and Drafts</h3>
+            <div className={styles.sectionTitleRow}>
+              <h3 className={styles.sectionTitle}>Publications and Drafts</h3>
+              <a
+                aria-label="Google Scholar"
+                className={styles.scholarLink}
+                href={scholarUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon className={styles.scholarIcon} icon={faGoogleScholar} />
+              </a>
+            </div>
           </header>
           <ol className={styles.publications}>
             {publicationItems.map((item) => (

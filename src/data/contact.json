@@ -10,6 +10,11 @@
     "icon": "linkedin"
   },
   {
+    "link": "https://scholar.google.com/citations?user=lYCr9xoAAAAJ&hl=en",
+    "label": "Google Scholar",
+    "icon": "scholar"
+  },
+  {
     "link": "mailto:dingfeng@u.nus.edu",
     "label": "Email",
     "icon": "email"

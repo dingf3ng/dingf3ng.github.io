@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faGoogleScholar } from '@fortawesome/free-brands-svg-icons/faGoogleScholar';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 
@@ -10,6 +11,7 @@ import styles from './ContactIcons.module.scss';
 const icons = {
   github: faGithub,
   linkedin: faLinkedinIn,
+  scholar: faGoogleScholar,
   email: faEnvelope,
 };
 

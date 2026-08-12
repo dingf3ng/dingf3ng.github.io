@@ -42,6 +42,7 @@ const Main = ({
     sameAs: [
       'https://github.com/dingf3ng',
       'https://www.linkedin.com/in/dingf3ng',
+      'https://scholar.google.com/citations?user=lYCr9xoAAAAJ&hl=en',
     ],
     knowsAbout: [
       'Computer Science',

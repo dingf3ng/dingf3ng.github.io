@@ -15,8 +15,38 @@
 }
 
 .sectionTitle {
-  margin-bottom: 0.3rem;
+  margin: 0;
   font-size: 1.2rem;
+}
+
+.sectionTitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.scholarLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  color: var(--color-text-strong);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.scholarLink:hover {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.scholarIcon {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .sectionIntro {
