@@ -7,8 +7,15 @@
     "pdf": "/pubs/pollsub.pdf"    
   },
   {
+    "title": "More Pie for the Little Typer",
+    "authors": "Zhang Qixiang, Ding Feng, Li Daoxin, Martin Henz",
+    "venue": "SPLASH-E",
+    "date": "2026-07-01",
+    "pdf": "/pubs/splashe.pdf"
+  },
+  {
     "title": "PieLoT: LLM-driven Toolbox for Theorem Proving Education",
-    "authors": "Ding Feng, Li Daoxin, Zhang Qixiang, Martin Henz",
+    "authors": "Ding Feng, Li Daoxin, Zhang Qixiang",
     "venue": "AI4X-AC",
     "type": "Extended Abstract",
     "date": "2026-03-01",
