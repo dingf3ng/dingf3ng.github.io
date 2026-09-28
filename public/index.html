@@ -54,6 +54,10 @@
           l.pathname.slice(0, -1) + decoded + l.hash
         );
       }
+      // Old HashRouter links (/#/gallery) -> /gallery
+      if (l.hash.indexOf('#/') === 0) {
+        window.history.replaceState(null, null, l.hash.slice(1));
+      }
     }(window.location))
   </script>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

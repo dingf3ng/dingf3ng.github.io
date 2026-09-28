@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import {
-  HashRouter,
+  BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -25,7 +25,7 @@ const PostTemplate = lazy(() => import('./components/Posts/PostTemplate'));
 const App = () => (
   <ThemeProvider>
     <HelmetProvider>
-      <HashRouter basename={PUBLIC_URL}>
+      <BrowserRouter basename={PUBLIC_URL}>
         <Suspense fallback={<Main />}>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -37,7 +37,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </HelmetProvider>
   </ThemeProvider>
 );
