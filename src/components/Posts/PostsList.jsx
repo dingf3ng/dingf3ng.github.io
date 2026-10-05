@@ -11,8 +11,10 @@ const PostsList = ({ posts }) => (
           <time className={styles.date} dateTime={post.date}>{post.date}</time>
           <div className={styles.body}>
             <p className={styles.category}>{post.category}</p>
-            <h2 className={styles.title}>{post.title}</h2>
-            <p className={styles.excerpt}>{post.excerpt}</p>
+            <div className={styles.content}>
+              <h2 className={styles.title}>{post.title}</h2>
+              <p className={styles.excerpt}>{post.excerpt}</p>
+            </div>
           </div>
           <span className={styles.arrow} aria-hidden="true">↗</span>
         </Link>

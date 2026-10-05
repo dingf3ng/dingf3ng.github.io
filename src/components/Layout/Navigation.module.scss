@@ -48,10 +48,12 @@
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-fast);
+  transform-origin: center;
+  transition: transform var(--transition-panel);
 }
-.link:hover::after, .active::after { transform: scaleX(1); }
+.link:hover::after, .link:focus-visible::after, .active::after { transform: scaleX(1); }
+.link > span { transition: transform var(--transition-panel); }
+.link:hover > span, .link:focus-visible > span { transform: translate(2px, -2px); }
 .active { color: var(--color-accent); }
 .actions { grid-column: 12 / -1; justify-self: end; width: 44px; height: 44px; }
 .mobileOnly { display: none; }

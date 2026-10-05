@@ -10,12 +10,12 @@
   padding: 1.25rem 0;
   border-top: 1px solid var(--color-border);
   font-size: var(--font-size-body);
-  transition: background-color var(--transition-fast);
 }
-.item:hover { background: var(--color-border-soft); }
 .item:first-child { border-top: 0; }
 .date { font-size: var(--font-size-caption); color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
-.description { max-width: 80ch; overflow-wrap: anywhere; }
+.description { position: relative; max-width: 80ch; overflow-wrap: anywhere; }
+.description::before { content: ''; position: absolute; top: 0; bottom: 0; left: calc(var(--grid-gap) / -2); width: 3px; background: var(--gradient-accent); opacity: 0; transform: scaleY(0); transform-origin: center; transition: opacity var(--transition-fast), transform var(--transition-panel); }
+.item:hover .description::before, .item:focus-within .description::before { opacity: 1; transform: scaleY(1); }
 .description :global(p) { margin: 0; }
 @include mobile {
   .item { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; }

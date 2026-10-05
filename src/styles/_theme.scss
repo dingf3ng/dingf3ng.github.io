@@ -48,6 +48,9 @@
   --color-border-soft: #e9e6ec;
   --color-border-strong: #87818e;
   --color-accent: #24666b;
+  --color-accent-purple: #b4a3c9;
+  --color-accent-green: #9dbcc0;
+  --gradient-accent: linear-gradient(180deg, var(--color-accent-purple), var(--color-accent-green));
   --color-lavender: #e2dde6;
   --color-overlay: rgba(25, 24, 27, 0.3);
   --color-surface-overlay: rgba(245, 244, 240, 0.9);
@@ -64,6 +67,8 @@
   --color-border-soft: #302b36;
   --color-border-strong: #8c8297;
   --color-accent: #8bcbd0;
+  --color-accent-purple: #696077;
+  --color-accent-green: #4c6870;
   --color-lavender: #37303f;
   --color-surface-overlay: rgba(36, 33, 39, 0.9);
   --color-surface-overlay-hover: #242127;
