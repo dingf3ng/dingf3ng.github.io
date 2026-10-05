@@ -8,6 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Main from './layouts/Main'; // fallback for lazy pages
 import './styles/index.scss';
 import { ThemeProvider } from './context/ThemeContext';
+import GridDebug from './components/Layout/GridDebug';
 
 const PUBLIC_URL = process.env.PUBLIC_URL || '';
 // Every route - we lazy load so that each page can be chunked
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        {(process.env.NODE_ENV === 'development' || new URLSearchParams(window.location.search).get('grid') === '1') && <GridDebug />}
       </BrowserRouter>
     </HelmetProvider>
   </ThemeProvider>

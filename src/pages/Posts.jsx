@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 import PostsList from '../components/Posts/PostsList';
 import { usePosts } from '../hooks/usePosts';
@@ -57,10 +56,7 @@ const Posts = () => {
       <article className="surface-panel">
         <header className="surface-panel__header">
           <div className="surface-panel__title-block">
-            <h2 className="surface-panel__title">
-              <Link to="/posts">Posts</Link>
-            </h2>
-            <p className="surface-panel__subtitle">Read my blog posts in various topics</p>
+            <h1 className="surface-panel__title">Posts</h1>
           </div>
         </header>
 
@@ -76,6 +72,7 @@ const Posts = () => {
               <div className={styles.selectWrap}>
                 <select
                   className={styles.select}
+                  aria-label="Filter posts by category"
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                 >

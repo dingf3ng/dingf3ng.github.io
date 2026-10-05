@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
 import Markdown from 'react-markdown';
 
 import Main from '../layouts/Main';
 import { useMarkdownFile } from '../hooks/useMarkdownFile';
 
 const Personal = () => {
-  const { markdown, wordCount } = useMarkdownFile(() => import('../data/about.md'));
+  const { markdown } = useMarkdownFile(() => import('../data/about.md'));
 
   return (
     <Main
@@ -17,10 +16,7 @@ const Personal = () => {
       <article className="surface-panel rich-text">
         <header className="surface-panel__header">
           <div className="surface-panel__title-block">
-            <h2 className="surface-panel__title">
-              <Link to="/personal">Personal Matters</Link>
-            </h2>
-            <p className="surface-panel__subtitle">(in about {wordCount} words)</p>
+            <h1 className="surface-panel__title">Personal matters</h1>
           </div>
         </header>
         <div className="rich-text__content">

@@ -5,7 +5,8 @@
 .link {
   display: inline-flex;
   border-bottom: 0;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
   font-weight: var(--font-weight-medium);
 }
 

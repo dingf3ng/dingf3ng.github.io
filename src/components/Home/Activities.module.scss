@@ -1,87 +1,22 @@
 @use '../../styles/mixins' as *;
 
-.root {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: var(--space-xl);
-}
-
-.title {
-  margin: 0 0 var(--space-md);
-  font-size: 1.2rem;
-  color: var(--color-text-strong);
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
+.root { min-width: 0; }
+.list { margin: 0; padding: 0; list-style: none; }
 .item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--space-md);
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: var(--font-size-body-sm);
-  transition:
-    background-color var(--transition-panel),
-    transform var(--transition-panel);
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--grid-gap);
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-body);
+  transition: background-color var(--transition-fast);
 }
-
-.item:hover {
-  background-color: var(--color-bg-alt);
-  transform: translateX(0.5rem);
-}
-
-.item:last-child {
-  border-bottom: 0;
-}
-
-.dateColumn {
-  flex-shrink: 0;
-  min-width: 5rem;
-}
-
-.date {
-  display: inline-block;
-  color: var(--color-text-strong);
-  font-size: var(--font-size-body-sm);
-  font-weight: var(--font-weight-bold);
-}
-
-.description {
-  flex: 1;
-  min-width: 0;
-}
-
-.description :global(p) {
-  margin: 0;
-}
-
+.item:hover { background: var(--color-border-soft); }
+.item:first-child { border-top: 0; }
+.date { font-size: var(--font-size-caption); color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+.description { max-width: 80ch; overflow-wrap: anywhere; }
+.description :global(p) { margin: 0; }
 @include mobile {
-  .item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-xs);
-    padding: 0.8rem 0;
-  }
-
-  .item:hover {
-    transform: none;
-  }
-
-  .dateColumn {
-    min-width: auto;
-  }
-
-  .date,
-  .description {
-    font-size: 0.8rem;
-  }
+  .item { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; }
 }

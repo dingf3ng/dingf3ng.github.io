@@ -16,12 +16,11 @@ const InlineMarkdown = ({ children }) => (
 
 const Activities = () => (
   <div className={styles.root}>
-    <h2 className={styles.title}>Recent Activities</h2>
     <ul className={styles.list}>
       {activities.map((item) => (
         <li className={styles.item} key={`${item.date}-${item.description.slice(0, 30)}`}>
           <div className={styles.dateColumn}>
-            <span className={styles.date}>{item.date}</span>
+            <time className={styles.date} dateTime={item.date}>{item.date}</time>
           </div>
           <div className={styles.description}>
             <InlineMarkdown>{item.description}</InlineMarkdown>

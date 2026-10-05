@@ -1,68 +1,21 @@
 @use '../../styles/mixins' as *;
 
-.list {
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
-  position: relative;
-  margin-bottom: var(--space-xl);
-  padding: var(--space-lg) var(--space-lg) var(--space-md);
-  border: solid var(--surface-border-width) var(--color-border);
-  background-color: var(--color-bg);
-  transition:
-    transform var(--transition-panel),
-    box-shadow var(--transition-panel);
-}
-
-.card:hover {
-  transform: translateY(-0.3em);
-  box-shadow: var(--shadow-lift);
-}
-
-.link {
-  display: block;
-  border: 0;
-}
-
-.title {
-  margin: 0 0 var(--space-xs);
-  font-size: var(--font-size-body);
-}
-
-.category {
-  margin: 0 0 var(--space-sm);
-  font-size: var(--font-size-body-sm);
-}
-
-.date {
-  position: absolute;
-  top: var(--space-lg);
-  right: var(--space-lg);
-  margin: 0;
-  font-size: var(--font-size-body-sm);
-  font-style: italic;
-  font-weight: var(--font-weight-medium);
-}
-
-.excerpt {
-  max-width: calc(100% - 8rem);
-  margin: 0;
-  font-size: var(--font-size-body-sm);
-}
+.list { min-width: 0; }
+.card { border-top: 1px solid var(--color-border); }
+.card:last-child { border-bottom: 1px solid var(--color-border); }
+.link { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) 1.5rem; gap: var(--grid-gap); padding: 1.75rem 0; text-decoration: none; transition: background-color var(--transition-fast); }
+.link:hover { background: var(--color-border-soft); color: inherit; }
+.date { padding-top: 0.2rem; color: var(--color-text-muted); font-size: var(--font-size-caption); font-variant-numeric: tabular-nums; }
+.body { min-width: 0; }
+.category { margin: 0 0 0.75rem; font-size: 0.6875rem; letter-spacing: 0.055em; text-transform: uppercase; color: var(--color-text-muted); }
+.title { margin: 0 0 0.75rem; font-size: clamp(1.4rem, 2.2vw, 2rem); font-weight: var(--font-weight-medium); line-height: 1.2; }
+.excerpt { max-width: 60ch; margin: 0; font-size: var(--font-size-body-sm); color: var(--color-text-muted); }
+.arrow { font-size: 1.25rem; color: var(--color-accent); transition: transform var(--transition-fast); }
+.link:hover .arrow { transform: translate(3px, -3px); }
 
 @include mobile {
-  .card {
-    padding: 1.25rem 1.25rem var(--space-md);
-  }
-
-  .date {
-    position: static;
-    margin: 0 0 var(--space-sm);
-  }
-
-  .excerpt {
-    max-width: none;
-  }
+  .link { grid-template-columns: minmax(0, 1fr) 1.5rem; gap: 0.75rem; }
+  .date { grid-column: 1; }
+  .body { grid-column: 1; grid-row: 2; }
+  .arrow { grid-column: 2; grid-row: 2; }
 }

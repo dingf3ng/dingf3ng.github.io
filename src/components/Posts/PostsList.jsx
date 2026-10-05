@@ -8,10 +8,13 @@ const PostsList = ({ posts }) => (
     {posts.map((post) => (
       <article className={styles.card} key={post.id}>
         <Link className={styles.link} to={`/posts/${post.id}`}>
-          <h3 className={styles.title}>{post.title}</h3>
-          <h4 className={styles.category}>{post.category}</h4>
-          <h4 className={styles.date}>{post.date}</h4>
-          <p className={styles.excerpt}>{post.excerpt}</p>
+          <time className={styles.date} dateTime={post.date}>{post.date}</time>
+          <div className={styles.body}>
+            <p className={styles.category}>{post.category}</p>
+            <h2 className={styles.title}>{post.title}</h2>
+            <p className={styles.excerpt}>{post.excerpt}</p>
+          </div>
+          <span className={styles.arrow} aria-hidden="true">↗</span>
         </Link>
       </article>
     ))}

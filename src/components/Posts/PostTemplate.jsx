@@ -58,9 +58,10 @@ const PostTemplate = () => {
     <Main title={post.title} fullPage description="Learn More">
       <article className="surface-panel rich-text">
         <header className="surface-panel__header">
+          <p className="section-label"><Link to="/posts">← All posts</Link></p>
           <div className="surface-panel__title-block">
-            <h2 className="surface-panel__title"><Link to={`/posts/${post.id}`}>{post.title}</Link></h2>
-            <p className="surface-panel__subtitle">(in about {wordCount(post.content)} words)</p>
+            <h1 className="surface-panel__title">{post.title}</h1>
+            <p className="surface-panel__subtitle">{post.date} / {post.category} / About {wordCount(post.content)} words</p>
           </div>
         </header>
         <div className="rich-text__content">

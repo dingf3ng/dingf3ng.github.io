@@ -1,13 +1,16 @@
 .wrapper {
   position: relative;
   width: 100%;
-  padding: var(--page-shell-padding);
+  padding: 4rem var(--page-shell-padding) 2rem;
 }
-
 .main {
   position: relative;
   z-index: var(--z-content);
   width: 100%;
   max-width: var(--content-max-width);
   margin: 0 auto;
+  animation: page-enter 350ms ease both;
+}
+@media (max-width: 736px) {
+  .wrapper { padding-top: 2rem; }
 }

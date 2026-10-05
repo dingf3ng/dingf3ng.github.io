@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
-import { faGoogleScholar } from '@fortawesome/free-brands-svg-icons/faGoogleScholar';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import publications from '../data/publications.json';
@@ -51,10 +50,7 @@ const Gallery = () => (
     <article className="surface-panel">
       <header className="surface-panel__header">
         <div className="surface-panel__title-block">
-          <h2 className="surface-panel__title">
-            <Link to="/gallery">Gallery</Link>
-          </h2>
-          <p className="surface-panel__subtitle">List of publications, drafts and talks</p>
+          <h1 className="surface-panel__title">Gallery</h1>
         </div>
       </header>
       <div className={styles.sections}>
@@ -64,18 +60,20 @@ const Gallery = () => (
               <h3 className={styles.sectionTitle}>Publications and Drafts</h3>
               <a
                 aria-label="Google Scholar"
+                title="Google Scholar"
                 className={styles.scholarLink}
                 href={scholarUrl}
                 rel="noreferrer"
                 target="_blank"
               >
-                <FontAwesomeIcon className={styles.scholarIcon} icon={faGoogleScholar} />
+                <FontAwesomeIcon aria-hidden="true" className={styles.scholarIcon} icon={faBookOpen} />
               </a>
             </div>
           </header>
           <ol className={styles.publications}>
             {publicationItems.map((item) => (
               <li className={styles.publicationItem} key={item.title}>
+                <span className={styles.year}>{item.date ? formatYear(item.date) : 'Draft'}</span>
                 <article className={styles.publicationBody}>
                   <div className={styles.publicationHeader}>
                     <h4 className={styles.publicationTitle}>
@@ -119,7 +117,6 @@ const Gallery = () => (
         <section className={styles.section}>
           <header className={styles.sectionHeader}>
             <h3 className={styles.sectionTitle}>Talks and Presentations</h3>
-            <p className={styles.sectionIntro}>Conference, workshops and seminar presentations with linked materials.</p>
           </header>
           <ul className={styles.talkList}>
             {talkItems.map((item) => (

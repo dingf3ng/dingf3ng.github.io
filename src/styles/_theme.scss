@@ -1,33 +1,26 @@
 @use 'mixins' as *;
 
 :root {
-  --font-sans: "Inter", Helvetica, sans-serif;
-  --font-mono: "Courier New", monospace;
-
-  --font-size-root: 13pt;
-  --font-size-body: 0.92rem;
-  --font-size-body-sm: 0.9rem;
-  --font-size-caption: 0.7rem;
-  --font-size-title: 1.4rem;
-  --font-size-profile-name: 2.3rem;
-
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+  --font-size-root: 16px;
+  --font-size-body: 1rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-caption: 0.75rem;
+  --font-size-title: clamp(2rem, 3vw, 3rem);
+  --font-size-profile-name: clamp(2.5rem, 4vw, 3.75rem);
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 500;
-
-  --letter-spacing-tight: -0.01em;
-  --letter-spacing-wide: 0.01em;
-
-  --line-height-body: 1.75;
-  --line-height-heading: 1.65;
-
-  --surface-border-width: 2px;
-  --border-radius-soft: 6px;
-
-  --header-height: 3.5rem;
-  --header-inline-padding: 1.5rem;
-  --content-max-width: 50rem;
-
+  --font-weight-bold: 700;
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-wide: 0.025em;
+  --line-height-body: 1.65;
+  --line-height-heading: 1.05;
+  --surface-border-width: 1px;
+  --border-radius-soft: 0;
+  --header-height: 5rem;
+  --content-max-width: 1280px;
+  --grid-gap: 24px;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -36,73 +29,51 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4.5rem;
-
-  --space-stack: 2rem;
+  --space-stack: 1.5rem;
   --space-stack-sm: 1rem;
-  --space-section: 3rem;
-  --space-section-mobile: 1.5rem;
-  --page-shell-padding: 4.5rem;
-  --page-shell-padding-desktop: 3rem;
-  --page-shell-padding-mobile: 1.5rem;
-
-  --profile-photo-size: 16rem;
-  --profile-name-gap: 3rem;
-  --profile-signature-width: 7rem;
-  --profile-spacing: 2rem;
-
-  --transition-fast: 0.2s ease;
-  --transition-panel: 0.3s ease;
-  --transition-menu: 0.5s ease;
-
-  --shadow-lift: 0 0.3em 0.5em rgba(119, 118, 179, 0.3);
-
-  --z-gradient: -1;
+  --space-section: 5rem;
+  --space-section-mobile: 2.5rem;
+  --page-shell-padding: clamp(1.5rem, 4vw, 4rem);
+  --transition-fast: 180ms ease;
+  --transition-panel: 240ms ease;
+  --transition-menu: 240ms ease;
   --z-content: 1;
-  --z-header: 10000;
-
-  --color-bg: #e2e1e2;
-  --color-bg-alt: #e2dde6;
-  --color-text: #1c1b1b;
-  --color-text-strong: #252525;
-  --color-text-muted: #7776b3;
-  --color-border: rgba(119, 118, 179, 0.3);
-  --color-border-soft: rgba(119, 118, 179, 0.075);
-  --color-border-strong: rgba(119, 118, 179, 0.65);
-  --color-accent: #66b3ba;
-  --color-overlay: rgba(0, 0, 0, 0.4);
-  --color-surface-overlay: rgba(255, 255, 255, 0.7);
-  --color-surface-overlay-hover: rgba(255, 255, 255, 0.9);
+  --z-header: 100;
+  --color-bg: #f5f4f0;
+  --color-bg-alt: #f5f4f0;
+  --color-text: #242326;
+  --color-text-strong: #19181b;
+  --color-text-muted: #65616b;
+  --color-border: #cac7cc;
+  --color-border-soft: #e9e6ec;
+  --color-border-strong: #87818e;
+  --color-accent: #24666b;
+  --color-lavender: #e2dde6;
+  --color-overlay: rgba(25, 24, 27, 0.3);
+  --color-surface-overlay: rgba(245, 244, 240, 0.9);
+  --color-surface-overlay-hover: #f5f4f0;
 }
 
 :root[data-theme='dark'] {
-  --color-bg: #35303a;
-  --color-bg-alt: #302e36;
-  --color-text: #fefeee;
-  --color-text-strong: #ffffff;
-  --color-text-muted: #c1b6d0;
-  --color-border: rgba(119, 118, 179, 0.3);
-  --color-border-soft: rgba(119, 118, 179, 0.075);
-  --color-border-strong: rgba(119, 118, 179, 0.65);
-  --color-accent: #66b3ba;
-}
-
-@include desktop {
-  :root {
-    --content-max-width: 100%;
-    --page-shell-padding: var(--page-shell-padding-desktop);
-    --profile-photo-size: 14rem;
-    --profile-name-gap: 2rem;
-    --profile-spacing: var(--space-section);
-  }
+  --color-bg: #242127;
+  --color-bg-alt: #242127;
+  --color-text: #e0dde4;
+  --color-text-strong: #f5f4f0;
+  --color-text-muted: #b0a9b8;
+  --color-border: #514b58;
+  --color-border-soft: #302b36;
+  --color-border-strong: #8c8297;
+  --color-accent: #8bcbd0;
+  --color-lavender: #37303f;
+  --color-surface-overlay: rgba(36, 33, 39, 0.9);
+  --color-surface-overlay-hover: #242127;
 }
 
 @include mobile {
   :root {
-    --header-height: 2.75rem;
-    --header-inline-padding: 1rem;
-    --page-shell-padding: var(--page-shell-padding-mobile);
-    --profile-photo-size: 12rem;
-    --profile-signature-width: 5rem;
-    --profile-spacing: var(--space-section-mobile);
+    --header-height: 4.5rem;
+    --grid-gap: 16px;
+    --space-section: 3rem;
+    --page-shell-padding: 1.25rem;
   }
 }
