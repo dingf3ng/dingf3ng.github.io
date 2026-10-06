@@ -8,27 +8,29 @@
   min-width: 0;
 }
 .surface-panel > * { grid-column: 4 / -1; min-width: 0; }
+.surface-panel:last-child { margin-bottom: 0; }
 .surface-panel__header {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: subgrid;
   align-items: start;
-  padding: 1.25rem 0 3.5rem;
+  padding: 0 0 var(--grid-module);
 }
 .section-label {
   grid-column: 1 / 4;
   margin: 0;
-  padding-top: 0.5rem;
+  padding-top: 0;
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.055em;
-  line-height: 1.5;
+  line-height: 24px;
   text-transform: uppercase;
 }
 .surface-panel__title-block { grid-column: 4 / -1; min-width: 0; }
 .surface-panel__title {
-  margin: 0 0 1.25rem;
+  margin: 0;
   font-size: var(--font-size-title);
+  line-height: var(--grid-module);
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
@@ -36,11 +38,11 @@
 .surface-panel__subtitle { margin: 0; color: var(--color-text-muted); font-size: var(--font-size-body-sm); }
 .rich-text__content { grid-column: 4 / 11; max-width: 68ch; overflow-wrap: anywhere; }
 .rich-text__content > :last-child { margin-bottom: 0; }
-.rich-text__content :where(h1, h2, h3, h4, h5, h6) { margin-top: 3rem; line-height: 1.2; }
+.rich-text__content :where(h1, h2, h3, h4, h5, h6) { margin-top: 48px; margin-bottom: 24px; }
 .rich-text__content > :first-child { margin-top: 0; }
-.rich-text__content h1 { font-size: 2.25rem; }
-.rich-text__content h2 { font-size: 1.75rem; }
-.rich-text__content h3 { font-size: 1.5rem; }
+.rich-text__content h1 { font-size: 2.25rem; line-height: 48px; }
+.rich-text__content h2 { font-size: 1.75rem; line-height: 40px; }
+.rich-text__content h3 { font-size: 1.5rem; line-height: 32px; }
 .rich-text__content :where(ul, ol) { padding-left: 1.25rem; margin: 0 0 var(--space-xl); }
 .rich-text__content li { margin-bottom: 0.5rem; }
 .rich-text__content blockquote p { margin: 0; }
@@ -61,8 +63,7 @@
 @include mobile {
   .surface-panel { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .surface-panel > *, .surface-panel > .rich-text__content { grid-column: 1 / -1; }
-  .surface-panel__header { padding: 1rem 0 2.5rem; row-gap: 1.5rem; }
+  .surface-panel__header { padding: 0 0 var(--grid-module); row-gap: 24px; }
   .section-label, .surface-panel__title-block { grid-column: 1 / -1; }
   .section-label { padding-top: 0; }
-  .surface-panel__title { margin-bottom: 1rem; }
 }

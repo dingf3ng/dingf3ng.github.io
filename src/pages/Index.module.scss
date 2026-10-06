@@ -1,8 +1,9 @@
 @use '../styles/mixins' as *;
 
 .notice {
-  border-top: 1px solid var(--color-text-strong);
-  padding-top: 2rem;
+  box-shadow: inset 0 1px var(--color-text-strong);
+  padding-top: var(--grid-module);
+  min-height: var(--opening-lower);
 }
 
 .notice > :global(.surface-panel__header) {
@@ -12,7 +13,7 @@
   top: calc(var(--header-height) + 1.5rem);
   align-self: start;
   display: block;
-  padding: 0;
+  padding: 24px 0 0;
 }
 
 .notice > :last-child {
@@ -42,7 +43,8 @@
 
 @include mobile {
   .notice {
-    padding-top: 1.5rem;
+    min-height: 0;
+    padding-top: var(--grid-module);
     row-gap: 1.5rem;
   }
 
@@ -50,6 +52,8 @@
     grid-column: 1 / -1;
     grid-row: 1;
     position: static;
+    height: var(--grid-module);
+    padding: 0;
   }
 
   .notice > :last-child {

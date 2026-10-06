@@ -14,11 +14,19 @@
   --font-weight-bold: 700;
   --letter-spacing-tight: -0.015em;
   --letter-spacing-wide: 0.025em;
-  --line-height-body: 1.65;
-  --line-height-heading: 1.05;
+  --line-height-body: 24px;
+  --line-height-heading: 32px;
+  --line-height-caption: 20px;
+  --line-height-profile: 72px;
+  --grid-unit: 4px;
+  --grid-module: 56px;
+  --page-top-gap: var(--grid-module);
+  --grid-origin: calc(var(--header-height) + var(--page-top-gap));
+  --opening-upper: calc(var(--grid-module) * 8);
+  --opening-lower: calc(var(--grid-module) * 5);
   --surface-border-width: 1px;
   --border-radius-soft: 0;
-  --header-height: 5rem;
+  --header-height: calc(var(--grid-module) * 2);
   --content-max-width: 1280px;
   --grid-gap: 24px;
   --space-2xs: 0.25rem;
@@ -31,7 +39,7 @@
   --space-3xl: 4.5rem;
   --space-stack: 1.5rem;
   --space-stack-sm: 1rem;
-  --space-section: 5rem;
+  --space-section: calc(var(--grid-module) * 2);
   --space-section-mobile: 2.5rem;
   --page-shell-padding: clamp(1.5rem, 4vw, 4rem);
   --transition-fast: 180ms ease;
@@ -74,9 +82,15 @@
   --color-surface-overlay-hover: #242127;
 }
 
+@include desktop {
+  :root { --grid-module: 64px; --line-height-profile: 48px; }
+}
+
 @include mobile {
   :root {
-    --header-height: 4.5rem;
+    --header-height: calc(var(--grid-module) * 2);
+    --grid-module: 48px;
+    --page-top-gap: var(--grid-module);
     --grid-gap: 16px;
     --space-section: 3rem;
     --page-shell-padding: 1.25rem;

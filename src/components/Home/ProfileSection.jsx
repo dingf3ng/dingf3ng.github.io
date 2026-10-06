@@ -44,6 +44,13 @@ const ProfileSection = () => {
       <div className={styles.container}>
         <header className={styles.header}>
           <h1 id="profile-name" className={styles.name}>Ding Feng</h1>
+          <img
+            className={styles.signature}
+            src={`${PUBLIC_URL}/signature.png`}
+            width="1809"
+            height="1042"
+            alt="Ding Feng's signature"
+          />
         </header>
         <div className={styles.imageWrap}>
           <MeshGradient key={`${theme}-${reducedMotion}`} className={styles.mesh} options={meshOptions} isPaused={isHidden} aria-hidden="true" />

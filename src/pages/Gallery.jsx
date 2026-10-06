@@ -3,6 +3,7 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Main from '../layouts/Main';
+import useGridRows from '../hooks/useGridRows';
 import publications from '../data/publications.json';
 import talks from '../data/talks.json';
 import styles from './Gallery.module.scss';
@@ -40,137 +41,143 @@ const talkItems = [...talks]
   }))
   .sort((a, b) => getLatestSessionDate(b.sessions) - getLatestSessionDate(a.sessions));
 
-const Gallery = () => (
-  <Main
-    title="Gallery"
-    description="A list of Ding Feng's publications and talks, with PDF links for papers, abstracts, and presentation materials."
-    keywords="Ding Feng Publications, Ding Feng Talks, Research Papers, Presentations, Programming Languages, Software Engineering, Computer Science, NUS"
-    path="/gallery"
-  >
-    <article className="surface-panel">
-      <header className="surface-panel__header">
-        <div className="surface-panel__title-block">
-          <h1 className="surface-panel__title">Gallery</h1>
-        </div>
-      </header>
-      <div className={styles.sections}>
-        <section className={styles.section}>
-          <header className={styles.sectionHeader}>
-            <div className={styles.sectionTitleRow}>
-              <h3 className={styles.sectionTitle}>Publications and Drafts</h3>
-              <a
-                aria-label="Google Scholar"
-                title="Google Scholar"
-                className={styles.scholarLink}
-                href={scholarUrl}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <FontAwesomeIcon aria-hidden="true" className={styles.scholarIcon} icon={faBookOpen} />
-              </a>
-            </div>
-          </header>
-          <ol className={styles.publications}>
-            {publicationItems.map((item) => (
-              <li className={styles.publicationItem} key={item.title}>
-                <span className={styles.year}>{item.date ? formatYear(item.date) : 'Draft'}</span>
-                <article className={styles.publicationBody}>
-                  <div className={styles.publicationHeader}>
-                    <h4 className={styles.publicationTitle}>
-                      {item.title}
-                    </h4>
-                    {(item.pdf || item.artifact) && (
-                      <div className={styles.publicationLinks}>
-                        {item.pdf && (
-                          <a
-                            className={styles.publicationButton}
-                            href={resolveAssetLink(item.pdf)}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            PDF
-                          </a>
-                        )}
-                        {item.artifact && (
-                          <a
-                            className={styles.publicationButton}
-                            href={resolveAssetLink(item.artifact)}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            Artifact
-                          </a>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                  <p className={styles.publicationAuthors}>{item.authors}</p>
-                  <p className={styles.publicationVenue}>
-                    {formatPublicationDetails(item)}.
-                  </p>
-                </article>
-              </li>
-            ))}
-          </ol>
-        </section>
+const Gallery = () => {
+  const publicationRef = useGridRows(publicationItems);
+  const talkRef = useGridRows(talkItems);
+  return (
+    <Main
+      title="Gallery"
+      description="A list of Ding Feng's publications and talks, with PDF links for papers, abstracts, and presentation materials."
+      keywords="Ding Feng Publications, Ding Feng Talks, Research Papers, Presentations, Programming Languages, Software Engineering, Computer Science, NUS"
+      path="/gallery"
+    >
+      <article className="surface-panel">
+        <header className="surface-panel__header">
+          <div className="surface-panel__title-block">
+            <h1 className="surface-panel__title">Gallery</h1>
+          </div>
+        </header>
+        <div className={styles.sections}>
+          <section className={styles.section}>
+            <header className={styles.sectionHeader}>
+              <div className={styles.sectionTitleRow}>
+                <h3 className={styles.sectionTitle}>Publications and Drafts</h3>
+                <a
+                  aria-label="Google Scholar"
+                  title="Google Scholar"
+                  className={styles.scholarLink}
+                  href={scholarUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon aria-hidden="true" className={styles.scholarIcon} icon={faBookOpen} />
+                </a>
+              </div>
+            </header>
+            <ol className={styles.publications} ref={publicationRef}>
+              {publicationItems.map((item) => (
+                <li className={styles.publicationItem} data-grid-row key={item.title}>
+                  <span className={styles.year} data-grid-content>{item.date ? formatYear(item.date) : 'Draft'}</span>
+                  <article className={styles.publicationBody} data-grid-content>
+                    <div className={styles.publicationHeader}>
+                      <h4 className={styles.publicationTitle}>
+                        {item.title}
+                      </h4>
+                      {(item.pdf || item.artifact) && (
+                        <div className={styles.publicationLinks}>
+                          {item.pdf && (
+                            <a
+                              className={styles.publicationButton}
+                              href={resolveAssetLink(item.pdf)}
+                              rel="noreferrer"
+                              target="_blank"
+                            >
+                              PDF
+                            </a>
+                          )}
+                          {item.artifact && (
+                            <a
+                              className={styles.publicationButton}
+                              href={resolveAssetLink(item.artifact)}
+                              rel="noreferrer"
+                              target="_blank"
+                            >
+                              Artifact
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                    <p className={styles.publicationAuthors}>{item.authors}</p>
+                    <p className={styles.publicationVenue}>
+                      {formatPublicationDetails(item)}.
+                    </p>
+                  </article>
+                </li>
+              ))}
+            </ol>
+          </section>
 
-        <section className={styles.section}>
-          <header className={styles.sectionHeader}>
-            <h3 className={styles.sectionTitle}>Talks and Presentations</h3>
-          </header>
-          <ul className={styles.talkList}>
-            {talkItems.map((item) => (
-              <li className={styles.talkItem} key={item.title}>
-                <div className={styles.talkHeader}>
-                  <h4 className={styles.talkTitle}>{item.title}</h4>
-                  {item.slides && (
-                    <a
-                      className={styles.publicationButton}
-                      href={resolveAssetLink(item.slides)}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      Slides
-                    </a>
-                  )}
-                  {item.video && (
-                    <a
-                      className={styles.publicationButton}
-                      href={resolveAssetLink(item.video)}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      Video
-                    </a>
-                  )}
-                </div>
-                <ul className={styles.talkVenues}>
-                  {item.sessions.map((session) => (
-                    <li className={styles.talkVenue} key={`${item.title}-${session.event}-${session.date}`}>
-                      {session.link ? (
+          <section className={styles.section}>
+            <header className={styles.sectionHeader}>
+              <h3 className={styles.sectionTitle}>Talks and Presentations</h3>
+            </header>
+            <ul className={styles.talkList} ref={talkRef}>
+              {talkItems.map((item) => (
+                <li className={styles.talkItem} data-grid-row key={item.title}>
+                  <div data-grid-content>
+                    <div className={styles.talkHeader}>
+                      <h4 className={styles.talkTitle}>{item.title}</h4>
+                      {item.slides && (
                         <a
-                          className={styles.talkVenueLink}
-                          href={resolveAssetLink(session.link)}
+                          className={styles.publicationButton}
+                          href={resolveAssetLink(item.slides)}
                           rel="noreferrer"
                           target="_blank"
                         >
-                          {session.event}
+                          Slides
                         </a>
-                      ) : (
-                        <span>{session.event}</span>
                       )}
-                      {session.note && `, ${session.note}`}
-                      {`, ${session.location}, ${formatDate(session.date)}`}
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
-    </article>
-  </Main>
-);
+                      {item.video && (
+                        <a
+                          className={styles.publicationButton}
+                          href={resolveAssetLink(item.video)}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          Video
+                        </a>
+                      )}
+                    </div>
+                    <ul className={styles.talkVenues}>
+                      {item.sessions.map((session) => (
+                        <li className={styles.talkVenue} key={`${item.title}-${session.event}-${session.date}`}>
+                          {session.link ? (
+                            <a
+                              className={styles.talkVenueLink}
+                              href={resolveAssetLink(session.link)}
+                              rel="noreferrer"
+                              target="_blank"
+                            >
+                              {session.event}
+                            </a>
+                          ) : (
+                            <span>{session.event}</span>
+                          )}
+                          {session.note && `, ${session.note}`}
+                          {`, ${session.location}, ${formatDate(session.date)}`}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </article>
+    </Main>
+  );
+};
 
 export default Gallery;

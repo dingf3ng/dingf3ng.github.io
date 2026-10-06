@@ -11,6 +11,7 @@
 .overlay[hidden] { display: none; }
 
 .columns {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--grid-gap);
@@ -19,6 +20,39 @@
   height: 100%;
   margin: 0 auto;
 }
+
+.rows, .headerRows {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(to bottom, rgba(137, 91, 162, 0.28) 0 1px, transparent 1px var(--grid-module)),
+    repeating-linear-gradient(to bottom, rgba(137, 91, 162, 0.06) 0 1px, transparent 1px var(--grid-unit));
+  background-size: 100% var(--grid-module), 100% var(--grid-unit);
+}
+
+.rows { top: var(--header-height); background-position: 0 calc(var(--grid-origin) - var(--header-height) - var(--grid-scroll, 0px)); }
+.headerRows { bottom: auto; height: var(--header-height); background-position: 0 0; }
+
+.cut {
+  --cut-top: calc(var(--grid-origin) + var(--opening-upper) - var(--grid-scroll, 0px));
+  position: absolute;
+  inset-inline: 0;
+  top: var(--cut-top);
+  // Document markers must not cross the fixed navigation band.
+  clip-path: inset(max(0px, calc(var(--header-height) - var(--cut-top))) 0 0);
+  border-top: 1px dashed #b15e85;
+  text-align: right;
+}
+
+.cut span {
+  display: inline-block;
+  padding: 2px 4px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: 11px/16px var(--font-mono);
+}
+
+.openingEnd { --cut-top: calc(var(--grid-origin) + var(--opening-upper) + var(--opening-lower) - var(--grid-scroll, 0px)); }
 
 .column {
   background: rgba(0, 150, 180, 0.08);
@@ -46,6 +80,7 @@
 @include mobile {
   .columns { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .column:nth-child(n + 5) { display: none; }
+  .cut { display: none; }
 }
 
 @media print {

@@ -1,8 +1,8 @@
 @use '../../styles/mixins' as *;
 
-.footer { position: relative; z-index: var(--z-content); width: 100%; max-width: var(--content-max-width); margin: 5rem auto 0; border-top: 1px solid var(--color-border); padding-top: 1.5rem; }
+.footer { position: relative; z-index: var(--z-content); width: 100%; max-width: var(--content-max-width); margin: var(--space-section) auto 0; box-shadow: inset 0 1px var(--color-border); padding-top: 24px; }
 .content { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--grid-gap); }
-.copy { margin: 0; color: var(--color-text-muted); font-size: 0.6875rem; letter-spacing: 0; line-height: 1.6; }
+.copy { margin: 0; color: var(--color-text-muted); font-size: 0.6875rem; letter-spacing: 0; line-height: 20px; }
 .copy:first-child { grid-column: 1 / 4; }
 .copy:last-child { grid-column: 4 / -1; }
 .copy a { text-decoration: none; }
@@ -12,6 +12,6 @@
 }
 @include mobile {
   .footer { margin-top: 3rem; }
-  .content { grid-template-columns: 1fr; gap: 0.5rem; }
-  .copy:first-child, .copy:last-child { grid-column: 1; }
+  .content { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 0.5rem; }
+  .copy:first-child, .copy:last-child { grid-column: 1 / -1; }
 }

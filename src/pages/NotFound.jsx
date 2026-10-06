@@ -1,20 +1,17 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import styles from './NotFound.module.scss';
+import Main from '../layouts/Main';
 
 const PageNotFound = () => (
-  <div className={styles.page}>
-    <Helmet title="404 Not Found">
-      <meta
-        name="description"
-        content="The content you are looking for cannot be found."
-      />
-    </Helmet>
-    <h1>Page Not Found</h1>
-    <p>
-      Return <Link to="/">home</Link>.
-    </p>
-  </div>
+  <Main title="404 Not Found" description="The content you are looking for cannot be found.">
+    <article className="surface-panel">
+      <header className="surface-panel__header">
+        <div className="surface-panel__title-block">
+          <h1 className="surface-panel__title">Page Not Found</h1>
+        </div>
+      </header>
+      <p>Return <Link to="/">home</Link>.</p>
+    </article>
+  </Main>
 );
 
 export default PageNotFound;

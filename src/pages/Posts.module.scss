@@ -1,13 +1,13 @@
 @use '../styles/mixins' as *;
 
-.controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; }
-.controlButton, .select { min-height: 44px; padding: 0.5rem 0; border: 0; border-radius: 0; background: transparent; color: var(--color-text); cursor: pointer; font-size: var(--font-size-caption); text-align: left; transition: color var(--transition-fast); }
+.controls { display: grid; grid-template-columns: subgrid; align-items: center; }
+.controlButton { grid-column: 1 / 4; justify-self: start; }
+.controlButton, .select { height: var(--grid-module); padding: calc((var(--grid-module) - 24px) / 2) 0; line-height: 24px; border: 0; border-radius: 0; background: transparent; color: var(--color-text); cursor: pointer; font-size: var(--font-size-caption); text-align: left; transition: color var(--transition-fast); }
 .controlButton:hover, .select:hover { color: var(--color-accent); }
-.selectWrap { position: relative; min-width: 0; }
+.selectWrap { grid-column: -3 / -1; position: relative; min-width: 0; }
 .select { width: 100%; padding-right: 1.5rem; appearance: none; }
 .selectWrap::after { content: '⌄'; position: absolute; top: 50%; right: 0; transform: translateY(-50%); pointer-events: none; color: var(--color-text-muted); }
 .loading { margin: 0; }
 @include mobile {
-  .controls { flex-wrap: wrap; }
-  .selectWrap { max-width: 100%; }
+  .controlButton { grid-column: 1 / 3; }
 }

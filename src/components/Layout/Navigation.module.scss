@@ -12,37 +12,46 @@
 .inner {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--grid-gap);
+  column-gap: var(--grid-gap);
+  row-gap: 0;
   align-items: center;
+  grid-template-rows: repeat(2, var(--grid-module));
   width: 100%;
   max-width: var(--content-max-width);
   height: 100%;
   margin: auto;
-  border-bottom: 1px solid var(--color-border);
+  box-shadow: inset 0 -1px var(--color-border);
 }
 .brand {
   grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  height: 100%;
   justify-self: start;
   font-size: 1.25rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.04em;
   text-decoration: none;
+  line-height: 24px;
 }
-.links { grid-column: 4 / 12; }
-.linksList { display: flex; gap: clamp(1rem, 3vw, 3rem); align-items: center; list-style: none; padding: 0; margin: 0; }
+.links { grid-column: 4 / 12; grid-row: 1 / 3; height: 100%; display: grid; grid-template-columns: subgrid; }
+.linksList { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: center; height: 100%; list-style: none; padding: 0; margin: 0; }
+.linksList > li { min-width: 0; height: 100%; }
 .link {
   position: relative;
   display: inline-flex;
   gap: 0.4rem;
   align-items: center;
-  min-height: 44px;
+  height: 100%;
+  line-height: 24px;
   font-size: var(--font-size-body-sm);
   text-decoration: none;
 }
 .link::after {
   content: '';
   position: absolute;
-  bottom: 5px;
+  bottom: calc(var(--header-height) / 2 - 20px);
   left: 0;
   right: 0;
   height: 1px;
@@ -55,17 +64,21 @@
 .link > span { transition: transform var(--transition-panel); }
 .link:hover > span, .link:focus-visible > span { transform: translate(2px, -2px); }
 .active { color: var(--color-accent); }
-.actions { grid-column: 12 / -1; justify-self: end; width: 44px; height: 44px; }
+.actions { grid-column: 12 / -1; grid-row: 1 / 3; justify-self: end; width: var(--grid-module); height: 100%; }
 .mobileOnly { display: none; }
 
 @include desktop {
   .brand { grid-column: 1 / 3; }
   .links { grid-column: 3 / 12; }
-  .linksList { gap: 1.5rem; }
+  .linksList > li:nth-child(1) { grid-column: 1 / 3; }
+  .linksList > li:nth-child(2) { grid-column: 3 / 5; }
+  .linksList > li:nth-child(3) { grid-column: 5 / 7; }
+  .linksList > li:nth-child(4) { grid-column: 7 / 9; }
+  .linksList > li:nth-child(5) { grid-column: 9 / -1; }
 }
 @include mobile {
-  .inner { grid-template-columns: 1fr auto; }
-  .brand { grid-column: 1; }
+  .inner { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .brand { grid-column: 1 / 3; }
   .links, .actions { display: none; }
-  .mobileOnly { display: flex; height: 100%; grid-column: 2; }
+  .mobileOnly { display: flex; height: 100%; grid-column: 3 / -1; grid-row: 1 / 3; justify-self: end; }
 }
