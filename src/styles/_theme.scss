@@ -49,8 +49,8 @@
   --transition-menu: 240ms ease;
   --z-content: 1;
   --z-header: 100;
-  --color-bg: #f5f4f0;
-  --color-bg-alt: #f5f4f0;
+  --color-bg: #f2eee6;
+  --color-bg-alt: #f2eee6;
   --color-text: #242326;
   --color-text-strong: #19181b;
   --color-text-muted: #65616b;
@@ -62,7 +62,7 @@
   // theme's background. Bars, the rail name and the signature are ink on paper in the light
   // theme and paper on ink in the dark theme, so the two themes are exact inversions.
   --color-ink: #242127;
-  --color-paper: #f5f4f0;
+  --color-paper: #f2eee6;
   --color-switch-light: var(--color-paper);
   --color-switch-dark: var(--color-ink);
   --color-bar: var(--color-ink);
@@ -73,15 +73,15 @@
   --gradient-accent: linear-gradient(180deg, var(--color-accent-purple), var(--color-accent-green));
   --color-lavender: #e2dde6;
   --color-overlay: rgba(25, 24, 27, 0.3);
-  --color-surface-overlay: rgba(245, 244, 240, 0.9);
-  --color-surface-overlay-hover: #f5f4f0;
+  --color-surface-overlay: rgba(242, 238, 230, 0.9);
+  --color-surface-overlay-hover: #f2eee6;
 }
 
 :root[data-theme='dark'] {
   --color-bg: #242127;
   --color-bg-alt: #242127;
   --color-text: #e0dde4;
-  --color-text-strong: #f5f4f0;
+  --color-text-strong: #f2eee6;
   --color-text-muted: #b0a9b8;
   --color-border: #514b58;
   --color-border-soft: #302b36;
