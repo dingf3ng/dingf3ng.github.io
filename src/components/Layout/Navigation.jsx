@@ -4,6 +4,9 @@ import ThemeToggle from './ThemeToggle';
 import routes from '../../data/routes.json';
 import styles from './Navigation.module.scss';
 
+// Desktop and tablet: a left-aligned pyramid of bars, one per page, with the theme switch
+// in the top-right corner. The site name and the CV link live in the rail (see Rail.jsx).
+// Mobile: the brand and the menu button.
 const Navigation = () => (
   <header className={styles.header}>
     <div className={styles.inner}>
@@ -18,15 +21,10 @@ const Navigation = () => (
                 className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
                 to={route.path}
               >
-                {route.label}
+                <span className={styles.label}>{route.label}</span>
               </NavLink>
             </li>
           ))}
-          <li>
-            <a className={styles.link} href={`${process.env.PUBLIC_URL}/cv.pdf`} target="_blank" rel="noreferrer">
-              CV <span aria-hidden="true">↗</span>
-            </a>
-          </li>
         </ul>
       </nav>
       <div className={styles.actions}><ThemeToggle /></div>

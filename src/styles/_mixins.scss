@@ -7,6 +7,17 @@ $mobile-max: 736px;
   }
 }
 
+// Page shell: fourteen equal columns. The first two hold the name rail;
+// the other twelve are the content grid every page lays out on.
+@mixin shell-grid {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+}
+
 @mixin mobile {
   @media screen and (max-width: $mobile-max) {
     @content;

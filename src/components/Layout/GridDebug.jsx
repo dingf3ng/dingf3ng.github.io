@@ -19,8 +19,14 @@ const GridDebug = () => {
     <>
       <div ref={overlayRef} id="layout-grid-overlay" className={styles.overlay} hidden={!visible} aria-hidden="true">
         <div className={styles.columns}>
+          {/* Two rail columns, then the twelve numbered content columns. */}
+          {Array.from({ length: 2 }, (_, index) => (
+            <div className={`${styles.column} ${styles.railColumn}`} key={`rail-${index}`}>
+              <span>R{index + 1}</span>
+            </div>
+          ))}
           {Array.from({ length: 12 }, (_, index) => (
-            <div className={styles.column} key={index}>
+            <div className={`${styles.column} ${styles.contentColumn}`} key={index}>
               <span>{index + 1}</span>
             </div>
           ))}

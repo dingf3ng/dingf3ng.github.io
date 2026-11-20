@@ -1,0 +1,89 @@
+@use '../../styles/mixins' as *;
+
+// Fixed layer over the two rail columns. Only the name and the bar take pointer events.
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-header) + 1);
+  padding: 0 var(--page-shell-padding);
+  pointer-events: none;
+}
+.grid { @include shell-grid; height: 100%; }
+.rail { grid-column: 1 / 3; position: relative; height: 100%; min-width: 0; }
+
+// The name leans 6 degrees off vertical and its last letter touches the bar.
+// useRailName sets the size and the transform; `top` is the first content module line.
+.name {
+  position: absolute;
+  top: var(--grid-origin);
+  left: 0;
+  color: var(--color-bar);
+  font-size: 100px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: lowercase;
+  white-space: nowrap;
+  transform-origin: 0 0;
+  visibility: hidden;
+  pointer-events: auto;
+}
+.name:hover { color: var(--color-bar); }
+// The name is the link home. On hover or focus its letters slide two units away from the bar.
+// The link is rotated, so "up" in its own box is left on screen.
+.nameText { display: inline-block; transition: transform var(--transition-panel); }
+.name:hover .nameText, .name:focus-visible .nameText { transform: translateY(calc(var(--grid-unit) * -2)); }
+
+.band {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: var(--rail-band);
+  background: var(--color-bar);
+  pointer-events: auto;
+  transition: background-color var(--transition-panel);
+}
+
+// Links read upward inside the bar. Their lower end sits on the fifteenth module line,
+// or one module above the window's bottom edge when the window is shorter than that.
+.links {
+  position: absolute;
+  right: 0;
+  bottom: max(var(--grid-module), calc(100vh - var(--grid-module) * 15));
+  display: flex;
+  gap: var(--grid-gap);
+  width: var(--rail-band);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--color-on-bar);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0;
+  line-height: var(--rail-band);
+  white-space: nowrap;
+}
+.link { position: relative; display: inline-flex; gap: 0.4rem; text-decoration: none; }
+.link:hover { color: var(--color-on-bar); }
+// Centred underline reveal, drawn beside the upright text.
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 calc(var(--grid-unit) * 1.5);
+  width: 1px;
+  background: currentColor;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform var(--transition-panel);
+}
+.link:hover::after, .link:focus-visible::after { transform: scaleY(1); }
+
+.link:focus-visible { outline-color: var(--color-on-bar); outline-offset: -2px; }
+.link > span { transition: transform var(--transition-panel); }
+.link:hover > span, .link:focus-visible > span { transform: translate(2px, -2px); }
+
+@include mobile {
+  .layer { display: none; }
+}

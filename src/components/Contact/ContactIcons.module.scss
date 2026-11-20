@@ -2,32 +2,35 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: calc(var(--grid-unit) * 2);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+// Each link is a square tile in the bar colour with the glyph knocked out of it.
 .link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: calc(var(--grid-unit) * 12);
+  height: calc(var(--grid-unit) * 12);
   border: 0;
+  background: var(--color-bar);
+  color: var(--color-on-bar);
   text-decoration: none;
-  color: var(--color-text-strong);
   transition:
-    color var(--transition-fast),
-    transform var(--transition-fast);
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
-.link:hover {
-  color: var(--color-accent);
-  transform: translateY(-1px);
+.link:hover,
+.link:focus-visible {
+  background: var(--color-accent-purple);
+  color: var(--color-text-strong);
 }
 
 .icon {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: calc(var(--grid-unit) * 6);
+  height: calc(var(--grid-unit) * 6);
 }

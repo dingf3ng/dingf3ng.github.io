@@ -1,69 +1,55 @@
 @use '../styles/mixins' as *;
 
 .notice {
-  box-shadow: inset 0 1px var(--color-text-strong);
-  padding-top: var(--grid-module);
   min-height: var(--opening-lower);
 }
 
+// One-module bar: the strong divider and the section title in one.
 .notice > :global(.surface-panel__header) {
-  grid-column: 1 / 3;
-  grid-row: 1;
-  position: sticky;
-  top: calc(var(--header-height) + 1.5rem);
-  align-self: start;
+  position: relative;
+  grid-column: 1 / -1;
   display: block;
-  padding: 24px 0 0;
+  height: var(--grid-module);
+  padding: 0;
+  background: var(--color-bar);
+  transition: background-color var(--transition-panel);
+}
+
+// The bar reaches back across the gutter to join the rail's vertical bar.
+.notice > :global(.surface-panel__header)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: var(--grid-gap);
+  height: 100%;
+  background: inherit;
 }
 
 .notice > :last-child {
-  grid-column: 4 / 12;
-  grid-row: 1;
+  grid-column: 1 / -1;
 }
 
 .notice :global(.surface-panel__title) {
   margin: 0;
-  font-size: clamp(3rem, 4.5vw, 4rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
+  color: var(--color-on-bar);
+  font-size: 1.5rem;
+  line-height: var(--grid-module);
+  letter-spacing: -0.035em;
+  text-transform: lowercase;
   white-space: nowrap;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-}
-
-@include desktop {
-  .notice > :global(.surface-panel__header) {
-    grid-column: 1 / 3;
-  }
-
-  .notice > :last-child {
-    grid-column: 3 / 12;
-  }
 }
 
 @include mobile {
   .notice {
     min-height: 0;
-    padding-top: var(--grid-module);
-    row-gap: 1.5rem;
   }
 
   .notice > :global(.surface-panel__header) {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    position: static;
-    height: var(--grid-module);
-    padding: 0;
+    padding: 0 var(--space-sm);
   }
 
-  .notice > :last-child {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-
-  .notice :global(.surface-panel__title) {
-    font-size: 2rem;
-    writing-mode: horizontal-tb;
-    transform: none;
+  .notice > :global(.surface-panel__header)::before {
+    display: none;
   }
 }

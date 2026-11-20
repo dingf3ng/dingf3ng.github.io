@@ -1,57 +1,77 @@
 @use '../../styles/mixins' as *;
 
+// No background above mobile widths: only the bars and the theme switch cover the page,
+// so content scrolls behind the pyramid and shows in its open steps.
 .header {
   position: fixed;
   inset: 0 0 auto;
   z-index: var(--z-header);
   height: var(--header-height);
   padding: 0 var(--page-shell-padding);
-  background: var(--color-bg);
+  pointer-events: none;
+}
+// Two modules, split into four bars of half a module each.
+.inner {
+  @include shell-grid;
+  grid-template-rows: repeat(4, var(--bar-height));
+  row-gap: 0;
+  height: 100%;
+}
+.brand { display: none; }
+.links { grid-column: 3 / -1; grid-row: 1 / -1; display: grid; grid-template-columns: subgrid; grid-template-rows: subgrid; }
+.linksList { grid-column: 1 / -1; grid-row: 1 / -1; display: grid; grid-template-columns: subgrid; grid-template-rows: subgrid; list-style: none; padding: 0; margin: 0; }
+
+// Pyramid: every bar starts at the rail and each one is two columns shorter than the bar above.
+// Labels sit at the right end, with their right edges on columns 5, 7, 9 and 11 in page order:
+// the first page has the bottom, shortest bar, so the labels read left to right as they climb.
+// Each bar runs one gutter past its label, so the top one meets the theme switch.
+.linksList > li {
+  position: relative;
+  grid-column: 1 / 12;
+  display: flex;
+  min-width: 0;
+  margin-right: calc(var(--grid-gap) * -1);
+  background: var(--color-bar);
+  pointer-events: auto;
   transition: background-color var(--transition-panel);
 }
-.inner {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--grid-gap);
-  row-gap: 0;
-  align-items: center;
-  grid-template-rows: repeat(2, var(--grid-module));
-  width: 100%;
-  max-width: var(--content-max-width);
-  height: 100%;
-  margin: auto;
-  box-shadow: inset 0 -1px var(--color-border);
-}
-.brand {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  justify-self: start;
-  font-size: 1.25rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -0.04em;
-  text-decoration: none;
-  line-height: 24px;
-}
-.links { grid-column: 4 / 12; grid-row: 1 / 3; height: 100%; display: grid; grid-template-columns: subgrid; }
-.linksList { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: center; height: 100%; list-style: none; padding: 0; margin: 0; }
-.linksList > li { min-width: 0; height: 100%; }
-.link {
-  position: relative;
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: center;
-  height: 100%;
-  line-height: 24px;
-  font-size: var(--font-size-body-sm);
-  text-decoration: none;
-}
-.link::after {
+.linksList > li:nth-child(1) { grid-column: 1 / 6; grid-row: 4; }
+.linksList > li:nth-child(2) { grid-column: 1 / 8; grid-row: 3; }
+.linksList > li:nth-child(3) { grid-column: 1 / 10; grid-row: 2; }
+.linksList > li:nth-child(4) { grid-row: 1; }
+// Bars reach back across the gutter to join the rail's vertical bar.
+.linksList > li::before {
   content: '';
   position: absolute;
-  bottom: calc(var(--header-height) / 2 - 20px);
+  top: 0;
+  right: 100%;
+  width: var(--grid-gap);
+  height: 100%;
+  background: inherit;
+}
+.link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  padding-right: var(--grid-gap);
+  color: var(--color-on-bar);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.link:hover { color: var(--color-on-bar); }
+.link:focus-visible { outline-color: var(--color-on-bar); outline-offset: -4px; }
+.label { position: relative; }
+.label::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
   left: 0;
   right: 0;
   height: 1px;
@@ -60,25 +80,47 @@
   transform-origin: center;
   transition: transform var(--transition-panel);
 }
-.link:hover::after, .link:focus-visible::after, .active::after { transform: scaleX(1); }
-.link > span { transition: transform var(--transition-panel); }
-.link:hover > span, .link:focus-visible > span { transform: translate(2px, -2px); }
-.active { color: var(--color-accent); }
-.actions { grid-column: 12 / -1; grid-row: 1 / 3; justify-self: end; width: var(--grid-module); height: 100%; }
+.link:hover .label::after, .link:focus-visible .label::after, .active .label::after { transform: scaleX(1); }
+// The current page's label takes the green accent.
+.active, .active:hover { color: var(--color-accent-green); }
+
+// Theme switch: column 12 of the content grid, one module tall.
+.actions {
+  grid-column: 14 / -1;
+  grid-row: 1 / 3;
+  background: var(--color-accent-purple);
+  pointer-events: auto;
+  transition: background-color var(--transition-panel);
+}
+.actions button:hover { color: var(--color-text-strong); }
+.actions button:focus-visible { outline-color: var(--color-text-strong); outline-offset: -6px; }
 .mobileOnly { display: none; }
 
-@include desktop {
-  .brand { grid-column: 1 / 3; }
-  .links { grid-column: 3 / 12; }
-  .linksList > li:nth-child(1) { grid-column: 1 / 3; }
-  .linksList > li:nth-child(2) { grid-column: 3 / 5; }
-  .linksList > li:nth-child(3) { grid-column: 5 / 7; }
-  .linksList > li:nth-child(4) { grid-column: 7 / 9; }
-  .linksList > li:nth-child(5) { grid-column: 9 / -1; }
-}
 @include mobile {
-  .inner { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .brand { grid-column: 1 / 3; }
+  .header {
+    background: var(--color-bg);
+    pointer-events: auto;
+    transition: background-color var(--transition-panel);
+  }
+  .inner {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, var(--grid-module));
+    align-items: center;
+    box-shadow: inset 0 -1px var(--color-border);
+  }
+  .brand {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-self: start;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    line-height: 24px;
+  }
   .links, .actions { display: none; }
   .mobileOnly { display: flex; height: 100%; grid-column: 3 / -1; grid-row: 1 / 3; justify-self: end; }
 }

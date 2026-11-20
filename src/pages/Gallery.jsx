@@ -1,6 +1,5 @@
 import dayjs from 'dayjs';
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { BookIcon } from '../components/Contact/SharpIcons';
 
 import Main from '../layouts/Main';
 import useGridRows from '../hooks/useGridRows';
@@ -70,7 +69,7 @@ const Gallery = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon aria-hidden="true" className={styles.scholarIcon} icon={faBookOpen} />
+                  <BookIcon className={styles.scholarIcon} />
                 </a>
               </div>
             </header>

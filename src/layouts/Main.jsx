@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Analytics from '../components/Layout/Analytics';
 import Navigation from '../components/Layout/Navigation';
+import Rail from '../components/Layout/Rail';
 import GlobalFooter from '../components/Layout/GlobalFooter';
 import ScrollToTop from '../components/Layout/ScrollToTop';
 import styles from './Main.module.scss';
@@ -94,8 +95,11 @@ const Main = ({
       </Helmet>
       <div className={styles.wrapper}>
         <Navigation />
-        <main className={styles.main}>{children}</main>
-        <GlobalFooter />
+        <Rail />
+        <div className={styles.shell}>
+          <main className={styles.main}>{children}</main>
+          <GlobalFooter />
+        </div>
       </div>
     </>
   );

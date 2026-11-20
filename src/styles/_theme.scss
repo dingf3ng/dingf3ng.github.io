@@ -20,6 +20,8 @@
   --line-height-profile: 72px;
   --grid-unit: 4px;
   --grid-module: 56px;
+  --bar-height: calc(var(--grid-module) / 2);
+  --rail-band: var(--bar-height);
   --page-top-gap: var(--grid-module);
   --grid-origin: calc(var(--header-height) + var(--page-top-gap));
   --opening-upper: calc(var(--grid-module) * 8);
@@ -41,7 +43,7 @@
   --space-stack-sm: 1rem;
   --space-section: calc(var(--grid-module) * 2);
   --space-section-mobile: 2.5rem;
-  --page-shell-padding: clamp(1.5rem, 4vw, 4rem);
+  --page-shell-padding: clamp(1rem, 2.5vw, 2.5rem);
   --transition-fast: 180ms ease;
   --transition-panel: 240ms ease;
   --transition-menu: 240ms ease;
@@ -55,6 +57,16 @@
   --color-border: #cac7cc;
   --color-border-soft: #e9e6ec;
   --color-border-strong: #87818e;
+  // The theme switch's two halves. They are not overridden in the dark theme.
+  // One black and one white for the solid shapes: the dark theme's background and the light
+  // theme's background. Bars, the rail name and the signature are ink on paper in the light
+  // theme and paper on ink in the dark theme, so the two themes are exact inversions.
+  --color-ink: #242127;
+  --color-paper: #f5f4f0;
+  --color-switch-light: var(--color-paper);
+  --color-switch-dark: var(--color-ink);
+  --color-bar: var(--color-ink);
+  --color-on-bar: var(--color-paper);
   --color-accent: #24666b;
   --color-accent-purple: #b4a3c9;
   --color-accent-green: #9dbcc0;
@@ -80,6 +92,8 @@
   --color-lavender: #37303f;
   --color-surface-overlay: rgba(36, 33, 39, 0.9);
   --color-surface-overlay-hover: #242127;
+  --color-bar: var(--color-paper);
+  --color-on-bar: var(--color-ink);
 }
 
 @include desktop {

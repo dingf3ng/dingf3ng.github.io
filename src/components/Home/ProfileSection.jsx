@@ -1,12 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { MeshGradient } from '@mesh-gradient/react';
 import ContactIcons from '../Contact/ContactIcons';
-import EmailLink from '../Contact/EmailLink';
-import contactData from '../../data/contact.json';
 import { useTheme } from '../../context/ThemeContext';
 import styles from './ProfileSection.module.scss';
 
-const emailEntry = contactData.find((entry) => entry.icon === 'email');
 const { PUBLIC_URL } = process.env;
 
 const ProfileSection = () => {
@@ -42,22 +39,23 @@ const ProfileSection = () => {
   return (
     <section className={styles.section} aria-labelledby="profile-name">
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h1 id="profile-name" className={styles.name}>Ding Feng</h1>
-          <img
+        {/* The visible name is the rail on wide screens and the header brand on mobile. */}
+        <h1 id="profile-name" className={styles.name}>Ding Feng</h1>
+        <div className={styles.figure}>
+          <div className={styles.imageWrap}>
+            <MeshGradient key={`${theme}-${reducedMotion}`} className={styles.mesh} options={meshOptions} isPaused={isHidden} aria-hidden="true" />
+            <img className={styles.photo} src={`${PUBLIC_URL}/images/me.jpg`} alt="Ding Feng" fetchPriority="high" />
+          </div>
+          <span className={styles.square} aria-hidden="true" />
+          {/* The PNG is used as a mask, so the signature takes the bar colour in both themes. */}
+          <span
+            aria-label="Ding Feng's signature"
             className={styles.signature}
-            src={`${PUBLIC_URL}/signature.png`}
-            width="1809"
-            height="1042"
-            alt="Ding Feng's signature"
+            role="img"
+            style={{ '--signature-image': `url(${PUBLIC_URL}/signature.png)` }}
           />
-        </header>
-        <div className={styles.imageWrap}>
-          <MeshGradient key={`${theme}-${reducedMotion}`} className={styles.mesh} options={meshOptions} isPaused={isHidden} aria-hidden="true" />
-          <img className={styles.photo} src={`${PUBLIC_URL}/images/me.jpg`} alt="Ding Feng" fetchPriority="high" />
         </div>
         <div className={styles.contactRow}>
-          {emailEntry && <EmailLink email={emailEntry.link.replace('mailto:', '')} />}
           <ContactIcons />
         </div>
         <div className={styles.intro}>

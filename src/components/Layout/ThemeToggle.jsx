@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-regular-svg-icons/faMoon';
-import { faSun } from '@fortawesome/free-regular-svg-icons/faSun';
 import PropTypes from 'prop-types';
 import { useTheme } from '../../context/ThemeContext';
 import styles from './ThemeToggle.module.scss';
@@ -8,7 +5,6 @@ import styles from './ThemeToggle.module.scss';
 const ThemeToggle = ({ className, fullWidth }) => {
   const { theme, toggleTheme } = useTheme();
   const nextTheme = theme === 'light' ? 'dark' : 'light';
-  const icon = theme === 'light' ? faMoon : faSun;
 
   const buttonClassName = [
     styles.button,
@@ -24,7 +20,8 @@ const ThemeToggle = ({ className, fullWidth }) => {
       title={`Switch to ${nextTheme} theme`}
       onClick={toggleTheme}
     >
-      <FontAwesomeIcon aria-hidden="true" className={styles.icon} icon={icon} />
+      {/* A disc split into a light and a dark half; it turns half a circle when the theme changes. */}
+      <span aria-hidden="true" className={styles.icon} />
     </button>
   );
 };
