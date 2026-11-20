@@ -25,7 +25,7 @@ The site puts a few bold, free elements on a strict grid: a leaning name, thick 
 
 ### Navigation
 
-- Above 736px the navigation is a left-aligned pyramid of four bars, one per page, each half a module tall. Every bar starts at the rail's bar and is two columns shorter than the bar above.
+- Above 736px the navigation is a left-aligned pyramid of four bars, one per page, each half a module tall. Every bar starts at the rail's bar and is two columns shorter than the bar above. A half-pixel hairline in the page background colour separates the layers, like a cut between them; it is drawn inside the top edge of each lower bar, so it is as long as that bar and adds no height.
 - Labels sit at the right end of their bars. The first page has the bottom, shortest bar and the last page the top, longest one, so the labels read left to right in page order with their right edges on columns 5, 7, 9, and 11. Each bar runs one gutter past its label, so the top bar meets the theme switch.
 - The theme switch fills column 12 and is one module tall. Its icon is a 24px disc split into a light and a dark half. The disc turns 180 degrees when the theme changes, so the dark half leads in the dark theme. Its ring follows the theme: light in the light theme and dark in the dark theme.
 - Above 736px the header has no background. Only the bars and the theme switch cover the page, so content scrolls behind the pyramid and shows in its open steps. Pointer events pass through the open steps to the content.

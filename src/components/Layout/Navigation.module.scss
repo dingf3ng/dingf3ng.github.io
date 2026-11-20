@@ -39,6 +39,10 @@
 .linksList > li:nth-child(2) { grid-column: 1 / 8; grid-row: 3; }
 .linksList > li:nth-child(3) { grid-column: 1 / 10; grid-row: 2; }
 .linksList > li:nth-child(4) { grid-row: 1; }
+// A hairline in the page colour separates the layers, like a cut between them. It is drawn
+// inside the top edge of each lower bar, so it is as long as that bar and adds no height.
+// Half a pixel: one device pixel on high-density screens, a fainter single pixel on others.
+.linksList > li:not(:nth-child(4)) { box-shadow: inset 0 0.5px 0 var(--color-bg); }
 // Bars reach back across the gutter to join the rail's vertical bar.
 .linksList > li::before {
   content: '';
@@ -48,6 +52,8 @@
   width: var(--grid-gap);
   height: 100%;
   background: inherit;
+  // Carry the layer line across the gutter to the rail's bar.
+  box-shadow: inherit;
 }
 .link {
   flex: 1;
