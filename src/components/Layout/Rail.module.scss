@@ -81,7 +81,7 @@
 .link:hover::after, .link:focus-visible::after { transform: scaleY(1); }
 
 .link:focus-visible { outline-color: var(--color-on-bar); outline-offset: -2px; }
-.link > span { transition: transform var(--transition-panel); }
+.link > span { font-variant-emoji: text; transition: transform var(--transition-panel); }
 .link:hover > span, .link:focus-visible > span { transform: translate(2px, -2px); }
 
 @include mobile {

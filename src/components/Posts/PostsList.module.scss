@@ -14,7 +14,7 @@
 .category { margin: 0 0 8px; font-size: 0.6875rem; line-height: 16px; letter-spacing: 0.055em; text-transform: uppercase; color: var(--color-text-muted); }
 .title { margin: 0 0 8px; font-size: clamp(1.4rem, 2.2vw, 2rem); font-weight: var(--font-weight-medium); line-height: 40px; }
 .excerpt { max-width: 60ch; margin: 0; font-size: var(--font-size-body-sm); color: var(--color-text-muted); }
-.arrow { grid-column: -2 / -1; justify-self: end; font-size: 1.25rem; color: var(--color-accent); transition: transform var(--transition-panel); }
+.arrow { grid-column: -2 / -1; justify-self: end; font-size: 1.25rem; font-variant-emoji: text; color: var(--color-accent); transition: transform var(--transition-panel); }
 .link:hover .arrow, .link:focus-visible .arrow { transform: translate(2px, -2px); }
 
 @include desktop {

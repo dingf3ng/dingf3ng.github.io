@@ -54,7 +54,7 @@ const Hamburger = () => {
             ))}
             <li className={styles.menuItem}>
               <a className={styles.menuLink} href={`${process.env.PUBLIC_URL}/cv.pdf`} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
-                CV <span aria-hidden="true">↗</span>
+                CV <span aria-hidden="true">{'\u2197\uFE0E'}</span>
               </a>
             </li>
           </ul>

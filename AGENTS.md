@@ -81,7 +81,7 @@ Keep the moving mesh around the portrait. Preserve the Notice Board bar as the o
 
 Post and notice hover states use a 3px gradient side bar in the gutter beside the content column. Anchor it to the full item height, with 12px of space at the top and bottom, rather than sizing it to the text. Keep text stationary and the row background clear. Use matching keyboard focus states. On mobile posts, place the bar 12px to the left of the item in the shell margin, clear of the focus outline, spanning both the date and text rows.
 
-Keep motion small: centered underline reveals and a 2px diagonal arrow movement, using the shared transition tokens. Navigation labels and the rail's links use the same underline reveal; in the rail it runs beside the upright text. Respect reduced motion, pause the mesh while the document is hidden, and preserve mobile-menu keyboard navigation and focus return.
+Keep motion small: centered underline reveals and a 2px diagonal arrow movement, using the shared transition tokens. Write the diagonal arrow as U+2197 followed by U+FE0E (`'\u2197\uFE0E'` in JSX, `'\2197\FE0E'` in CSS); without the second character iOS and iPadOS draw it as a colour emoji. Navigation labels and the rail's links use the same underline reveal; in the rail it runs beside the upright text. Respect reduced motion, pause the mesh while the document is hidden, and preserve mobile-menu keyboard navigation and focus return.
 
 ## Check changes
 

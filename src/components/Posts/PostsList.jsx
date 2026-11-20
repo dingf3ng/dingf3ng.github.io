@@ -19,7 +19,7 @@ const PostsList = ({ posts }) => {
                 <p className={styles.excerpt}>{post.excerpt}</p>
               </div>
             </div>
-            <span className={styles.arrow} aria-hidden="true">↗</span>
+            <span className={styles.arrow} aria-hidden="true">{'\u2197\uFE0E'}</span>
           </Link>
         </article>
       ))}
